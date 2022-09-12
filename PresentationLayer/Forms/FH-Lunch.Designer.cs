@@ -33,7 +33,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAra = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAraLunch = new System.Windows.Forms.TextBox();
             this.btnEkle = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -94,13 +94,13 @@
             this.btnAra.TabIndex = 31;
             this.btnAra.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtAraLunch
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(207, 128);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(204, 29);
-            this.textBox1.TabIndex = 30;
+            this.txtAraLunch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAraLunch.Location = new System.Drawing.Point(207, 128);
+            this.txtAraLunch.Name = "txtAraLunch";
+            this.txtAraLunch.Size = new System.Drawing.Size(204, 29);
+            this.txtAraLunch.TabIndex = 30;
             // 
             // btnEkle
             // 
@@ -143,7 +143,7 @@
             this.ClientSize = new System.Drawing.Size(1397, 581);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAra);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAraLunch);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
@@ -169,7 +169,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAra;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAraLunch;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;

@@ -30,7 +30,7 @@
         {
             this.btnIptal = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbAktiviteDuzeyi = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -38,22 +38,22 @@
             this.label8 = new System.Windows.Forms.Label();
             this.rdbKadin = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtEmailAdresiniz = new System.Windows.Forms.TextBox();
+            this.txtSifreniz = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txtHedefAgirlik = new System.Windows.Forms.TextBox();
+            this.cmbDiyetHedefiniz = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnKaydol = new System.Windows.Forms.Button();
             this.rdbErkek = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtKilonuz = new System.Windows.Forms.TextBox();
+            this.txtBoyunuz = new System.Windows.Forms.TextBox();
+            this.txtSoyadiniz = new System.Windows.Forms.TextBox();
+            this.txtAdiniz = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -82,14 +82,14 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(297, 29);
             this.dateTimePicker1.TabIndex = 53;
             // 
-            // comboBox1
+            // cmbAktiviteDuzeyi
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(419, 312);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(297, 30);
-            this.comboBox1.TabIndex = 52;
+            this.cmbAktiviteDuzeyi.BackColor = System.Drawing.SystemColors.Window;
+            this.cmbAktiviteDuzeyi.FormattingEnabled = true;
+            this.cmbAktiviteDuzeyi.Location = new System.Drawing.Point(419, 312);
+            this.cmbAktiviteDuzeyi.Name = "cmbAktiviteDuzeyi";
+            this.cmbAktiviteDuzeyi.Size = new System.Drawing.Size(297, 30);
+            this.cmbAktiviteDuzeyi.TabIndex = 52;
             // 
             // label12
             // 
@@ -162,23 +162,23 @@
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox8
+            // txtEmailAdresiniz
             // 
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Location = new System.Drawing.Point(419, 585);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(297, 29);
-            this.textBox8.TabIndex = 61;
+            this.txtEmailAdresiniz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmailAdresiniz.Location = new System.Drawing.Point(419, 585);
+            this.txtEmailAdresiniz.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmailAdresiniz.Name = "txtEmailAdresiniz";
+            this.txtEmailAdresiniz.Size = new System.Drawing.Size(297, 29);
+            this.txtEmailAdresiniz.TabIndex = 61;
             // 
-            // textBox7
+            // txtSifreniz
             // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Location = new System.Drawing.Point(420, 622);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(297, 29);
-            this.textBox7.TabIndex = 60;
+            this.txtSifreniz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSifreniz.Location = new System.Drawing.Point(420, 622);
+            this.txtSifreniz.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSifreniz.Name = "txtSifreniz";
+            this.txtSifreniz.Size = new System.Drawing.Size(297, 29);
+            this.txtSifreniz.TabIndex = 60;
             // 
             // label15
             // 
@@ -202,24 +202,24 @@
             this.label13.TabIndex = 58;
             this.label13.Text = "FatHunter Hesabım";
             // 
-            // textBox3
+            // txtHedefAgirlik
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(419, 483);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(297, 29);
-            this.textBox3.TabIndex = 57;
-            this.textBox3.Text = "kg";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtHedefAgirlik.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtHedefAgirlik.Location = new System.Drawing.Point(419, 483);
+            this.txtHedefAgirlik.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHedefAgirlik.Name = "txtHedefAgirlik";
+            this.txtHedefAgirlik.Size = new System.Drawing.Size(297, 29);
+            this.txtHedefAgirlik.TabIndex = 57;
+            this.txtHedefAgirlik.Text = "kg";
+            this.txtHedefAgirlik.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // comboBox2
+            // cmbDiyetHedefiniz
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(419, 446);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(297, 30);
-            this.comboBox2.TabIndex = 56;
+            this.cmbDiyetHedefiniz.FormattingEnabled = true;
+            this.cmbDiyetHedefiniz.Location = new System.Drawing.Point(419, 446);
+            this.cmbDiyetHedefiniz.Name = "cmbDiyetHedefiniz";
+            this.cmbDiyetHedefiniz.Size = new System.Drawing.Size(297, 30);
+            this.cmbDiyetHedefiniz.TabIndex = 56;
             // 
             // label3
             // 
@@ -288,45 +288,45 @@
             this.label6.TabIndex = 43;
             this.label6.Text = "Kişisel Bilgilerim";
             // 
-            // textBox5
+            // txtKilonuz
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Location = new System.Drawing.Point(419, 276);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(297, 29);
-            this.textBox5.TabIndex = 42;
-            this.textBox5.Text = "kg";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtKilonuz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKilonuz.Location = new System.Drawing.Point(419, 276);
+            this.txtKilonuz.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKilonuz.Name = "txtKilonuz";
+            this.txtKilonuz.Size = new System.Drawing.Size(297, 29);
+            this.txtKilonuz.TabIndex = 42;
+            this.txtKilonuz.Text = "kg";
+            this.txtKilonuz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox4
+            // txtBoyunuz
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(420, 239);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(297, 29);
-            this.textBox4.TabIndex = 41;
-            this.textBox4.Text = "cm";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBoyunuz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBoyunuz.Location = new System.Drawing.Point(420, 239);
+            this.txtBoyunuz.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoyunuz.Name = "txtBoyunuz";
+            this.txtBoyunuz.Size = new System.Drawing.Size(297, 29);
+            this.txtBoyunuz.TabIndex = 41;
+            this.txtBoyunuz.Text = "cm";
+            this.txtBoyunuz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox2
+            // txtSoyadiniz
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(420, 167);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(297, 29);
-            this.textBox2.TabIndex = 40;
+            this.txtSoyadiniz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSoyadiniz.Location = new System.Drawing.Point(420, 167);
+            this.txtSoyadiniz.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoyadiniz.Name = "txtSoyadiniz";
+            this.txtSoyadiniz.Size = new System.Drawing.Size(297, 29);
+            this.txtSoyadiniz.TabIndex = 40;
             // 
-            // textBox1
+            // txtAdiniz
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(420, 130);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(297, 29);
-            this.textBox1.TabIndex = 39;
+            this.txtAdiniz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAdiniz.Location = new System.Drawing.Point(420, 130);
+            this.txtAdiniz.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAdiniz.Name = "txtAdiniz";
+            this.txtAdiniz.Size = new System.Drawing.Size(297, 29);
+            this.txtAdiniz.TabIndex = 39;
             // 
             // label5
             // 
@@ -373,7 +373,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(-1, 20);
+            this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1002, 64);
             this.panel1.TabIndex = 54;
@@ -386,28 +386,28 @@
             this.ClientSize = new System.Drawing.Size(1000, 727);
             this.Controls.Add(this.btnIptal);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbAktiviteDuzeyi);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.rdbKadin);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtEmailAdresiniz);
+            this.Controls.Add(this.txtSifreniz);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.txtHedefAgirlik);
+            this.Controls.Add(this.cmbDiyetHedefiniz);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnKaydol);
             this.Controls.Add(this.rdbErkek);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtKilonuz);
+            this.Controls.Add(this.txtBoyunuz);
+            this.Controls.Add(this.txtSoyadiniz);
+            this.Controls.Add(this.txtAdiniz);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -430,7 +430,7 @@
 
         private System.Windows.Forms.Button btnIptal;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbAktiviteDuzeyi;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -438,22 +438,22 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RadioButton rdbKadin;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtEmailAdresiniz;
+        private System.Windows.Forms.TextBox txtSifreniz;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txtHedefAgirlik;
+        private System.Windows.Forms.ComboBox cmbDiyetHedefiniz;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnKaydol;
         private System.Windows.Forms.RadioButton rdbErkek;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtKilonuz;
+        private System.Windows.Forms.TextBox txtBoyunuz;
+        private System.Windows.Forms.TextBox txtSoyadiniz;
+        private System.Windows.Forms.TextBox txtAdiniz;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;

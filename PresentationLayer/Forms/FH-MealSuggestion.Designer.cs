@@ -32,7 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbDiyetPlanlari = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -78,14 +78,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(565, 277);
             this.dataGridView1.TabIndex = 6;
             // 
-            // comboBox1
+            // cmbDiyetPlanlari
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(84, 139);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(508, 30);
-            this.comboBox1.TabIndex = 5;
+            this.cmbDiyetPlanlari.FormattingEnabled = true;
+            this.cmbDiyetPlanlari.Location = new System.Drawing.Point(84, 139);
+            this.cmbDiyetPlanlari.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbDiyetPlanlari.Name = "cmbDiyetPlanlari";
+            this.cmbDiyetPlanlari.Size = new System.Drawing.Size(508, 30);
+            this.cmbDiyetPlanlari.TabIndex = 5;
             // 
             // FH_MealSuggestion
             // 
@@ -97,7 +97,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbDiyetPlanlari);
             this.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FH_MealSuggestion";
@@ -117,6 +117,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbDiyetPlanlari;
     }
 }
