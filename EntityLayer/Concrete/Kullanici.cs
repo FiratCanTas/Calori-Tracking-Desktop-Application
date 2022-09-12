@@ -24,8 +24,6 @@ namespace EntityLayer.Concrete
         public string DiyetHedefi { get; set; }
         public int HedefAgırlıgı { get; set; }
 
-
-
         public DateTime CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }

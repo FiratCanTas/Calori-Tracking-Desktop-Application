@@ -16,16 +16,13 @@ namespace DataAccessLayer.Context
             Database.SetInitializer(new CreateDatabaseIfNotExists<FatHunterDbContext>());
         }
 
-
-
         public DbSet<Kullanici> Kullanıcılar { get; set; }
         public DbSet<Besin> Besinler { get; set; }
         public DbSet<TuketilenBesin> TuketilenBesinler { get; set; }
         public DbSet<MakroDeger> MakroDegerler { get; set; }
+        public DbSet<IletisimFormlari> IletisimFormlari { get; set; }
 
-
-
-        //Mapping işlemlerini buradan yapabilirim
+        //Mapping işlemlerini bununla yapabilirim
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

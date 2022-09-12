@@ -158,6 +158,7 @@
             this.Name = "FH_SignIn";
             this.Text = "FH_SignIn";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FH_SignIn_FormClosed);
+            this.Load += new System.EventHandler(this.FH_SignIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);

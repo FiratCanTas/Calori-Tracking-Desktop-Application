@@ -21,13 +21,15 @@ namespace PresentationLayer.Forms
         public static UserMainPage userMainPage;
         public static FH_ContactUs fH_ContactUs;
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void FH_SignIn_Load(object sender, EventArgs e)
         {
+            fH_ChangePassword = new FH_ChangePassword();
+            fH_ContactUs = new FH_ContactUs();
+            userMainPage = new UserMainPage();
         }
 
         private void btnSifremiUnuttum_Click(object sender, EventArgs e)
         {
-            fH_ChangePassword = new FH_ChangePassword();
             fH_ChangePassword.Show();
             this.Hide();
         }
@@ -39,14 +41,12 @@ namespace PresentationLayer.Forms
 
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
-            userMainPage = new UserMainPage();
             userMainPage.Show();
             this.Hide();
         }
 
         private void btnContactUs_Click(object sender, EventArgs e)
         {
-            fH_ContactUs = new FH_ContactUs();
             fH_ContactUs.Show();
             this.Hide();
         }

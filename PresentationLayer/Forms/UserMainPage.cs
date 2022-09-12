@@ -30,6 +30,7 @@ namespace PresentationLayer.Forms
         {
             fH_Breakfast = new FH_Breakfast();
             fH_Breakfast.Show();
+            this.Hide();
         }
 
         private void btnLunch_Click(object sender, EventArgs e)
