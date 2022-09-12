@@ -34,7 +34,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAra = new System.Windows.Forms.Button();
             this.txtAraBreakfast = new System.Windows.Forms.TextBox();
-            this.btnEkle = new System.Windows.Forms.Button();
+            this.btnKahvaltiEkle = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
@@ -60,7 +60,7 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(884, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 28);
+            this.label1.Size = new System.Drawing.Size(197, 29);
             this.label1.TabIndex = 11;
             this.label1.Text = "Kahvaltı Seçimi";
             // 
@@ -102,16 +102,16 @@
             this.txtAraBreakfast.Size = new System.Drawing.Size(204, 29);
             this.txtAraBreakfast.TabIndex = 12;
             // 
-            // btnEkle
+            // btnKahvaltiEkle
             // 
-            this.btnEkle.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEkle.Image = global::PresentationLayer.Properties.Resources.icons8_sent;
-            this.btnEkle.Location = new System.Drawing.Point(774, 348);
-            this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(115, 37);
-            this.btnEkle.TabIndex = 11;
-            this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnKahvaltiEkle.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnKahvaltiEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKahvaltiEkle.Image = global::PresentationLayer.Properties.Resources.icons8_sent;
+            this.btnKahvaltiEkle.Location = new System.Drawing.Point(774, 348);
+            this.btnKahvaltiEkle.Name = "btnKahvaltiEkle";
+            this.btnKahvaltiEkle.Size = new System.Drawing.Size(115, 37);
+            this.btnKahvaltiEkle.TabIndex = 11;
+            this.btnKahvaltiEkle.UseVisualStyleBackColor = false;
             // 
             // dataGridView2
             // 
@@ -144,7 +144,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAra);
             this.Controls.Add(this.txtAraBreakfast);
-            this.Controls.Add(this.btnEkle);
+            this.Controls.Add(this.btnKahvaltiEkle);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -171,7 +171,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAra;
         private System.Windows.Forms.TextBox txtAraBreakfast;
-        private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.Button btnKahvaltiEkle;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
     }

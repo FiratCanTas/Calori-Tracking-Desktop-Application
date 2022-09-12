@@ -31,5 +31,6 @@ namespace EntityLayer.Concrete
         public string ModifiedBy { get; set; }
         public string DeletedBy { get; set; }
         public Status status { get; set; }
+        public List<IletisimFormlari> IletisimFormlari { get; set; }
     }
 }

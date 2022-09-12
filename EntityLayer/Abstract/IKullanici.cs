@@ -24,6 +24,9 @@ namespace EntityLayer.Abstract
         string AktiviteDüzeyi { get; set; }
         string DiyetHedefi { get; set; }
         int HedefAgırlıgı { get; set; }
+
+        //İletisim form tablo listesi
+        List<IletisimFormlari> IletisimFormlari { get; set; }
     }
 }
 

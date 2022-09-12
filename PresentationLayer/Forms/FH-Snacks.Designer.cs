@@ -36,7 +36,7 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAra = new System.Windows.Forms.Button();
-            this.btnEkle = new System.Windows.Forms.Button();
+            this.btnAraOgunEkle = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,7 +60,7 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(905, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 28);
+            this.label1.Size = new System.Drawing.Size(209, 29);
             this.label1.TabIndex = 11;
             this.label1.Text = "Ara Öğün Seçimi";
             // 
@@ -124,16 +124,16 @@
             this.btnAra.TabIndex = 31;
             this.btnAra.UseVisualStyleBackColor = false;
             // 
-            // btnEkle
+            // btnAraOgunEkle
             // 
-            this.btnEkle.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEkle.Image = global::PresentationLayer.Properties.Resources.icons8_sent;
-            this.btnEkle.Location = new System.Drawing.Point(774, 350);
-            this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(115, 37);
-            this.btnEkle.TabIndex = 29;
-            this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnAraOgunEkle.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAraOgunEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAraOgunEkle.Image = global::PresentationLayer.Properties.Resources.icons8_sent;
+            this.btnAraOgunEkle.Location = new System.Drawing.Point(774, 350);
+            this.btnAraOgunEkle.Name = "btnAraOgunEkle";
+            this.btnAraOgunEkle.Size = new System.Drawing.Size(115, 37);
+            this.btnAraOgunEkle.TabIndex = 29;
+            this.btnAraOgunEkle.UseVisualStyleBackColor = false;
             // 
             // FH_Snacks
             // 
@@ -144,7 +144,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAra);
             this.Controls.Add(this.txtAraSnacks);
-            this.Controls.Add(this.btnEkle);
+            this.Controls.Add(this.btnAraOgunEkle);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -170,7 +170,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAra;
         private System.Windows.Forms.TextBox txtAraSnacks;
-        private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.Button btnAraOgunEkle;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
