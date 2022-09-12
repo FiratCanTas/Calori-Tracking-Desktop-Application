@@ -33,10 +33,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMesaj = new System.Windows.Forms.TextBox();
+            this.txtKonu = new System.Windows.Forms.TextBox();
+            this.txtEmailAdresiniz = new System.Windows.Forms.TextBox();
+            this.txtAdiniz = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -98,38 +98,38 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox4
+            // txtMesaj
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(333, 277);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(328, 143);
-            this.textBox4.TabIndex = 18;
+            this.txtMesaj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMesaj.Location = new System.Drawing.Point(333, 277);
+            this.txtMesaj.Multiline = true;
+            this.txtMesaj.Name = "txtMesaj";
+            this.txtMesaj.Size = new System.Drawing.Size(328, 143);
+            this.txtMesaj.TabIndex = 18;
             // 
-            // textBox3
+            // txtKonu
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(333, 242);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(328, 29);
-            this.textBox3.TabIndex = 17;
+            this.txtKonu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKonu.Location = new System.Drawing.Point(333, 242);
+            this.txtKonu.Name = "txtKonu";
+            this.txtKonu.Size = new System.Drawing.Size(328, 29);
+            this.txtKonu.TabIndex = 17;
             // 
-            // textBox2
+            // txtEmailAdresiniz
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(333, 207);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(328, 29);
-            this.textBox2.TabIndex = 16;
+            this.txtEmailAdresiniz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmailAdresiniz.Location = new System.Drawing.Point(333, 207);
+            this.txtEmailAdresiniz.Name = "txtEmailAdresiniz";
+            this.txtEmailAdresiniz.Size = new System.Drawing.Size(328, 29);
+            this.txtEmailAdresiniz.TabIndex = 16;
             // 
-            // textBox1
+            // txtAdiniz
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(333, 172);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(328, 29);
-            this.textBox1.TabIndex = 15;
+            this.txtAdiniz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAdiniz.Location = new System.Drawing.Point(333, 172);
+            this.txtAdiniz.Name = "txtAdiniz";
+            this.txtAdiniz.Size = new System.Drawing.Size(328, 29);
+            this.txtAdiniz.TabIndex = 15;
             // 
             // label5
             // 
@@ -175,10 +175,10 @@
             this.ClientSize = new System.Drawing.Size(873, 493);
             this.Controls.Add(this.btnIletiGönder);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMesaj);
+            this.Controls.Add(this.txtKonu);
+            this.Controls.Add(this.txtEmailAdresiniz);
+            this.Controls.Add(this.txtAdiniz);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -203,10 +203,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMesaj;
+        private System.Windows.Forms.TextBox txtKonu;
+        private System.Windows.Forms.TextBox txtEmailAdresiniz;
+        private System.Windows.Forms.TextBox txtAdiniz;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

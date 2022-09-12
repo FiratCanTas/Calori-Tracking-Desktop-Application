@@ -31,12 +31,12 @@
             this.btnRozetler = new System.Windows.Forms.Button();
             this.btnRaporlar = new System.Windows.Forms.Button();
             this.btnÖneriler = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvGenelDegerler = new System.Windows.Forms.DataGridView();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvOgleYemegi = new System.Windows.Forms.DataGridView();
+            this.dgvAksamYemegi = new System.Windows.Forms.DataGridView();
+            this.dgvAraOgun = new System.Windows.Forms.DataGridView();
+            this.dgvKahvalti = new System.Windows.Forms.DataGridView();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -49,12 +49,12 @@
             this.btnHesabım = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGenelDegerler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOgleYemegi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAksamYemegi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAraOgun)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKahvalti)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -92,17 +92,17 @@
             this.btnÖneriler.UseVisualStyleBackColor = true;
             this.btnÖneriler.Click += new System.EventHandler(this.btnÖneriler_Click);
             // 
-            // dataGridView2
+            // dgvGenelDegerler
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView2.Location = new System.Drawing.Point(205, 171);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(439, 69);
-            this.dataGridView2.TabIndex = 45;
+            this.dgvGenelDegerler.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvGenelDegerler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGenelDegerler.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvGenelDegerler.Location = new System.Drawing.Point(205, 171);
+            this.dgvGenelDegerler.Name = "dgvGenelDegerler";
+            this.dgvGenelDegerler.RowHeadersWidth = 51;
+            this.dgvGenelDegerler.RowTemplate.Height = 24;
+            this.dgvGenelDegerler.Size = new System.Drawing.Size(439, 69);
+            this.dgvGenelDegerler.TabIndex = 45;
             // 
             // pictureBox5
             // 
@@ -114,49 +114,49 @@
             this.pictureBox5.TabIndex = 44;
             this.pictureBox5.TabStop = false;
             // 
-            // dataGridView5
+            // dgvOgleYemegi
             // 
-            this.dataGridView5.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(205, 398);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.RowHeadersWidth = 51;
-            this.dataGridView5.RowTemplate.Height = 24;
-            this.dataGridView5.Size = new System.Drawing.Size(439, 50);
-            this.dataGridView5.TabIndex = 43;
+            this.dgvOgleYemegi.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvOgleYemegi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOgleYemegi.Location = new System.Drawing.Point(205, 398);
+            this.dgvOgleYemegi.Name = "dgvOgleYemegi";
+            this.dgvOgleYemegi.RowHeadersWidth = 51;
+            this.dgvOgleYemegi.RowTemplate.Height = 24;
+            this.dgvOgleYemegi.Size = new System.Drawing.Size(439, 50);
+            this.dgvOgleYemegi.TabIndex = 43;
             // 
-            // dataGridView4
+            // dgvAksamYemegi
             // 
-            this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(205, 502);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.Size = new System.Drawing.Size(439, 50);
-            this.dataGridView4.TabIndex = 42;
+            this.dgvAksamYemegi.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvAksamYemegi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAksamYemegi.Location = new System.Drawing.Point(205, 502);
+            this.dgvAksamYemegi.Name = "dgvAksamYemegi";
+            this.dgvAksamYemegi.RowHeadersWidth = 51;
+            this.dgvAksamYemegi.RowTemplate.Height = 24;
+            this.dgvAksamYemegi.Size = new System.Drawing.Size(439, 50);
+            this.dgvAksamYemegi.TabIndex = 42;
             // 
-            // dataGridView3
+            // dgvAraOgun
             // 
-            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(205, 606);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(439, 50);
-            this.dataGridView3.TabIndex = 41;
+            this.dgvAraOgun.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvAraOgun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAraOgun.Location = new System.Drawing.Point(205, 606);
+            this.dgvAraOgun.Name = "dgvAraOgun";
+            this.dgvAraOgun.RowHeadersWidth = 51;
+            this.dgvAraOgun.RowTemplate.Height = 24;
+            this.dgvAraOgun.Size = new System.Drawing.Size(439, 50);
+            this.dgvAraOgun.TabIndex = 41;
             // 
-            // dataGridView1
+            // dgvKahvalti
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(205, 294);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(439, 50);
-            this.dataGridView1.TabIndex = 40;
+            this.dgvKahvalti.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvKahvalti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKahvalti.Location = new System.Drawing.Point(205, 294);
+            this.dgvKahvalti.Name = "dgvKahvalti";
+            this.dgvKahvalti.RowHeadersWidth = 51;
+            this.dgvKahvalti.RowTemplate.Height = 24;
+            this.dgvKahvalti.Size = new System.Drawing.Size(439, 50);
+            this.dgvKahvalti.TabIndex = 40;
             // 
             // pictureBox4
             // 
@@ -301,12 +301,12 @@
             this.Controls.Add(this.btnRozetler);
             this.Controls.Add(this.btnRaporlar);
             this.Controls.Add(this.btnÖneriler);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dgvGenelDegerler);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.dataGridView5);
-            this.Controls.Add(this.dataGridView4);
-            this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvOgleYemegi);
+            this.Controls.Add(this.dgvAksamYemegi);
+            this.Controls.Add(this.dgvAraOgun);
+            this.Controls.Add(this.dgvKahvalti);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -322,12 +322,12 @@
             this.Name = "UserMainPage";
             this.Text = "UserMainPage";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserMainPage_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGenelDegerler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOgleYemegi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAksamYemegi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAraOgun)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKahvalti)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -343,12 +343,12 @@
         private System.Windows.Forms.Button btnRozetler;
         private System.Windows.Forms.Button btnRaporlar;
         private System.Windows.Forms.Button btnÖneriler;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvGenelDegerler;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvOgleYemegi;
+        private System.Windows.Forms.DataGridView dgvAksamYemegi;
+        private System.Windows.Forms.DataGridView dgvAraOgun;
+        private System.Windows.Forms.DataGridView dgvKahvalti;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;

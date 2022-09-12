@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnIptal = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDogumTarihi = new System.Windows.Forms.DateTimePicker();
             this.cmbAktiviteDuzeyi = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -75,12 +75,12 @@
             this.btnIptal.UseVisualStyleBackColor = true;
             this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
             // 
-            // dateTimePicker1
+            // dtpDogumTarihi
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(419, 203);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(297, 29);
-            this.dateTimePicker1.TabIndex = 53;
+            this.dtpDogumTarihi.Location = new System.Drawing.Point(419, 203);
+            this.dtpDogumTarihi.Name = "dtpDogumTarihi";
+            this.dtpDogumTarihi.Size = new System.Drawing.Size(297, 29);
+            this.dtpDogumTarihi.TabIndex = 53;
             // 
             // cmbAktiviteDuzeyi
             // 
@@ -385,7 +385,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1000, 727);
             this.Controls.Add(this.btnIptal);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpDogumTarihi);
             this.Controls.Add(this.cmbAktiviteDuzeyi);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -429,7 +429,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnIptal;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDogumTarihi;
         private System.Windows.Forms.ComboBox cmbAktiviteDuzeyi;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;

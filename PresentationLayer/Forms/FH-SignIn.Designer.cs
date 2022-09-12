@@ -34,8 +34,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSifreniz = new System.Windows.Forms.TextBox();
+            this.txtEmailAdresiniz = new System.Windows.Forms.TextBox();
             this.btnGirisYap = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -106,23 +106,23 @@
             this.label1.TabIndex = 32;
             this.label1.Text = "Mail Adresi :";
             // 
-            // textBox2
+            // txtSifreniz
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(373, 286);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(274, 29);
-            this.textBox2.TabIndex = 31;
+            this.txtSifreniz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSifreniz.Location = new System.Drawing.Point(373, 286);
+            this.txtSifreniz.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSifreniz.Name = "txtSifreniz";
+            this.txtSifreniz.Size = new System.Drawing.Size(274, 29);
+            this.txtSifreniz.TabIndex = 31;
             // 
-            // textBox1
+            // txtEmailAdresiniz
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(373, 235);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(274, 29);
-            this.textBox1.TabIndex = 30;
+            this.txtEmailAdresiniz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmailAdresiniz.Location = new System.Drawing.Point(373, 235);
+            this.txtEmailAdresiniz.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmailAdresiniz.Name = "txtEmailAdresiniz";
+            this.txtEmailAdresiniz.Size = new System.Drawing.Size(274, 29);
+            this.txtEmailAdresiniz.TabIndex = 30;
             // 
             // btnGirisYap
             // 
@@ -150,8 +150,8 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSifreniz);
+            this.Controls.Add(this.txtEmailAdresiniz);
             this.Controls.Add(this.btnGirisYap);
             this.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -174,8 +174,8 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSifreniz;
+        private System.Windows.Forms.TextBox txtEmailAdresiniz;
         private System.Windows.Forms.Button btnGirisYap;
     }
 }

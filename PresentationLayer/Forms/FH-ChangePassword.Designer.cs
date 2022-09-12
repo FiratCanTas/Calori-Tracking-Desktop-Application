@@ -34,15 +34,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSifreGüncelle = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtYeniSifre = new System.Windows.Forms.TextBox();
+            this.dtpDogumTarihi = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtSoyadiniz = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAdiniz = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -110,22 +110,22 @@
             this.label5.TabIndex = 34;
             this.label5.Text = "Yeni Şifre : ";
             // 
-            // textBox4
+            // txtYeniSifre
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(367, 290);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(363, 29);
-            this.textBox4.TabIndex = 33;
+            this.txtYeniSifre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtYeniSifre.Location = new System.Drawing.Point(367, 290);
+            this.txtYeniSifre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtYeniSifre.Name = "txtYeniSifre";
+            this.txtYeniSifre.Size = new System.Drawing.Size(363, 29);
+            this.txtYeniSifre.TabIndex = 33;
             // 
-            // dateTimePicker1
+            // dtpDogumTarihi
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(367, 252);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(363, 29);
-            this.dateTimePicker1.TabIndex = 32;
+            this.dtpDogumTarihi.Location = new System.Drawing.Point(367, 252);
+            this.dtpDogumTarihi.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpDogumTarihi.Name = "dtpDogumTarihi";
+            this.dtpDogumTarihi.Size = new System.Drawing.Size(363, 29);
+            this.dtpDogumTarihi.TabIndex = 32;
             // 
             // label4
             // 
@@ -147,14 +147,14 @@
             this.label3.TabIndex = 30;
             this.label3.Text = "Soyadınız : ";
             // 
-            // textBox3
+            // txtSoyadiniz
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(367, 213);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(363, 29);
-            this.textBox3.TabIndex = 29;
+            this.txtSoyadiniz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSoyadiniz.Location = new System.Drawing.Point(367, 213);
+            this.txtSoyadiniz.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoyadiniz.Name = "txtSoyadiniz";
+            this.txtSoyadiniz.Size = new System.Drawing.Size(363, 29);
+            this.txtSoyadiniz.TabIndex = 29;
             // 
             // label2
             // 
@@ -166,14 +166,14 @@
             this.label2.TabIndex = 28;
             this.label2.Text = "Adınız : ";
             // 
-            // textBox2
+            // txtAdiniz
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(367, 175);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(363, 29);
-            this.textBox2.TabIndex = 27;
+            this.txtAdiniz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAdiniz.Location = new System.Drawing.Point(367, 175);
+            this.txtAdiniz.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAdiniz.Name = "txtAdiniz";
+            this.txtAdiniz.Size = new System.Drawing.Size(363, 29);
+            this.txtAdiniz.TabIndex = 27;
             // 
             // label1
             // 
@@ -185,14 +185,14 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "E-Posta :";
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(367, 136);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(363, 29);
-            this.textBox1.TabIndex = 25;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Location = new System.Drawing.Point(367, 136);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(363, 29);
+            this.txtEmail.TabIndex = 25;
             // 
             // FH_ChangePassword
             // 
@@ -203,15 +203,15 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSifreGüncelle);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txtYeniSifre);
+            this.Controls.Add(this.dtpDogumTarihi);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtSoyadiniz);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtAdiniz);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEmail);
             this.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FH_ChangePassword";
@@ -232,15 +232,15 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnSifreGüncelle;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txtYeniSifre;
+        private System.Windows.Forms.DateTimePicker dtpDogumTarihi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSoyadiniz;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAdiniz;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
