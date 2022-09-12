@@ -17,9 +17,9 @@ namespace DataAccessLayer.Mapping
 
             this.Property(x => x.TuketilenBesinID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
 
-            this.HasMany(x => x.Besinler)
-               .WithRequired(x => x.TuketilenBesin)
-               .HasForeignKey(x => x.TuketilenBesinID);
+            this.HasMany(b => b.Besinler)
+               .WithRequired(tb => tb.TuketilenBesin)
+               .HasForeignKey(tb => tb.TuketilenBesinID);
 
             
         }

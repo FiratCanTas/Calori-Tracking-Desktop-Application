@@ -27,16 +27,12 @@ namespace DataAccessLayer.Mapping
 
 
 
-            this.HasOptional(x => x.MakroDeger)
-                .WithRequired(x => x.Besin).WillCascadeOnDelete(false);
+            this.HasOptional(md => md.MakroDeger)
+                .WithRequired(b => b.Besin).WillCascadeOnDelete(false);
 
-            this.HasRequired(x => x.TuketilenBesin)
-                .WithMany(x => x.Besinler)
-                .HasForeignKey(x => x.TuketilenBesinID);
-
-
-
-
+            this.HasRequired(tb => tb.TuketilenBesin)
+                .WithMany(b => b.Besinler)
+                .HasForeignKey(b => b.TuketilenBesinID);
 
         }
     }

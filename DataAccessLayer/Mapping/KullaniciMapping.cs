@@ -36,17 +36,17 @@ namespace DataAccessLayer.Mapping
             this.Property(x => x.status).HasColumnType("int");
 
 
-            this.HasMany(x => x.IletisimFormlari)
-                .WithRequired(x => x.Kullanici)
-                .HasForeignKey(x => x.KullaniciID);
+            this.HasMany(ıf => ıf.IletisimFormlari)
+                .WithRequired(k => k.Kullanici)
+                .HasForeignKey(k => k.KullaniciID);
 
-            this.HasMany(x => x.TüketilenBesinler)
+            this.HasMany(tb => tb.TüketilenBesinler)
                 .WithMany(p => p.Kullanicilar)
-                .Map(x =>
+                .Map(tb =>
                 {
-                    x.MapLeftKey("TüketilenBesinlerId"); //Ara tabloda oluşacak olan ID isimleri
-                    x.MapRightKey("KullanicilarId");
-                    x.ToTable("KullaniciTuketilenBesinler");
+                    tb.MapLeftKey("TüketilenBesinlerId"); //Ara tabloda oluşacak olan ID isimleri
+                    tb.MapRightKey("KullanicilarId");
+                    tb.ToTable("KullaniciTuketilenBesinler");
 
                 });
 
