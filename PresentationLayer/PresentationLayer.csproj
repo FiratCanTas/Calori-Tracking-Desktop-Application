@@ -45,6 +45,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,14 +57,143 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\FH-Badge.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\FH-Badge.Designer.cs">
+      <DependentUpon>FH-Badge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FH-Breakfast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FH-Breakfast.Designer.cs">
+      <DependentUpon>FH-Breakfast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FH-ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FH-ChangePassword.Designer.cs">
+      <DependentUpon>FH-ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FH-ClarificationText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FH-ClarificationText.Designer.cs">
+      <DependentUpon>FH-ClarificationText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FH-ComparingPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FH-ComparingPage.Designer.cs">
+      <DependentUpon>FH-ComparingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FH-ContactUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FH-ContactUs.Designer.cs">
+      <DependentUpon>FH-ContactUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FH-Dinner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FH-Dinner.Designer.cs">
+      <DependentUpon>FH-Dinner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FH-Lunch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FH-Lunch.Designer.cs">
+      <DependentUpon>FH-Lunch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FH-MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FH-MainPage.Designer.cs">
+      <DependentUpon>FH-MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FH-MealSuggestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FH-MealSuggestion.Designer.cs">
+      <DependentUpon>FH-MealSuggestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FH-MyAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FH-MyAccount.Designer.cs">
+      <DependentUpon>FH-MyAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FH-SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FH-SignIn.Designer.cs">
+      <DependentUpon>FH-SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FH-SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FH-SignUp.Designer.cs">
+      <DependentUpon>FH-SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FH-Snacks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FH-Snacks.Designer.cs">
+      <DependentUpon>FH-Snacks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserMainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserMainPage.Designer.cs">
+      <DependentUpon>UserMainPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FH-Badge.resx">
+      <DependentUpon>FH-Badge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FH-Breakfast.resx">
+      <DependentUpon>FH-Breakfast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FH-ChangePassword.resx">
+      <DependentUpon>FH-ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FH-ClarificationText.resx">
+      <DependentUpon>FH-ClarificationText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FH-ComparingPage.resx">
+      <DependentUpon>FH-ComparingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FH-ContactUs.resx">
+      <DependentUpon>FH-ContactUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FH-Dinner.resx">
+      <DependentUpon>FH-Dinner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FH-Lunch.resx">
+      <DependentUpon>FH-Lunch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FH-MainPage.resx">
+      <DependentUpon>FH-MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FH-MealSuggestion.resx">
+      <DependentUpon>FH-MealSuggestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FH-MyAccount.resx">
+      <DependentUpon>FH-MyAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FH-SignIn.resx">
+      <DependentUpon>FH-SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FH-SignUp.resx">
+      <DependentUpon>FH-SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FH-Snacks.resx">
+      <DependentUpon>FH-Snacks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserMainPage.resx">
+      <DependentUpon>UserMainPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -72,6 +202,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -86,6 +217,78 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_starburst_shape.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_sent.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_first_place_ribbon_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_starburst_shape1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_military_medal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_back_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aydinlatma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_beer_glass.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Beer_Glass_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Cloudy_Night.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_minus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Plus.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_sun_3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_sunrise.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_sunset.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_water.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Water_Glass.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Wine_Bar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Wine_Bar_1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MicrosoftTeams-image %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MicrosoftTeams-image %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MicrosoftTeams-image 3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
