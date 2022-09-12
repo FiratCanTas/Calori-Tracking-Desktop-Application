@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Context\FatHunterDbContext.cs" />
     <Compile Include="Mapping\BesinMapping.cs" />
+    <Compile Include="Mapping\IletisimFormMapping.cs" />
     <Compile Include="Mapping\KullaniciMapping.cs" />
     <Compile Include="Mapping\MakroDegerMapping.cs" />
     <Compile Include="Mapping\TuketilenBesinMapping.cs" />

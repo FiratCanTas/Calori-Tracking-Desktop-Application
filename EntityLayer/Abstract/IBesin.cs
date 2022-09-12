@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityLayer.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,14 @@ namespace EntityLayer.Abstract
         int BesinGramajı { get; set; }
         int BesinAdedi { get; set; }
         int BesinKalorisi { get; set; }
+
+        //Makro Tablo baglantı
+        MakroDeger MakroDeger { get; set; }
+        int MakroDegerID { get; set; }
+
+        //Tuketilen Besin tablo baglanti
+        TuketilenBesin TuketilenBesin { get; set; }
+        int TuketilenBesinID { get; set; }
+
     }
 }

@@ -10,15 +10,16 @@ namespace EntityLayer.Abstract
 {
     public interface ITuketilenBesin
     {
-        Ogunler BesininTüketildiğiÖğün { get; set; }
-        int BesinMakroID { get; set; }
+        Ogunler BesininTuketildigiOgun { get; set; }
+        int TuketilenBesinID { get; set; }
         DateTime TüketilenTarih { get; set; }
         int İçilenSuMiktarı { get; set; }
 
-
-
-        //Bir kullanıcı tarafından tüketilir
-        Kullanici Kullanıcı { get; set; }
-        int KullanıcıID { get; set; }
+        //Kullanıcı tablo baglantı
+        
+        List<Kullanici> Kullanicilar { get; set; }
+        //Besin tablo baglantı
+        int BesinID { get; set; }
+         List<Besin> Besinler { get; set; }
     }
 }
