@@ -21,19 +21,9 @@ namespace DataAccessLayer.Mapping
 
             this.Property(x => x.Soyadı).HasMaxLength(20).HasColumnType("nvarchar").IsUnicode(true);
 
-            this.Property(x => x.Boy).HasColumnType("float");
-
-            this.Property(x => x.Yas).HasColumnType("int");
-
-            this.Property(x => x.MevcutAğırlık).HasColumnType("float");
-
             this.Property(x => x.KullanıcıMail).HasMaxLength(20).HasColumnType("nvarchar").IsUnicode(true);
 
             this.Property(x=> x.KullanıcıŞifre).HasMaxLength(10).HasColumnType("nvarchar").IsUnicode(true);
-
-            this.Property(x=> x.HedefAgırlıgı).HasColumnType("float");
-
-            this.Property(x => x.status).HasColumnType("int");
 
 
             this.HasMany(ıf => ıf.IletisimFormlari)
@@ -47,7 +37,6 @@ namespace DataAccessLayer.Mapping
                     tb.MapLeftKey("TüketilenBesinlerId"); //Ara tabloda oluşacak olan ID isimleri
                     tb.MapRightKey("KullanicilarId");
                     tb.ToTable("KullaniciTuketilenBesinler");
-
                 });
 
 

@@ -13,27 +13,19 @@ namespace DataAccessLayer.Mapping
     {
         public BesinMapping()
         {
-            this.HasKey(x => x.BesinID);
+            this.HasKey(b => b.BesinID);
 
-            this.Property(x => x.BesinID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
+            this.Property(b => b.BesinID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
 
-            this.Property(x => x.BesinAdı).HasMaxLength(20).HasColumnType("nvarchar").IsUnicode(true);
-
-            this.Property(x => x.BesinAdedi).HasColumnType("int");
-
-            this.Property(x => x.BesinGramajı).HasColumnType("double");
-
-            this.Property(x => x.BesinKalorisi).HasColumnType("double");
+            this.Property(b => b.BesinAdı).IsUnicode(true);
 
 
-
-            this.HasOptional(md => md.MakroDeger)
+            this.HasOptional(b => b.MakroDeger)
                 .WithRequired(b => b.Besin).WillCascadeOnDelete(false);
 
-            this.HasRequired(tb => tb.TuketilenBesin)
-                .WithMany(b => b.Besinler)
+            this.HasRequired(b => b.TuketilenBesin)
+                .WithMany(tb => tb.Besinler)
                 .HasForeignKey(b => b.TuketilenBesinID);
-
         }
     }
 }

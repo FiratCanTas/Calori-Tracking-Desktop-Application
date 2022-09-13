@@ -13,20 +13,9 @@ namespace DataAccessLayer.Mapping
     {
         public MakroDegerMapping()
         {
-            this.HasKey(x => x.BesinMakroID);
+            this.HasKey(b => b.BesinMakroID);
 
-            this.Property(x => x.BesinMakroID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
-
-           
-
-            this.Property(x => x.YagMiktari).HasColumnType("int");
-
-            this.Property(x => x.ProteinMiktari).HasColumnType("int");
-
-            this.Property(x => x.KarbonhidratMiktari).HasColumnType("double");
-
-            
+            this.Property(b => b.BesinMakroID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
         }
-   
     }
 }
