@@ -38,11 +38,6 @@ namespace DataAccessLayer.Mapping
                     tb.MapRightKey("KullanicilarId");
                     tb.ToTable("KullaniciTuketilenBesinler");
                 });
-
-
-
-
-
         }
     }
 }

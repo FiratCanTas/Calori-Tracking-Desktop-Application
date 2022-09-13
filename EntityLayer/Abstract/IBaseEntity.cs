@@ -13,14 +13,10 @@ namespace EntityLayer.Abstract
         DateTime? ModifiedDate { get; set; }
         DateTime? DeletedDate { get; set; }
 
-
-
         string CreatedBy { get; set; }
         string ModifiedBy { get; set; }
         string DeletedBy { get; set; }
 
-
-
-        Status status { get; set; }
+        Status Status { get; set; }
     }
 }
