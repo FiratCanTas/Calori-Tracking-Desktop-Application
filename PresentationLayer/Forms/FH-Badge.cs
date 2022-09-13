@@ -18,9 +18,15 @@ namespace PresentationLayer
             InitializeComponent();
         }
 
+        //BURAYA ŞAHİN UZUN GÖNDERME YAPTI
         private void FH_Badge_FormClosed(object sender, FormClosedEventArgs e)
         {
             FH_SignIn.userMainPage.Show();
+        }
+
+        private void FH_Badge_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
