@@ -17,9 +17,15 @@ namespace DataAccessLayer.Mapping
 
             this.Property(x => x.FormID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
 
+<<<<<<< HEAD
             this.HasRequired(ıf => ıf.Kullanici)
                 .WithMany(k => k.IletisimFormlari)
                 .HasForeignKey(ıf => ıf.KullanıcıID);
+=======
+            this.HasRequired(x => x.Kullanici)
+                .WithMany(x => x.IletisimFormlari)
+                .HasForeignKey(x => x.KullaniciID);
+>>>>>>> bb0ecfda3121002f67b3060dd2deb1eec8211fb4
         }
 
     }
