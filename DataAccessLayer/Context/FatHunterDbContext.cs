@@ -10,7 +10,6 @@ namespace DataAccessLayer.Context
 {
     public class FatHunterDbContext : DbContext
     {
-
         public FatHunterDbContext() : base("Server = E-KAKAR; Database = FatHunterDb; Uid=sa; Pwd=1234")
         {
             Database.SetInitializer(new CreateDatabaseIfNotExists<FatHunterDbContext>());

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Kullanici :IKullanici,IBaseEntity
+    public class Kullanici : IKullanici, IBaseEntity
     {
         public int KullanıcıID { get; set; }
         public string Adı { get; set; }
@@ -30,7 +30,7 @@ namespace EntityLayer.Concrete
         public string CreatedBy { get; set; }
         public string ModifiedBy { get; set; }
         public string DeletedBy { get; set; }
-        public Status status { get; set; }
+        public Status Status { get; set; }
         public List<IletisimFormlari> IletisimFormlari { get; set; }
     }
 }

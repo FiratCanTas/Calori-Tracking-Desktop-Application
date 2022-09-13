@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Mapping
 {
-   public class IletisimFormMapping:EntityTypeConfiguration<IletisimFormlari>
+    public class IletisimFormMapping : EntityTypeConfiguration<IletisimFormlari>
     {
         public IletisimFormMapping()
         {
@@ -21,6 +21,6 @@ namespace DataAccessLayer.Mapping
                 .WithMany(x => x.IletisimFormlari)
                 .HasForeignKey(x => x.FormID);
         }
-        
+
     }
 }

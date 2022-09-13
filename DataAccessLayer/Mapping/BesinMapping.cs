@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Mapping
 {
-    public class BesinMapping:EntityTypeConfiguration<Besin>
+    public class BesinMapping : EntityTypeConfiguration<Besin>
     {
         public BesinMapping()
         {
@@ -19,13 +19,17 @@ namespace DataAccessLayer.Mapping
 
             this.Property(b => b.BesinAdı).IsUnicode(true);
 
-
             this.HasOptional(b => b.MakroDeger)
                 .WithRequired(b => b.Besin).WillCascadeOnDelete(false);
 
-            this.HasRequired(b => b.TuketilenBesin)
-                .WithMany(tb => tb.Besinler)
-                .HasForeignKey(b => b.TuketilenBesinID);
+            this.HasMany(b => b.TuketilenBesinler)
+                .WithMany(p => p.Besinler)
+                .Map(tb =>
+                {
+                    tb.MapLeftKey("TüketilenBesinlerId");
+                    tb.MapRightKey("BesinlerId");
+                    tb.ToTable("BesinlerTuketilenBesinler");
+                });
         }
     }
 }

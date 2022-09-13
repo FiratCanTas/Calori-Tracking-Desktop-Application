@@ -10,7 +10,7 @@ namespace EntityLayer.Concrete
 {
     public class IletisimFormlari : IIletisimFormlari
     {
-        public int FormID { get ; set ; }
+        public int FormID { get; set; }
         public string KullanıcıAdi { get; set; }
         public string MailAdresi { get; set; }
         public string Konu { get; set; }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Mapping
 {
-   public class MakroDegerMapping:EntityTypeConfiguration<MakroDeger>
+    public class MakroDegerMapping : EntityTypeConfiguration<MakroDeger>
     {
         public MakroDegerMapping()
         {

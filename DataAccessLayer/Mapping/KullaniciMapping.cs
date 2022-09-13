@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Mapping
 {
-   public class KullaniciMapping:EntityTypeConfiguration<Kullanici>
+    public class KullaniciMapping : EntityTypeConfiguration<Kullanici>
     {
         public KullaniciMapping()
         {
@@ -23,7 +23,7 @@ namespace DataAccessLayer.Mapping
 
             this.Property(x => x.KullanıcıMail).HasMaxLength(20).HasColumnType("nvarchar").IsUnicode(true);
 
-            this.Property(x=> x.KullanıcıŞifre).HasMaxLength(10).HasColumnType("nvarchar").IsUnicode(true);
+            this.Property(x => x.KullanıcıŞifre).HasMaxLength(10).HasColumnType("nvarchar").IsUnicode(true);
 
 
             this.HasMany(ıf => ıf.IletisimFormlari)

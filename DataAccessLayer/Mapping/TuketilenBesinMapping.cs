@@ -9,17 +9,13 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Mapping
 {
-    public class TuketilenBesinMapping:EntityTypeConfiguration<TuketilenBesin>
+    public class TuketilenBesinMapping : EntityTypeConfiguration<TuketilenBesin>
     {
         public TuketilenBesinMapping()
         {
             this.HasKey(b => b.TuketilenBesinID);
 
             this.Property(b => b.TuketilenBesinID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
-
-            this.HasMany(b => b.Besinler)
-               .WithRequired(b => b.TuketilenBesin)
-               .HasForeignKey(b => b.TuketilenBesinID);      
         }
     }
 }

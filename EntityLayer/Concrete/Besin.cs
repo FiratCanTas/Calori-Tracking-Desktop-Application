@@ -18,6 +18,7 @@ namespace EntityLayer.Concrete
         public int MakroDegerID { get; set; }
         public int TuketilenBesinID { get; set; }
         public MakroDeger MakroDeger { get; set; }
+        public List<TuketilenBesin> TuketilenBesinler { get; set; }
         public TuketilenBesin TuketilenBesin { get; set; }
     }
 }
