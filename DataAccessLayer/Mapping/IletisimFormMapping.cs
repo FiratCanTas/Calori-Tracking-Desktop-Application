@@ -19,7 +19,7 @@ namespace DataAccessLayer.Mapping
 
             this.HasRequired(x => x.Kullanici)
                 .WithMany(x => x.IletisimFormlari)
-                .HasForeignKey(x => x.FormID);
+                .HasForeignKey(x => x.KullaniciID);
         }
 
     }
