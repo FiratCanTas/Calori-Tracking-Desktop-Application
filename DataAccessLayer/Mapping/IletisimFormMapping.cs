@@ -21,10 +21,6 @@ namespace DataAccessLayer.Mapping
             this.HasRequired(ıf => ıf.Kullanici)
                 .WithMany(k => k.IletisimFormlari)
                 .HasForeignKey(ıf => ıf.KullanıcıID);
-
-            this.HasRequired(x => x.Kullanici)
-                .WithMany(k => k.IletisimFormlari)
-                .HasForeignKey(ıf => ıf.KullanıcıID);
         }
 
     }
