@@ -20,8 +20,8 @@ namespace EntityLayer.Abstract
         int MakroDegerID { get; set; }
 
         //Tuketilen Besin tablo baglanti
-        TuketilenBesin TuketilenBesin { get; set; }
-        int TuketilenBesinID { get; set; }
+        
+        List<TuketilenBesin> TuketilenBesinler { get; set; }
 
     }
 }
