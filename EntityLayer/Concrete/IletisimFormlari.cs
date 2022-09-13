@@ -16,6 +16,6 @@ namespace EntityLayer.Concrete
         public string Konu { get; set; }
         public string OneriSikayet { get; set; }
         public Kullanici Kullanici { get; set; }
-        public int KullaniciID { get; set; }
+        public int KullanıcıID { get; set; }
     }
 }

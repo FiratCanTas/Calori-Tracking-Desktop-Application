@@ -9,14 +9,12 @@ namespace EntityLayer.Abstract
 {
     public interface IMakroDeger
     {
-        int BesinMakroID { get; set; }
+        int MakroDegerID { get; set; }
 
         //Besin tablo baglanti
         Besin Besin { get; set; }
-        int BesinID { get; set; }
-        int KarbonhidratMiktari { get; set; }
-        int YagMiktari { get; set; }
-        int ProteinMiktari { get; set; }
-
+        double KarbonhidratMiktari { get; set; }
+        double YagMiktari { get; set; }
+        double ProteinMiktari { get; set; }
     }
 }

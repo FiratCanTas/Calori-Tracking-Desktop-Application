@@ -10,11 +10,10 @@ namespace EntityLayer.Concrete
 {
     public class MakroDeger : IMakroDeger
     {
-        public int BesinMakroID { get; set; }
-        public int BesinID { get; set; }
-        public int KarbonhidratMiktari { get; set; }
-        public int YagMiktari { get; set; }
-        public int ProteinMiktari { get; set; }
+        public int MakroDegerID { get; set; }
+        public double KarbonhidratMiktari { get; set; }
+        public double YagMiktari { get; set; }
+        public double ProteinMiktari { get; set; }
         public Besin Besin { get; set; }
     }
 }
