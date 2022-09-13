@@ -1,4 +1,5 @@
-﻿using EntityLayer.Concrete;
+﻿using DataAccessLayer.Mapping;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -25,6 +26,11 @@ namespace DataAccessLayer.Context
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Configurations.Add(new BesinMapping());
+            modelBuilder.Configurations.Add(new TuketilenBesinMapping());
+            modelBuilder.Configurations.Add(new KullaniciMapping());
+            modelBuilder.Configurations.Add(new MakroDegerMapping());
+            modelBuilder.Configurations.Add(new IletisimFormMapping());
         }
     }
 }
