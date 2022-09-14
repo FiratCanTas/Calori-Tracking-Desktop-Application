@@ -15,6 +15,7 @@ namespace EntityLayer.Concrete
 
         public DateTime TüketilenTarih { get; set; }
         public int İçilenSuMiktarı { get; set; }
+
         public int BesinID { get; set; }
         public List<Besin> Besinler { get; set; }
         public List<Kullanici> Kullanicilar { get; set; }

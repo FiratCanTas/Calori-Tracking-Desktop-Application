@@ -11,7 +11,7 @@ namespace DataAccessLayer.Context
 {
     public class FatHunterDbContext : DbContext
     {
-        public FatHunterDbContext() : base("Server = DESKTOP-SH6MHS2\\MSSQLSERVER2019; Database = FatHunterDb; Trusted_Connection=True;")
+        public FatHunterDbContext() : base("Server = E-KAKAR; Database = FatHunterDb; Uid=sa; Pwd=1234")
         {
             Database.SetInitializer(new CreateDatabaseIfNotExists<FatHunterDbContext>());
         }

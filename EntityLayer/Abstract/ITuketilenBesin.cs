@@ -20,6 +20,6 @@ namespace EntityLayer.Abstract
         List<Kullanici> Kullanicilar { get; set; }
         //Besin tablo baglantı
         int BesinID { get; set; }
-         List<Besin> Besinler { get; set; }
+        List<Besin> Besinler { get; set; }
     }
 }

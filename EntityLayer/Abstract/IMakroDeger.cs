@@ -13,10 +13,10 @@ namespace EntityLayer.Abstract
 
         //Besin tablo baglanti
         Besin Besin { get; set; }
+
         
         double KarbonhidratMiktari { get; set; }
         double YagMiktari { get; set; }
         double ProteinMiktari { get; set; }
-
     }
 }
