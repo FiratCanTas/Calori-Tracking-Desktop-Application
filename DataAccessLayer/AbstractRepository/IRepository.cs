@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.AbstractRepository
 {
-   public interface IRepository<T> //Ben sana dışarıdan bir entity göndericem - class göndericem 
+   public interface IRepository<T> where T : class//Ben sana dışarıdan bir entity göndericem - class göndericem 
         //Her tablom için ayrı ayrı Crud işlemleri yapmak yerine tek yerden tanımlıyorum. 
     {
 
