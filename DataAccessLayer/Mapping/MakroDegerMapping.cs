@@ -13,9 +13,9 @@ namespace DataAccessLayer.Mapping
     {
         public MakroDegerMapping()
         {
-            this.HasKey(b => b.BesinMakroID);
+            this.HasKey(b => b.MakroDegerID);
 
-            this.Property(b => b.BesinMakroID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
+            this.Property(b => b.MakroDegerID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None).IsRequired();
         }
     }
 }
