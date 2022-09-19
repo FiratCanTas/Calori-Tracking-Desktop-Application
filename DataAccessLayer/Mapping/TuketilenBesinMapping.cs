@@ -11,11 +11,11 @@ namespace DataAccessLayer.Mapping
 {
     public class TuketilenBesinMapping : EntityTypeConfiguration<TuketilenBesin>
     {
-        public TuketilenBesinMapping()
-        {
-            this.HasKey(b => b.TuketilenBesinID);
+        //public TuketilenBesinMapping()
+        //{
+        //    this.HasKey(b => b.TuketilenBesinID);
 
-            this.Property(b => b.TuketilenBesinID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
-        }
+        //    this.Property(b => b.TuketilenBesinID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
+        //}
     }
 }

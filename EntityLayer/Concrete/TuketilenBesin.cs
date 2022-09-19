@@ -10,14 +10,20 @@ namespace EntityLayer.Concrete
 {
     public class TuketilenBesin : ITuketilenBesin
     {
-        public int TuketilenBesinID { get; set; }
-        public Ogunler BesininTuketildigiOgun { get; set; }
+    //    public TuketilenBesin()
+    //    {
+    //        Besinler = new List<Besin>();
+    //        Kullanicilar = new List<Kullanici>();
+    //    }
 
-        public DateTime TüketilenTarih { get; set; }
-        public int İçilenSuMiktarı { get; set; }
+    //    public int TuketilenBesinID { get; set; }
+    //    public Ogunler BesininTuketildigiOgun { get; set; }
 
-        public int BesinID { get; set; }
-        public List<Besin> Besinler { get; set; }
-        public List<Kullanici> Kullanicilar { get; set; }
+    //    public DateTime TüketilenTarih { get; set; }
+    //    public int İçilenSuMiktarı { get; set; }
+
+    //    public int BesinID { get; set; }
+    //    public List<Besin> Besinler { get; set; }
+    //    public List<Kullanici> Kullanicilar { get; set; }
     }
 }

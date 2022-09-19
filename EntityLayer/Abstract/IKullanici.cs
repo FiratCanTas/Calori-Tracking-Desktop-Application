@@ -18,7 +18,7 @@ namespace EntityLayer.Abstract
         int Boy { get; set; }
         Cinsiyet Cinsiyet { get; set; }
         //Bir kullanıcı birden fazla besin tüketecek
-        List<TuketilenBesin> TüketilenBesinler { get; set; }
+        //List<TuketilenBesin> TüketilenBesinler { get; set; }
         int Yas { get; set; }
         int MevcutAğırlık { get; set; }
         string AktiviteDüzeyi { get; set; }

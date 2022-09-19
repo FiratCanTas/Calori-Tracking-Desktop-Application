@@ -30,14 +30,14 @@ namespace DataAccessLayer.Mapping
                 .WithRequired(ıf => ıf.Kullanici)
                 .HasForeignKey(ıf => ıf.KullanıcıID);
 
-            this.HasMany(k => k.TüketilenBesinler)
-                .WithMany(tb => tb.Kullanicilar)
-                .Map(k =>
-                {
-                    k.MapLeftKey("TüketilenBesinlerId"); //Ara tabloda oluşacak olan ID isimleri
-                    k.MapRightKey("KullanicilarId");
-                    k.ToTable("KullaniciTuketilenBesinler");
-                });
+            //this.HasMany(k => k.TüketilenBesinler)
+            //    .WithMany(tb => tb.Kullanicilar)
+            //    .Map(k =>
+            //    {
+            //        k.MapLeftKey("TüketilenBesinlerId"); //Ara tabloda oluşacak olan ID isimleri
+            //        k.MapRightKey("KullanicilarId");
+            //        k.ToTable("KullaniciTuketilenBesinler");
+            //    });
         }
     }
 }

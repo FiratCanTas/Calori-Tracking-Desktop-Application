@@ -13,7 +13,7 @@ namespace DataAccessLayer.AbstractRepository
         int Insert(T entity);
         int Update(T entity);
         int Delete(T entity);
-        List<T> GetAll(T entity);
+        List<T> GetAll();
 
         T GetById(int id); 
     }

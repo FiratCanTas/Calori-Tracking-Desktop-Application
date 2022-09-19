@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.ConcreteRepository
 {
-    public class BesinRepository : Repository<Besin>
+    public class BesinRepository : BaseRepository<Besin>
     {
       
     }

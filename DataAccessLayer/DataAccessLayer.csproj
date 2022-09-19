@@ -56,7 +56,7 @@
     <Compile Include="ConcreteRepository\IletisimFormlariRepository.cs" />
     <Compile Include="ConcreteRepository\KullaniciRepository.cs" />
     <Compile Include="ConcreteRepository\MakroDegerRepository.cs" />
-    <Compile Include="ConcreteRepository\Repository.cs" />
+    <Compile Include="ConcreteRepository\BaseRepository.cs" />
     <Compile Include="ConcreteRepository\TuketilenBesinRepository.cs" />
     <Compile Include="Context\FatHunterDbContext.cs" />
     <Compile Include="Mapping\BesinMapping.cs" />

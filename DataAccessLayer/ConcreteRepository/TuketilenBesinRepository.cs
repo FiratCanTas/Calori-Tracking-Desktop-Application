@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.ConcreteRepository
 {
-    public class TuketilenBesinRepository : Repository<TuketilenBesin>
+    public class TuketilenBesinRepository : BaseRepository<TuketilenBesin>
     {
 
     }

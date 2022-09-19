@@ -16,9 +16,9 @@ namespace EntityLayer.Concrete
         public int BesinAdedi { get; set; }
         public int BesinKalorisi { get; set; }
         public int MakroDegerID { get; set; }
-        public int TuketilenBesinID { get; set; }
         public MakroDeger MakroDeger { get; set; }
-        public List<TuketilenBesin> TuketilenBesinler { get; set; }
+        public Ogunler? BesininTuketildigiOgun { get; set; }
+        public DateTime? TüketilenTarih { get; set; }
     }
 }
 

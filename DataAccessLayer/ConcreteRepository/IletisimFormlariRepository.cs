@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.ConcreteRepository
 {
-    public class IletisimFormlariRepository : Repository<IletisimFormlari>
+    public class IletisimFormlariRepository : BaseRepository<IletisimFormlari>
     {
         
     }
