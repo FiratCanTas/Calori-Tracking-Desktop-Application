@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FH-ExerciseAnnotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FH-ExerciseAnnotation.Designer.cs">
+      <DependentUpon>FH-ExerciseAnnotation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FH-Badge.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FH-ExerciseAnnotation.resx">
+      <DependentUpon>FH-ExerciseAnnotation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FH-Badge.resx">
       <DependentUpon>FH-Badge.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +181,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FH-Lunch.resx">
       <DependentUpon>FH-Lunch.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FH-MainPage.resx">
       <DependentUpon>FH-MainPage.cs</DependentUpon>
@@ -289,6 +299,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MicrosoftTeams-image 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{39CEFFEB-59F8-47A0-9982-98235441CE4F}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
+      <Project>{D0EB8126-6C81-434F-A8EE-7517EA2B63FD}</Project>
+      <Name>EntityLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\icons8_question_mark_1.ico" />
+    <Content Include="Resources\icons8_return.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

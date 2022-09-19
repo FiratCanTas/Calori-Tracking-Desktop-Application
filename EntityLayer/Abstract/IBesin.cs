@@ -21,7 +21,8 @@ namespace EntityLayer.Abstract
 
         //Tuketilen Besin tablo baglanti
         
-        List<TuketilenBesin> TuketilenBesinler { get; set; }
+        int TuketilenBesinId { get; set; }
+        ICollection<TuketilenBesin> TuketilenBesinler { get; set; }
 
     }
 }

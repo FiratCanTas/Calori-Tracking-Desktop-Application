@@ -87,5 +87,7 @@ namespace PresentationLayer.Forms
             myAccount.Show();
             this.Hide();
         }
+
+       
     }
 }

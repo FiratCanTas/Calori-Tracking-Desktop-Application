@@ -10,15 +10,16 @@ namespace EntityLayer.Concrete
 {
     public class Besin : IBesin
     {
+      
         public int BesinID { get; set; }
         public string BesinAdı { get; set; }
         public int BesinGramajı { get; set; }
         public int BesinAdedi { get; set; }
         public int BesinKalorisi { get; set; }
         public int MakroDegerID { get; set; }
-        public int TuketilenBesinID { get; set; }
-        public MakroDeger MakroDeger { get; set; }
-        public List<TuketilenBesin> TuketilenBesinler { get; set; }
+        public MakroDeger MakroDeger { get; set; }       
+        public ICollection<TuketilenBesin> TuketilenBesinler { get; set; }
+        public int TuketilenBesinId { get; set; }
     }
 }
 

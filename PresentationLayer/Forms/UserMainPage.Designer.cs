@@ -345,7 +345,6 @@
         private System.Windows.Forms.Button btnÖneriler;
         private System.Windows.Forms.DataGridView dgvGenelDegerler;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.DataGridView dgvOgleYemegi;
         private System.Windows.Forms.DataGridView dgvAksamYemegi;
         private System.Windows.Forms.DataGridView dgvAraOgun;
         private System.Windows.Forms.DataGridView dgvKahvalti;
@@ -361,5 +360,6 @@
         private System.Windows.Forms.Button btnHesabım;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.DataGridView dgvOgleYemegi;
     }
 }
