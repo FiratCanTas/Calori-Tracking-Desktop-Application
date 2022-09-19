@@ -1,4 +1,4 @@
-﻿using EntityLayer.Concrete;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,8 +21,6 @@ namespace EntityLayer.Abstract
 
         //Tuketilen Besin tablo baglanti
         
-        int TuketilenBesinId { get; set; }
-        ICollection<TuketilenBesin> TuketilenBesinler { get; set; }
 
     }
 }

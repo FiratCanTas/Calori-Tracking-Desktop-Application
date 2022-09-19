@@ -35,13 +35,13 @@
             this.btnAra = new System.Windows.Forms.Button();
             this.txtAraDinner = new System.Windows.Forms.TextBox();
             this.btnAksamOgunuEkle = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvMealList = new System.Windows.Forms.DataGridView();
+            this.dgvDinnerList = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMealList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDinnerList)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,7 +60,7 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(880, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 29);
+            this.label1.Size = new System.Drawing.Size(267, 28);
             this.label1.TabIndex = 11;
             this.label1.Text = "Akşam Yemeği Seçimi";
             // 
@@ -112,28 +112,30 @@
             this.btnAksamOgunuEkle.Size = new System.Drawing.Size(115, 37);
             this.btnAksamOgunuEkle.TabIndex = 23;
             this.btnAksamOgunuEkle.UseVisualStyleBackColor = false;
+            this.btnAksamOgunuEkle.Click += new System.EventHandler(this.btnAksamOgunuEkle_Click);
             // 
-            // dataGridView2
+            // dgvMealList
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 166);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(717, 404);
-            this.dataGridView2.TabIndex = 22;
+            this.dgvMealList.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvMealList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMealList.Location = new System.Drawing.Point(12, 166);
+            this.dgvMealList.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.dgvMealList.Name = "dgvMealList";
+            this.dgvMealList.RowHeadersWidth = 51;
+            this.dgvMealList.Size = new System.Drawing.Size(717, 404);
+            this.dgvMealList.TabIndex = 22;
+            this.dgvMealList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMealList_CellClick);
             // 
-            // dataGridView1
+            // dgvDinnerList
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(935, 166);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(426, 404);
-            this.dataGridView1.TabIndex = 21;
+            this.dgvDinnerList.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvDinnerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDinnerList.Location = new System.Drawing.Point(935, 166);
+            this.dgvDinnerList.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.dgvDinnerList.Name = "dgvDinnerList";
+            this.dgvDinnerList.RowHeadersWidth = 51;
+            this.dgvDinnerList.Size = new System.Drawing.Size(426, 404);
+            this.dgvDinnerList.TabIndex = 21;
             // 
             // FH_Dinner
             // 
@@ -145,18 +147,19 @@
             this.Controls.Add(this.btnAra);
             this.Controls.Add(this.txtAraDinner);
             this.Controls.Add(this.btnAksamOgunuEkle);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvMealList);
+            this.Controls.Add(this.dgvDinnerList);
             this.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FH_Dinner";
             this.Text = "FH_Dinner";
+            this.Load += new System.EventHandler(this.FH_Dinner_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMealList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDinnerList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,7 +174,7 @@
         private System.Windows.Forms.Button btnAra;
         private System.Windows.Forms.TextBox txtAraDinner;
         private System.Windows.Forms.Button btnAksamOgunuEkle;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMealList;
+        private System.Windows.Forms.DataGridView dgvDinnerList;
     }
 }

@@ -14,6 +14,9 @@ namespace PresentationLayer.Forms
     {
         public FH_SignIn()
         {
+            fH_ChangePassword = new FH_ChangePassword();
+            fH_ContactUs = new FH_ContactUs();
+            userMainPage = new UserMainPage();
             InitializeComponent();
         }
 
@@ -23,9 +26,7 @@ namespace PresentationLayer.Forms
 
         private void FH_SignIn_Load(object sender, EventArgs e)
         {
-            fH_ChangePassword = new FH_ChangePassword();
-            fH_ContactUs = new FH_ContactUs();
-            userMainPage = new UserMainPage();
+
         }
 
         private void btnSifremiUnuttum_Click(object sender, EventArgs e)

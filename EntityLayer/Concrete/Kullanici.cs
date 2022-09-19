@@ -2,6 +2,8 @@
 using EntityLayer.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,12 +63,14 @@ namespace EntityLayer.Concrete
             } }
         public int Boy { get; set; }
         public Cinsiyet Cinsiyet { get; set; }
-        public List<TuketilenBesin> TüketilenBesinler { get; set; }
+        //public List<TuketilenBesin> TüketilenBesinler { get; set; }
+
         public int Yas { get; set; }
         public int MevcutAğırlık { get; set; }
         public string AktiviteDüzeyi { get; set; }
         public string DiyetHedefi { get; set; }
         public int HedefAgırlıgı { get; set; }
+        public List<IletisimFormlari> IletisimFormlari { get; set; }
 
         public DateTime CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }
@@ -75,6 +79,6 @@ namespace EntityLayer.Concrete
         public string ModifiedBy { get; set; }
         public string DeletedBy { get; set; }
         public Status Status { get; set; }
-        public List<IletisimFormlari> IletisimFormlari { get; set; }
+
     }
 }

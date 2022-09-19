@@ -1,4 +1,4 @@
-﻿using EntityLayer.Concrete;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +12,10 @@ namespace EntityLayer.Abstract
         int MakroDegerID { get; set; }
 
         //Besin tablo baglanti
-        Besin Besin{ get; set; }
+        Besin Besin { get; set; }
         
         double KarbonhidratMiktari { get; set; }
         double YagMiktari { get; set; }
         double ProteinMiktari { get; set; }
-
     }
 }

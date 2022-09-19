@@ -11,14 +11,14 @@ namespace DataAccessLayer.Context
 {
     public class FatHunterDbContext : DbContext
     {
-        public FatHunterDbContext() : base("Server = DESKTOP-SH6MHS2\\MSSQLSERVER2019; Database = FatHunterDb; Trusted_Connection=True;")
+        public FatHunterDbContext() : base("Server = E-KAKAR; Database = FatHunterDb; Uid=sa; Pwd=1234")
         {
             Database.SetInitializer(new CreateDatabaseIfNotExists<FatHunterDbContext>());
         }
 
         public DbSet<Kullanici> Kullanıcılar { get; set; }
         public DbSet<Besin> Besinler { get; set; }
-        public DbSet<TuketilenBesin> TuketilenBesinler { get; set; }
+        //public DbSet<TuketilenBesin> TuketilenBesinler { get; set; }
         public DbSet<MakroDeger> MakroDegerler { get; set; }
         public DbSet<IletisimFormlari> IletisimFormlari { get; set; }
 
@@ -27,7 +27,7 @@ namespace DataAccessLayer.Context
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Configurations.Add(new BesinMapping());
-            modelBuilder.Configurations.Add(new TuketilenBesinMapping());
+            //modelBuilder.Configurations.Add(new TuketilenBesinMapping());
             modelBuilder.Configurations.Add(new KullaniciMapping());
             modelBuilder.Configurations.Add(new MakroDegerMapping());
             modelBuilder.Configurations.Add(new IletisimFormMapping());

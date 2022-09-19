@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccessLayer.Context;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,13 +17,20 @@ namespace PresentationLayer.Forms
         {
             InitializeComponent();
         }
+        FatHunterDbContext dbContext;
 
-        FH_SignIn fH_SignIn;
+        private void FH_ChangePassword_Load(object sender, EventArgs e)
+        {
+            dbContext = new FatHunterDbContext();
+        }
 
         private void btnSifreGüncelle_Click(object sender, EventArgs e)
         {
-            fH_SignIn = new FH_SignIn();
-            fH_SignIn.Show();
+            var sifreGuncellenecekKisi = dbContext.Kullanıcılar.Where(x => x.KullanıcıMail == txtEmail.Text).Where(x => x.Adı == txtAdiniz.Text).Where(x => x.Soyadı == txtSoyadiniz.Text).FirstOrDefault();
+
+            sifreGuncellenecekKisi.KullanıcıŞifre = txtYeniSifre.Text;
+
+            FH_MainPage.fH_SignIn.Show();
             this.Hide();
         }
 

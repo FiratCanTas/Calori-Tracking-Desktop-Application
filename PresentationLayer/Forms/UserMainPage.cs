@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -88,6 +88,10 @@ namespace PresentationLayer.Forms
             this.Hide();
         }
 
-       
+        private void UserMainPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

@@ -16,6 +16,6 @@ namespace EntityLayer.Abstract
         string OneriSikayet { get; set; }
 
          Kullanici Kullanici { get; set; }
-        int KullaniciID { get; set; }
+        int KullanıcıID { get; set; }
     }
 }

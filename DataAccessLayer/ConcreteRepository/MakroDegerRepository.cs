@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.ConcreteRepository
 {
-    public class MakroDegerRepository : Repository<MakroDeger>
+    public class MakroDegerRepository : BaseRepository<MakroDeger>
     {
        
     }

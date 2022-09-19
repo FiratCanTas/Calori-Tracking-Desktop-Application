@@ -26,18 +26,18 @@ namespace DataAccessLayer.Mapping
             this.Property(x => x.KullanıcıŞifre).HasMaxLength(10).HasColumnType("nvarchar").IsUnicode(true);
 
 
-            this.HasMany(ıf => ıf.IletisimFormlari)
-                .WithRequired(k => k.Kullanici)
-                .HasForeignKey(k => k.KullaniciID);
+            this.HasMany(k => k.IletisimFormlari)
+                .WithRequired(ıf => ıf.Kullanici)
+                .HasForeignKey(ıf => ıf.KullanıcıID);
 
-            this.HasMany(tb => tb.TüketilenBesinler)
-                .WithMany(p => p.Kullanicilar)
-                .Map(tb =>
-                {
-                    tb.MapLeftKey("TüketilenBesinlerId"); //Ara tabloda oluşacak olan ID isimleri
-                    tb.MapRightKey("KullanicilarId");
-                    tb.ToTable("KullaniciTuketilenBesinler");
-                });
+            //this.HasMany(k => k.TüketilenBesinler)
+            //    .WithMany(tb => tb.Kullanicilar)
+            //    .Map(k =>
+            //    {
+            //        k.MapLeftKey("TüketilenBesinlerId"); //Ara tabloda oluşacak olan ID isimleri
+            //        k.MapRightKey("KullanicilarId");
+            //        k.ToTable("KullaniciTuketilenBesinler");
+            //    });
         }
     }
 }
