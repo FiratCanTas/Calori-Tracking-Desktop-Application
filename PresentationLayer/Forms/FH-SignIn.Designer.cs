@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FH_SignIn));
             this.btnContactUs = new System.Windows.Forms.Button();
             this.btnSifremiUnuttum = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtSifreniz = new System.Windows.Forms.TextBox();
             this.txtEmailAdresiniz = new System.Windows.Forms.TextBox();
             this.btnGirisYap = new System.Windows.Forms.Button();
+            this.btnSifreGizle = new System.Windows.Forms.Button();
+            this.txtSifreniz = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -89,36 +91,27 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(236, 289);
+            this.label2.Location = new System.Drawing.Point(282, 292);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 22);
+            this.label2.Size = new System.Drawing.Size(67, 23);
             this.label2.TabIndex = 33;
             this.label2.Text = "Şifre : ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(236, 238);
+            this.label1.Location = new System.Drawing.Point(236, 252);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 22);
+            this.label1.Size = new System.Drawing.Size(113, 23);
             this.label1.TabIndex = 32;
             this.label1.Text = "Mail Adresi :";
-            // 
-            // txtSifreniz
-            // 
-            this.txtSifreniz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSifreniz.Location = new System.Drawing.Point(373, 286);
-            this.txtSifreniz.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSifreniz.Name = "txtSifreniz";
-            this.txtSifreniz.Size = new System.Drawing.Size(274, 29);
-            this.txtSifreniz.TabIndex = 31;
             // 
             // txtEmailAdresiniz
             // 
             this.txtEmailAdresiniz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmailAdresiniz.Location = new System.Drawing.Point(373, 235);
+            this.txtEmailAdresiniz.Location = new System.Drawing.Point(373, 249);
             this.txtEmailAdresiniz.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmailAdresiniz.Name = "txtEmailAdresiniz";
             this.txtEmailAdresiniz.Size = new System.Drawing.Size(274, 29);
@@ -138,19 +131,43 @@
             this.btnGirisYap.UseVisualStyleBackColor = false;
             this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
             // 
+            // btnSifreGizle
+            // 
+            this.btnSifreGizle.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnSifreGizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSifreGizle.Image = ((System.Drawing.Image)(resources.GetObject("btnSifreGizle.Image")));
+            this.btnSifreGizle.Location = new System.Drawing.Point(613, 286);
+            this.btnSifreGizle.Name = "btnSifreGizle";
+            this.btnSifreGizle.Size = new System.Drawing.Size(34, 25);
+            this.btnSifreGizle.TabIndex = 77;
+            this.btnSifreGizle.UseMnemonic = false;
+            this.btnSifreGizle.UseVisualStyleBackColor = true;
+            this.btnSifreGizle.Click += new System.EventHandler(this.btnSifreGizle_Click);
+            // 
+            // txtSifreniz
+            // 
+            this.txtSifreniz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSifreniz.Location = new System.Drawing.Point(373, 286);
+            this.txtSifreniz.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSifreniz.Name = "txtSifreniz";
+            this.txtSifreniz.Size = new System.Drawing.Size(240, 29);
+            this.txtSifreniz.TabIndex = 76;
+            this.txtSifreniz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // FH_SignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(875, 549);
+            this.Controls.Add(this.btnSifreGizle);
+            this.Controls.Add(this.txtSifreniz);
             this.Controls.Add(this.btnContactUs);
             this.Controls.Add(this.btnSifremiUnuttum);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtSifreniz);
             this.Controls.Add(this.txtEmailAdresiniz);
             this.Controls.Add(this.btnGirisYap);
             this.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -174,8 +191,9 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtSifreniz;
         private System.Windows.Forms.TextBox txtEmailAdresiniz;
         private System.Windows.Forms.Button btnGirisYap;
+        private System.Windows.Forms.Button btnSifreGizle;
+        private System.Windows.Forms.TextBox txtSifreniz;
     }
 }

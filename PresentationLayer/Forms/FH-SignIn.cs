@@ -51,5 +51,10 @@ namespace PresentationLayer.Forms
             fH_ContactUs.Show();
             this.Hide();
         }
+
+        private void btnSifreGizle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

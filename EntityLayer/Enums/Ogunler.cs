@@ -9,8 +9,8 @@ namespace EntityLayer.Enums
    public enum Ogunler
     {
         Sabah = 1,
-       Ogle,
+        Ogle,
         Aksam,
-       Ara
+        Ara
     }
 }

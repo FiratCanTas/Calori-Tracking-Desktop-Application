@@ -1,4 +1,4 @@
-﻿namespace PresentationLayer.Forms
+namespace PresentationLayer.Forms
 {
     partial class UserMainPage
     {
