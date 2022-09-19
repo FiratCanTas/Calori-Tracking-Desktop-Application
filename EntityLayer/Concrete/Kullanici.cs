@@ -19,7 +19,8 @@ namespace EntityLayer.Concrete
         public string KullanıcıŞifre { get; set; }
         public int Boy { get; set; }
         public Cinsiyet Cinsiyet { get; set; }
-        public List<TuketilenBesin> TüketilenBesinler { get; set; }
+        //public List<TuketilenBesin> TüketilenBesinler { get; set; }
+
         public int Yas { get; set; }
         public int MevcutAğırlık { get; set; }
         public string AktiviteDüzeyi { get; set; }

@@ -21,8 +21,11 @@ namespace PresentationLayer.Forms
             InitializeComponent();
         }
 
+        FatHunterDbContext dbContext;
+
         private void FH_ContactUs_Load(object sender, EventArgs e)
         {
+            dbContext = new FatHunterDbContext();
         }
 
         private void btnIletiGönder_Click(object sender, EventArgs e)
@@ -35,12 +38,12 @@ namespace PresentationLayer.Forms
                 OneriSikayet = txtMesaj.Text,
             };
 
-            var kullanıcı = FH_MainPage.dbContext.Kullanıcılar.Where(x => x.KullanıcıMail == txtEmailAdresiniz.Text).FirstOrDefault();
+            var kullanıcı = dbContext.Kullanıcılar.Where(x => x.KullanıcıMail == txtEmailAdresiniz.Text).FirstOrDefault();
 
             form.KullanıcıID = kullanıcı.KullanıcıID;
 
-            FH_MainPage.dbContext.IletisimFormlari.Add(form);
-            FH_MainPage.dbContext.SaveChanges();
+            dbContext.IletisimFormlari.Add(form);
+            dbContext.SaveChanges();
 
             var result = MessageBox.Show("Yeni Form Oluşturmak ister misiniz?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 

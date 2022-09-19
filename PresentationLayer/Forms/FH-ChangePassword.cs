@@ -17,20 +17,18 @@ namespace PresentationLayer.Forms
         {
             InitializeComponent();
         }
+        FatHunterDbContext dbContext;
 
         private void FH_ChangePassword_Load(object sender, EventArgs e)
         {
-
+            dbContext = new FatHunterDbContext();
         }
 
         private void btnSifreGüncelle_Click(object sender, EventArgs e)
         {
-            var sifreGuncellenecekKisi = FH_MainPage.dbContext.Kullanıcılar.Where(x => x.KullanıcıMail == txtEmail.Text).Where(x => x.Adı == txtAdiniz.Text).Where(x => x.Soyadı == txtSoyadiniz.Text).Where(x => x.DogumTarihi == dtpDogumTarihi.Value).FirstOrDefault();
+            var sifreGuncellenecekKisi = dbContext.Kullanıcılar.Where(x => x.KullanıcıMail == txtEmail.Text).Where(x => x.Adı == txtAdiniz.Text).Where(x => x.Soyadı == txtSoyadiniz.Text).FirstOrDefault();
 
             sifreGuncellenecekKisi.KullanıcıŞifre = txtYeniSifre.Text;
-            FH_MainPage.dbContext.
-
-
 
             FH_MainPage.fH_SignIn.Show();
             this.Hide();

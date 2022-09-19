@@ -22,14 +22,17 @@ namespace DataAccessLayer.Mapping
             this.HasOptional(b => b.MakroDeger)
                 .WithRequired(b => b.Besin).WillCascadeOnDelete(false);
 
-            this.HasMany(b => b.TuketilenBesinler)
-                .WithMany(p => p.Besinler)
-                .Map(tb =>
-                {
-                    tb.MapLeftKey("TüketilenBesinlerId");
-                    tb.MapRightKey("BesinlerId");
-                    tb.ToTable("BesinlerTuketilenBesinler");
-                });
+            this.Property(b => b.TüketilenTarih).IsOptional();
+            this.Property(b => b.BesininTuketildigiOgun).IsOptional();
+
+            //this.HasMany(b => b.TuketilenBesinler)
+            //    .WithMany(p => p.Besinler)
+            //    .Map(tb =>
+            //    {
+            //        tb.MapLeftKey("TüketilenBesinlerId");
+            //        tb.MapRightKey("BesinlerId");
+            //        tb.ToTable("BesinlerTuketilenBesinler");
+            //    });
         }
     }
 }

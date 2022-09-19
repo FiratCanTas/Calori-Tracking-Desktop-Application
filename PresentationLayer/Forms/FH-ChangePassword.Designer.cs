@@ -98,7 +98,6 @@
             this.btnSifreGüncelle.TabIndex = 35;
             this.btnSifreGüncelle.Text = "Şifre Güncelle";
             this.btnSifreGüncelle.UseVisualStyleBackColor = true;
-            this.btnSifreGüncelle.Click += new System.EventHandler(this.btnSifreGüncelle_Click);
             // 
             // label5
             // 
@@ -217,7 +216,6 @@
             this.Name = "FH_ChangePassword";
             this.Text = "FH_ChangePassword";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FH_ChangePassword_FormClosed);
-            this.Load += new System.EventHandler(this.FH_ChangePassword_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

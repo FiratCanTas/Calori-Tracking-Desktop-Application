@@ -87,5 +87,10 @@ namespace PresentationLayer.Forms
             myAccount.Show();
             this.Hide();
         }
+
+        private void UserMainPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

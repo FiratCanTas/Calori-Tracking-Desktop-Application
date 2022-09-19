@@ -18,7 +18,7 @@ namespace DataAccessLayer.Context
 
         public DbSet<Kullanici> Kullanıcılar { get; set; }
         public DbSet<Besin> Besinler { get; set; }
-        public DbSet<TuketilenBesin> TuketilenBesinler { get; set; }
+        //public DbSet<TuketilenBesin> TuketilenBesinler { get; set; }
         public DbSet<MakroDeger> MakroDegerler { get; set; }
         public DbSet<IletisimFormlari> IletisimFormlari { get; set; }
 
@@ -27,7 +27,7 @@ namespace DataAccessLayer.Context
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Configurations.Add(new BesinMapping());
-            modelBuilder.Configurations.Add(new TuketilenBesinMapping());
+            //modelBuilder.Configurations.Add(new TuketilenBesinMapping());
             modelBuilder.Configurations.Add(new KullaniciMapping());
             modelBuilder.Configurations.Add(new MakroDegerMapping());
             modelBuilder.Configurations.Add(new IletisimFormMapping());

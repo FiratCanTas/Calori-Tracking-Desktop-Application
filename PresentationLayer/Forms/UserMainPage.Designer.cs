@@ -64,7 +64,7 @@
             // 
             // btnRozetler
             // 
-            this.btnRozetler.Location = new System.Drawing.Point(205, 100);
+            this.btnRozetler.Location = new System.Drawing.Point(237, 75);
             this.btnRozetler.Name = "btnRozetler";
             this.btnRozetler.Size = new System.Drawing.Size(137, 51);
             this.btnRozetler.TabIndex = 49;
@@ -74,7 +74,7 @@
             // 
             // btnRaporlar
             // 
-            this.btnRaporlar.Location = new System.Drawing.Point(509, 100);
+            this.btnRaporlar.Location = new System.Drawing.Point(541, 75);
             this.btnRaporlar.Name = "btnRaporlar";
             this.btnRaporlar.Size = new System.Drawing.Size(135, 51);
             this.btnRaporlar.TabIndex = 47;
@@ -84,7 +84,7 @@
             // 
             // btnÖneriler
             // 
-            this.btnÖneriler.Location = new System.Drawing.Point(348, 100);
+            this.btnÖneriler.Location = new System.Drawing.Point(380, 75);
             this.btnÖneriler.Name = "btnÖneriler";
             this.btnÖneriler.Size = new System.Drawing.Size(155, 51);
             this.btnÖneriler.TabIndex = 46;
@@ -97,17 +97,17 @@
             this.dgvGenelDegerler.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvGenelDegerler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGenelDegerler.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvGenelDegerler.Location = new System.Drawing.Point(205, 171);
+            this.dgvGenelDegerler.Location = new System.Drawing.Point(13, 142);
             this.dgvGenelDegerler.Name = "dgvGenelDegerler";
             this.dgvGenelDegerler.RowHeadersWidth = 51;
             this.dgvGenelDegerler.RowTemplate.Height = 24;
-            this.dgvGenelDegerler.Size = new System.Drawing.Size(439, 69);
+            this.dgvGenelDegerler.Size = new System.Drawing.Size(886, 80);
             this.dgvGenelDegerler.TabIndex = 45;
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::PresentationLayer.Properties.Resources.icons8_Plus;
-            this.pictureBox5.Location = new System.Drawing.Point(607, 666);
+            this.pictureBox5.Location = new System.Drawing.Point(860, 678);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(32, 32);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -118,50 +118,50 @@
             // 
             this.dgvOgleYemegi.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvOgleYemegi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOgleYemegi.Location = new System.Drawing.Point(205, 398);
+            this.dgvOgleYemegi.Location = new System.Drawing.Point(460, 289);
             this.dgvOgleYemegi.Name = "dgvOgleYemegi";
             this.dgvOgleYemegi.RowHeadersWidth = 51;
             this.dgvOgleYemegi.RowTemplate.Height = 24;
-            this.dgvOgleYemegi.Size = new System.Drawing.Size(439, 50);
+            this.dgvOgleYemegi.Size = new System.Drawing.Size(439, 150);
             this.dgvOgleYemegi.TabIndex = 43;
             // 
             // dgvAksamYemegi
             // 
             this.dgvAksamYemegi.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvAksamYemegi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAksamYemegi.Location = new System.Drawing.Point(205, 502);
+            this.dgvAksamYemegi.Location = new System.Drawing.Point(13, 506);
             this.dgvAksamYemegi.Name = "dgvAksamYemegi";
             this.dgvAksamYemegi.RowHeadersWidth = 51;
             this.dgvAksamYemegi.RowTemplate.Height = 24;
-            this.dgvAksamYemegi.Size = new System.Drawing.Size(439, 50);
+            this.dgvAksamYemegi.Size = new System.Drawing.Size(439, 150);
             this.dgvAksamYemegi.TabIndex = 42;
             // 
             // dgvAraOgun
             // 
             this.dgvAraOgun.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvAraOgun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAraOgun.Location = new System.Drawing.Point(205, 606);
+            this.dgvAraOgun.Location = new System.Drawing.Point(460, 506);
             this.dgvAraOgun.Name = "dgvAraOgun";
             this.dgvAraOgun.RowHeadersWidth = 51;
             this.dgvAraOgun.RowTemplate.Height = 24;
-            this.dgvAraOgun.Size = new System.Drawing.Size(439, 50);
+            this.dgvAraOgun.Size = new System.Drawing.Size(439, 150);
             this.dgvAraOgun.TabIndex = 41;
             // 
             // dgvKahvalti
             // 
             this.dgvKahvalti.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvKahvalti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKahvalti.Location = new System.Drawing.Point(205, 294);
+            this.dgvKahvalti.Location = new System.Drawing.Point(13, 291);
             this.dgvKahvalti.Name = "dgvKahvalti";
             this.dgvKahvalti.RowHeadersWidth = 51;
             this.dgvKahvalti.RowTemplate.Height = 24;
-            this.dgvKahvalti.Size = new System.Drawing.Size(439, 50);
+            this.dgvKahvalti.Size = new System.Drawing.Size(439, 150);
             this.dgvKahvalti.TabIndex = 40;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::PresentationLayer.Properties.Resources.icons8_Plus;
-            this.pictureBox4.Location = new System.Drawing.Point(607, 355);
+            this.pictureBox4.Location = new System.Drawing.Point(862, 248);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -171,7 +171,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::PresentationLayer.Properties.Resources.icons8_Plus;
-            this.pictureBox3.Location = new System.Drawing.Point(607, 562);
+            this.pictureBox3.Location = new System.Drawing.Point(862, 462);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -181,7 +181,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::PresentationLayer.Properties.Resources.icons8_Plus;
-            this.pictureBox2.Location = new System.Drawing.Point(607, 458);
+            this.pictureBox2.Location = new System.Drawing.Point(415, 462);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -191,7 +191,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PresentationLayer.Properties.Resources.icons8_Plus;
-            this.pictureBox1.Location = new System.Drawing.Point(608, 250);
+            this.pictureBox1.Location = new System.Drawing.Point(416, 247);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.TabIndex = 36;
@@ -201,10 +201,10 @@
             // 
             this.btnWaterFollowUp.Image = global::PresentationLayer.Properties.Resources.icons8_water;
             this.btnWaterFollowUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWaterFollowUp.Location = new System.Drawing.Point(205, 663);
+            this.btnWaterFollowUp.Location = new System.Drawing.Point(13, 675);
             this.btnWaterFollowUp.Margin = new System.Windows.Forms.Padding(4);
             this.btnWaterFollowUp.Name = "btnWaterFollowUp";
-            this.btnWaterFollowUp.Size = new System.Drawing.Size(439, 40);
+            this.btnWaterFollowUp.Size = new System.Drawing.Size(886, 40);
             this.btnWaterFollowUp.TabIndex = 35;
             this.btnWaterFollowUp.Text = "İçilen Su Miktarı(200mL)";
             this.btnWaterFollowUp.UseVisualStyleBackColor = true;
@@ -213,7 +213,7 @@
             // 
             this.btnSnacks.Image = global::PresentationLayer.Properties.Resources.icons8_Cloudy_Night;
             this.btnSnacks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSnacks.Location = new System.Drawing.Point(205, 559);
+            this.btnSnacks.Location = new System.Drawing.Point(460, 459);
             this.btnSnacks.Margin = new System.Windows.Forms.Padding(4);
             this.btnSnacks.Name = "btnSnacks";
             this.btnSnacks.Size = new System.Drawing.Size(439, 40);
@@ -226,7 +226,7 @@
             // 
             this.btnDinner.Image = global::PresentationLayer.Properties.Resources.icons8_sunset;
             this.btnDinner.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDinner.Location = new System.Drawing.Point(205, 455);
+            this.btnDinner.Location = new System.Drawing.Point(13, 459);
             this.btnDinner.Margin = new System.Windows.Forms.Padding(4);
             this.btnDinner.Name = "btnDinner";
             this.btnDinner.Size = new System.Drawing.Size(439, 40);
@@ -237,9 +237,10 @@
             // 
             // btnLunch
             // 
+            this.btnLunch.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnLunch.Image = global::PresentationLayer.Properties.Resources.icons8_sun_3;
             this.btnLunch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLunch.Location = new System.Drawing.Point(205, 351);
+            this.btnLunch.Location = new System.Drawing.Point(460, 244);
             this.btnLunch.Margin = new System.Windows.Forms.Padding(4);
             this.btnLunch.Name = "btnLunch";
             this.btnLunch.Size = new System.Drawing.Size(439, 40);
@@ -252,7 +253,7 @@
             // 
             this.btnKahvaltı.Image = global::PresentationLayer.Properties.Resources.icons8_sunrise;
             this.btnKahvaltı.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKahvaltı.Location = new System.Drawing.Point(205, 247);
+            this.btnKahvaltı.Location = new System.Drawing.Point(13, 244);
             this.btnKahvaltı.Margin = new System.Windows.Forms.Padding(4);
             this.btnKahvaltı.Name = "btnKahvaltı";
             this.btnKahvaltı.Size = new System.Drawing.Size(439, 40);
@@ -266,7 +267,7 @@
             this.btnHesabım.BackColor = System.Drawing.Color.White;
             this.btnHesabım.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHesabım.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(217)))), ((int)(((byte)(87)))));
-            this.btnHesabım.Location = new System.Drawing.Point(728, 9);
+            this.btnHesabım.Location = new System.Drawing.Point(780, 9);
             this.btnHesabım.Name = "btnHesabım";
             this.btnHesabım.Size = new System.Drawing.Size(118, 42);
             this.btnHesabım.TabIndex = 31;
@@ -275,7 +276,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(298, 14);
+            this.dateTimePicker1.Location = new System.Drawing.Point(331, 14);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(249, 29);
@@ -288,7 +289,7 @@
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(858, 59);
+            this.panel1.Size = new System.Drawing.Size(1365, 59);
             this.panel1.TabIndex = 48;
             // 
             // UserMainPage
@@ -297,7 +298,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(857, 718);
+            this.ClientSize = new System.Drawing.Size(910, 738);
             this.Controls.Add(this.btnRozetler);
             this.Controls.Add(this.btnRaporlar);
             this.Controls.Add(this.btnÖneriler);
@@ -322,6 +323,7 @@
             this.Name = "UserMainPage";
             this.Text = "UserMainPage";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserMainPage_FormClosed);
+            this.Load += new System.EventHandler(this.UserMainPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGenelDegerler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOgleYemegi)).EndInit();
@@ -346,7 +348,6 @@
         private System.Windows.Forms.DataGridView dgvGenelDegerler;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.DataGridView dgvOgleYemegi;
-        private System.Windows.Forms.DataGridView dgvAksamYemegi;
         private System.Windows.Forms.DataGridView dgvAraOgun;
         private System.Windows.Forms.DataGridView dgvKahvalti;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -361,5 +362,6 @@
         private System.Windows.Forms.Button btnHesabım;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.DataGridView dgvAksamYemegi;
     }
 }
