@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.ConcreteRepository
 {
-    public class KullaniciRepository : Repository<Kullanici>
+    public class KullaniciRepository : BaseRepository<Kullanici>
     {
      
     }

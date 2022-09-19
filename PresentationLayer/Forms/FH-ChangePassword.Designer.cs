@@ -54,15 +54,15 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(1, 1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(927, 64);
+            this.panel1.Size = new System.Drawing.Size(925, 69);
             this.panel1.TabIndex = 36;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::PresentationLayer.Properties.Resources.MicrosoftTeams_image__2_;
-            this.pictureBox2.Location = new System.Drawing.Point(104, 9);
+            this.pictureBox2.Location = new System.Drawing.Point(100, 14);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(345, 52);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -83,9 +83,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PresentationLayer.Properties.Resources.MicrosoftTeams_image_3;
-            this.pictureBox1.Location = new System.Drawing.Point(3, -3);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 64);
+            this.pictureBox1.Size = new System.Drawing.Size(210, 69);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
@@ -217,6 +217,7 @@
             this.Name = "FH_ChangePassword";
             this.Text = "FH_ChangePassword";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FH_ChangePassword_FormClosed);
+            this.Load += new System.EventHandler(this.FH_ChangePassword_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

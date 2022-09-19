@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccessLayer.Context;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,10 +21,12 @@ namespace PresentationLayer.Forms
         public static FH_MainPage page;
         public static FH_SignUp fH_SignUp;
         public static FH_SignIn fH_SignIn;
+        public static FatHunterDbContext dbContext;
 
         private void FH_MainPage_Load(object sender, EventArgs e)
         {
             page = this;
+            dbContext = new FatHunterDbContext();
         }
 
         private void btnKaydol_Click(object sender, EventArgs e)
