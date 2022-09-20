@@ -19,12 +19,11 @@ namespace PresentationLayer.Forms
         {
             InitializeComponent();
         }
-
-        //TuketilenBesin tuketilenBesin;
         FatHunterDbContext dbContext;
         Besin besin;
         public static List<Besin> besinlerList = new List<Besin>();
         int tuketilecekBesinID;
+        int kaldirilacakBesinID;
 
         private void FH_Dinner_Load(object sender, EventArgs e)
         {
@@ -38,34 +37,46 @@ namespace PresentationLayer.Forms
             tuketilecekBesinID = Convert.ToInt32(dgvMealList.CurrentRow.Cells[0].Value);
         }
 
+        private void dgvDinnerList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            kaldirilacakBesinID = Convert.ToInt32(dgvDinnerList.CurrentRow.Cells[0].Value);
+        }
+
         private void btnAksamOgunuEkle_Click(object sender, EventArgs e)
         {
-            //tuketilenBesin = new TuketilenBesin()
-            //{
-            //    TüketilenTarih = DateTime.Today,
-            //    BesininTuketildigiOgun = Ogunler.Aksam
-            //};
-
-            //tuketilenBesin.BesinID = tuketilecekBesinID;
-
-            //besin.TuketilenBesinID = tuketilenBesin.TuketilenBesinID;
-            //dbContext.TuketilenBesinler.Add(tuketilenBesin);
-            //dbContext.SaveChanges();
-
-            //dgvDinnerList.DataSource = dbContext.Besinler.Where(x => x.TuketilenBesinID != 0).Select(x=> x).ToList();
-
             var tuketilenBesin = dbContext.Besinler.Find(tuketilecekBesinID);
             tuketilenBesin.TüketilenTarih = DateTime.Today;
             tuketilenBesin.BesininTuketildigiOgun = Ogunler.Aksam;
             besinlerList.Add(tuketilenBesin);
-            dbContext.SaveChanges();
-
-            //dgvDinnerList.DataSource = dbContext.Besinler.Where(x => x.BesininTuketildigiOgun == Ogunler.Aksam && x.TüketilenTarih == DateTime.Today).Select(x => x).ToList();
             dgvDinnerList.DataSource = besinlerList.ToList();
 
             FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = besinlerList.ToList();
+        }
 
+        private void btnAksamOgunuKaldir_Click(object sender, EventArgs e)
+        {
+            var kaldirilanBesin = dbContext.Besinler.Find(kaldirilacakBesinID);
+            besinlerList.Remove(kaldirilanBesin);
 
+            dgvDinnerList.DataSource = besinlerList.ToList();
+            FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = besinlerList.ToList();
+        }
+
+        private void btnTamamla_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FH_SignIn.userMainPage.Show();
+        }
+
+        private void btnAra_Click(object sender, EventArgs e)
+        {
+            dgvMealList.DataSource = dbContext.Besinler
+                   .Where(x => x.BesinAdı == txtAraDinner.Text)
+                   .Select(x => x).ToList();
+            if (txtAraDinner.Text == string.Empty)
+            {
+                dgvMealList.DataSource = dbContext.Besinler.ToList();
+            }
         }
     }
 }

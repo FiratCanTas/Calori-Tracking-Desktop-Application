@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FH_Dinner));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -37,6 +38,8 @@
             this.btnAksamOgunuEkle = new System.Windows.Forms.Button();
             this.dgvMealList = new System.Windows.Forms.DataGridView();
             this.dgvDinnerList = new System.Windows.Forms.DataGridView();
+            this.btnTamamla = new System.Windows.Forms.Button();
+            this.btnAksamOgunuKaldir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -93,6 +96,7 @@
             this.btnAra.Size = new System.Drawing.Size(48, 36);
             this.btnAra.TabIndex = 25;
             this.btnAra.UseVisualStyleBackColor = false;
+            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
             // 
             // txtAraDinner
             // 
@@ -136,6 +140,32 @@
             this.dgvDinnerList.RowHeadersWidth = 51;
             this.dgvDinnerList.Size = new System.Drawing.Size(426, 404);
             this.dgvDinnerList.TabIndex = 21;
+            this.dgvDinnerList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDinnerList_CellClick);
+            // 
+            // btnTamamla
+            // 
+            this.btnTamamla.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTamamla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTamamla.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTamamla.Location = new System.Drawing.Point(774, 420);
+            this.btnTamamla.Name = "btnTamamla";
+            this.btnTamamla.Size = new System.Drawing.Size(115, 37);
+            this.btnTamamla.TabIndex = 36;
+            this.btnTamamla.Text = "Tamamla";
+            this.btnTamamla.UseVisualStyleBackColor = false;
+            this.btnTamamla.Click += new System.EventHandler(this.btnTamamla_Click);
+            // 
+            // btnAksamOgunuKaldir
+            // 
+            this.btnAksamOgunuKaldir.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAksamOgunuKaldir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAksamOgunuKaldir.Image = ((System.Drawing.Image)(resources.GetObject("btnAksamOgunuKaldir.Image")));
+            this.btnAksamOgunuKaldir.Location = new System.Drawing.Point(774, 307);
+            this.btnAksamOgunuKaldir.Name = "btnAksamOgunuKaldir";
+            this.btnAksamOgunuKaldir.Size = new System.Drawing.Size(115, 37);
+            this.btnAksamOgunuKaldir.TabIndex = 35;
+            this.btnAksamOgunuKaldir.UseVisualStyleBackColor = false;
+            this.btnAksamOgunuKaldir.Click += new System.EventHandler(this.btnAksamOgunuKaldir_Click);
             // 
             // FH_Dinner
             // 
@@ -143,6 +173,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1397, 581);
+            this.Controls.Add(this.btnTamamla);
+            this.Controls.Add(this.btnAksamOgunuKaldir);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAra);
             this.Controls.Add(this.txtAraDinner);
@@ -176,5 +208,7 @@
         private System.Windows.Forms.Button btnAksamOgunuEkle;
         private System.Windows.Forms.DataGridView dgvMealList;
         private System.Windows.Forms.DataGridView dgvDinnerList;
+        private System.Windows.Forms.Button btnTamamla;
+        private System.Windows.Forms.Button btnAksamOgunuKaldir;
     }
 }

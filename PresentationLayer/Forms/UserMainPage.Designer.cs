@@ -298,7 +298,7 @@ namespace PresentationLayer.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(910, 738);
+            this.ClientSize = new System.Drawing.Size(915, 738);
             this.Controls.Add(this.btnRozetler);
             this.Controls.Add(this.btnRaporlar);
             this.Controls.Add(this.btnÖneriler);

@@ -49,6 +49,8 @@
             this.txtBoyunuz = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -97,7 +99,7 @@
             // 
             // btnGüncelle
             // 
-            this.btnGüncelle.Location = new System.Drawing.Point(467, 495);
+            this.btnGüncelle.Location = new System.Drawing.Point(464, 550);
             this.btnGüncelle.Name = "btnGüncelle";
             this.btnGüncelle.Size = new System.Drawing.Size(129, 39);
             this.btnGüncelle.TabIndex = 78;
@@ -108,7 +110,7 @@
             // txtEmailAdresiniz
             // 
             this.txtEmailAdresiniz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmailAdresiniz.Location = new System.Drawing.Point(299, 406);
+            this.txtEmailAdresiniz.Location = new System.Drawing.Point(296, 461);
             this.txtEmailAdresiniz.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmailAdresiniz.Name = "txtEmailAdresiniz";
             this.txtEmailAdresiniz.Size = new System.Drawing.Size(297, 29);
@@ -117,7 +119,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(130, 409);
+            this.label12.Location = new System.Drawing.Point(127, 464);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(146, 22);
@@ -127,7 +129,7 @@
             // txtSifreniz
             // 
             this.txtSifreniz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSifreniz.Location = new System.Drawing.Point(299, 443);
+            this.txtSifreniz.Location = new System.Drawing.Point(296, 498);
             this.txtSifreniz.Margin = new System.Windows.Forms.Padding(4);
             this.txtSifreniz.Name = "txtSifreniz";
             this.txtSifreniz.Size = new System.Drawing.Size(297, 29);
@@ -136,7 +138,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(129, 446);
+            this.label15.Location = new System.Drawing.Point(126, 501);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(85, 22);
@@ -148,7 +150,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(217)))), ((int)(((byte)(87)))));
-            this.label13.Location = new System.Drawing.Point(128, 361);
+            this.label13.Location = new System.Drawing.Point(125, 416);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(197, 28);
@@ -158,7 +160,7 @@
             // txtHedefAgirlik
             // 
             this.txtHedefAgirlik.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtHedefAgirlik.Location = new System.Drawing.Point(298, 312);
+            this.txtHedefAgirlik.Location = new System.Drawing.Point(296, 360);
             this.txtHedefAgirlik.Margin = new System.Windows.Forms.Padding(4);
             this.txtHedefAgirlik.Name = "txtHedefAgirlik";
             this.txtHedefAgirlik.Size = new System.Drawing.Size(297, 29);
@@ -169,7 +171,7 @@
             // cmbDiyetHedefiniz
             // 
             this.cmbDiyetHedefiniz.FormattingEnabled = true;
-            this.cmbDiyetHedefiniz.Location = new System.Drawing.Point(298, 275);
+            this.cmbDiyetHedefiniz.Location = new System.Drawing.Point(296, 323);
             this.cmbDiyetHedefiniz.Name = "cmbDiyetHedefiniz";
             this.cmbDiyetHedefiniz.Size = new System.Drawing.Size(297, 30);
             this.cmbDiyetHedefiniz.TabIndex = 71;
@@ -178,7 +180,7 @@
             // 
             this.cmbAktiviteDüzeyi.BackColor = System.Drawing.SystemColors.Window;
             this.cmbAktiviteDüzeyi.FormattingEnabled = true;
-            this.cmbAktiviteDüzeyi.Location = new System.Drawing.Point(298, 239);
+            this.cmbAktiviteDüzeyi.Location = new System.Drawing.Point(296, 287);
             this.cmbAktiviteDüzeyi.Name = "cmbAktiviteDüzeyi";
             this.cmbAktiviteDüzeyi.Size = new System.Drawing.Size(297, 30);
             this.cmbAktiviteDüzeyi.TabIndex = 70;
@@ -186,7 +188,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(129, 315);
+            this.label11.Location = new System.Drawing.Point(127, 363);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(155, 22);
@@ -196,7 +198,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(129, 278);
+            this.label10.Location = new System.Drawing.Point(127, 326);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(146, 22);
@@ -206,7 +208,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(129, 241);
+            this.label8.Location = new System.Drawing.Point(127, 289);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(144, 22);
@@ -228,7 +230,7 @@
             // txtKilonuz
             // 
             this.txtKilonuz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtKilonuz.Location = new System.Drawing.Point(298, 166);
+            this.txtKilonuz.Location = new System.Drawing.Point(296, 214);
             this.txtKilonuz.Margin = new System.Windows.Forms.Padding(4);
             this.txtKilonuz.Name = "txtKilonuz";
             this.txtKilonuz.Size = new System.Drawing.Size(297, 29);
@@ -239,7 +241,7 @@
             // txtBoyunuz
             // 
             this.txtBoyunuz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBoyunuz.Location = new System.Drawing.Point(299, 203);
+            this.txtBoyunuz.Location = new System.Drawing.Point(297, 251);
             this.txtBoyunuz.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoyunuz.Name = "txtBoyunuz";
             this.txtBoyunuz.Size = new System.Drawing.Size(297, 29);
@@ -250,7 +252,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(129, 169);
+            this.label5.Location = new System.Drawing.Point(127, 217);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 22);
@@ -260,12 +262,32 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(129, 206);
+            this.label4.Location = new System.Drawing.Point(127, 254);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 22);
             this.label4.TabIndex = 62;
             this.label4.Text = "Boyunuz : ";
+            // 
+            // txtKullaniciAdi
+            // 
+            this.txtKullaniciAdi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(297, 177);
+            this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(297, 29);
+            this.txtKullaniciAdi.TabIndex = 81;
+            this.txtKullaniciAdi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(128, 180);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 22);
+            this.label2.TabIndex = 80;
+            this.label2.Text = "Kullanıcı Adı :";
             // 
             // FH_MyAccount
             // 
@@ -273,6 +295,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(722, 606);
+            this.Controls.Add(this.txtKullaniciAdi);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnGüncelle);
             this.Controls.Add(this.txtEmailAdresiniz);
@@ -327,5 +351,7 @@
         private System.Windows.Forms.TextBox txtBoyunuz;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtKullaniciAdi;
+        private System.Windows.Forms.Label label2;
     }
 }
