@@ -138,6 +138,29 @@
             this.btnGirisYap.UseVisualStyleBackColor = false;
             this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
             // 
+            // btnSifreGizle
+            // 
+            this.btnSifreGizle.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnSifreGizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSifreGizle.Image = ((System.Drawing.Image)(resources.GetObject("btnSifreGizle.Image")));
+            this.btnSifreGizle.Location = new System.Drawing.Point(613, 286);
+            this.btnSifreGizle.Name = "btnSifreGizle";
+            this.btnSifreGizle.Size = new System.Drawing.Size(34, 29);
+            this.btnSifreGizle.TabIndex = 77;
+            this.btnSifreGizle.UseMnemonic = false;
+            this.btnSifreGizle.UseVisualStyleBackColor = true;
+            this.btnSifreGizle.Click += new System.EventHandler(this.btnSifreGizle_Click);
+            // 
+            // txtSifreniz
+            // 
+            this.txtSifreniz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSifreniz.Location = new System.Drawing.Point(373, 286);
+            this.txtSifreniz.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSifreniz.Name = "txtSifreniz";
+            this.txtSifreniz.Size = new System.Drawing.Size(240, 29);
+            this.txtSifreniz.TabIndex = 76;
+            this.txtSifreniz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // FH_SignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);

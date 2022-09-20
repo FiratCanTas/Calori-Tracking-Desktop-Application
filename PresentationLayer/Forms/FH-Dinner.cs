@@ -66,6 +66,15 @@ namespace PresentationLayer.Forms
             FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = besinlerList.ToList();
 
 
+        private void btnAra_Click(object sender, EventArgs e)
+        {
+            dgvMealList.DataSource = dbContext.Besinler
+                   .Where(x => x.BesinAdı == txtAraDinner.Text)
+                   .Select(x => x).ToList();
+            if (txtAraDinner.Text == string.Empty)
+            {
+                dgvMealList.DataSource = dbContext.Besinler.ToList();
+            }
         }
     }
 }
