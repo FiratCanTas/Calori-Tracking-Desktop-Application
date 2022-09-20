@@ -17,6 +17,7 @@ namespace EntityLayer.Concrete
         public int KullanıcıID { get; set; }
         public string Adı { get; set; }
         public string Soyadı { get; set; }
+        public string NickName { get; set; }
         public string KullanıcıMail { get; set; }
 
         string kullaniciSifre;
