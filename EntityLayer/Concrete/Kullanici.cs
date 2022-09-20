@@ -61,12 +61,12 @@ namespace EntityLayer.Concrete
                 }
                 
             } }
-        public int Boy { get; set; }
+        public double Boy { get; set; }
         public Cinsiyet Cinsiyet { get; set; }
         //public List<TuketilenBesin> TüketilenBesinler { get; set; }
 
         public int Yas { get; set; }
-        public int MevcutAğırlık { get; set; }
+        public double MevcutAğırlık { get; set; }
         public string AktiviteDüzeyi { get; set; }
         public string DiyetHedefi { get; set; }
         public int HedefAgırlıgı { get; set; }
