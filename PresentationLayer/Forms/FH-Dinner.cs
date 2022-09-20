@@ -22,13 +22,11 @@ namespace PresentationLayer.Forms
 
         //TuketilenBesin tuketilenBesin;
         FatHunterDbContext dbContext;
-        Besin besin;
         public static List<Besin> besinlerList = new List<Besin>();
         int tuketilecekBesinID;
 
         private void FH_Dinner_Load(object sender, EventArgs e)
         {
-            besin = new Besin();
             dbContext = new FatHunterDbContext();
             dgvMealList.DataSource = dbContext.Besinler.ToList();
         }
@@ -68,10 +66,15 @@ namespace PresentationLayer.Forms
 
         private void btnAra_Click(object sender, EventArgs e)
         {
-            dgvMealList.DataSource = dbContext.Besinler
-                   .Where(x => x.BesinAdı == txtAraDinner.Text)
-                   .Select(x => x).ToList();
-            if (txtAraDinner.Text == string.Empty)
+
+            if (txtAraDinner.Text != string.Empty)
+            {
+                dgvMealList.DataSource = dbContext.Besinler
+                    .Where(x => x.BesinAdı == txtAraDinner.Text)
+                    .Select(x => x).ToList();
+
+            }
+            else
             {
                 dgvMealList.DataSource = dbContext.Besinler.ToList();
             }

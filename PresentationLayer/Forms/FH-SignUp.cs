@@ -18,6 +18,8 @@ namespace PresentationLayer.Forms
         }
 
         FH_ClarificationText fH_ClarificationText;
+        FatHunterDbContext db = new FatHunterDbContext();
+
         private void btnIptal_Click(object sender, EventArgs e)
         {
             //Clear(); KATMANLIDA BASE İÇERSİNDE OLUŞACAK

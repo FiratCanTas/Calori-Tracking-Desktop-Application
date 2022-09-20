@@ -145,7 +145,7 @@
             this.btnSifreGizle.Image = ((System.Drawing.Image)(resources.GetObject("btnSifreGizle.Image")));
             this.btnSifreGizle.Location = new System.Drawing.Point(613, 286);
             this.btnSifreGizle.Name = "btnSifreGizle";
-            this.btnSifreGizle.Size = new System.Drawing.Size(34, 29);
+            this.btnSifreGizle.Size = new System.Drawing.Size(35, 29);
             this.btnSifreGizle.TabIndex = 77;
             this.btnSifreGizle.UseMnemonic = false;
             this.btnSifreGizle.UseVisualStyleBackColor = true;

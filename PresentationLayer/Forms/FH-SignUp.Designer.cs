@@ -378,6 +378,138 @@
             this.panel1.Size = new System.Drawing.Size(1002, 64);
             this.panel1.TabIndex = 54;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PresentationLayer.Properties.Resources.MicrosoftTeams_image_3;
+            this.pictureBox1.Location = new System.Drawing.Point(157, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(210, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::PresentationLayer.Properties.Resources.MicrosoftTeams_image__2_;
+            this.pictureBox2.Location = new System.Drawing.Point(615, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(387, 64);
+            this.pictureBox2.TabIndex = 22;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label14.Location = new System.Drawing.Point(681, 273);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(34, 25);
+            this.label14.TabIndex = 64;
+            this.label14.Text = "cm";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label16.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label16.Location = new System.Drawing.Point(680, 307);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(34, 25);
+            this.label16.TabIndex = 70;
+            this.label16.Text = "kg";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtKilonuz
+            // 
+            this.txtKilonuz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKilonuz.Location = new System.Drawing.Point(418, 307);
+            this.txtKilonuz.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKilonuz.Name = "txtKilonuz";
+            this.txtKilonuz.Size = new System.Drawing.Size(263, 29);
+            this.txtKilonuz.TabIndex = 69;
+            this.txtKilonuz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label17
+            // 
+            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label17.Location = new System.Drawing.Point(680, 495);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(34, 25);
+            this.label17.TabIndex = 72;
+            this.label17.Text = "kg";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtHedefAgirlik
+            // 
+            this.txtHedefAgirlik.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtHedefAgirlik.Location = new System.Drawing.Point(418, 495);
+            this.txtHedefAgirlik.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHedefAgirlik.Name = "txtHedefAgirlik";
+            this.txtHedefAgirlik.Size = new System.Drawing.Size(263, 29);
+            this.txtHedefAgirlik.TabIndex = 71;
+            this.txtHedefAgirlik.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtSifreniz
+            // 
+            this.txtSifreniz.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSifreniz.Location = new System.Drawing.Point(419, 619);
+            this.txtSifreniz.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSifreniz.Name = "txtSifreniz";
+            this.txtSifreniz.Size = new System.Drawing.Size(263, 29);
+            this.txtSifreniz.TabIndex = 73;
+            this.txtSifreniz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // aktiviteDuzeyiAciklama
+            // 
+            this.aktiviteDuzeyiAciklama.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.aktiviteDuzeyiAciklama.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.aktiviteDuzeyiAciklama.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(217)))), ((int)(((byte)(87)))));
+            this.aktiviteDuzeyiAciklama.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.aktiviteDuzeyiAciklama.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.aktiviteDuzeyiAciklama.Image = ((System.Drawing.Image)(resources.GetObject("aktiviteDuzeyiAciklama.Image")));
+            this.aktiviteDuzeyiAciklama.Location = new System.Drawing.Point(715, 345);
+            this.aktiviteDuzeyiAciklama.Name = "aktiviteDuzeyiAciklama";
+            this.aktiviteDuzeyiAciklama.Size = new System.Drawing.Size(23, 31);
+            this.aktiviteDuzeyiAciklama.TabIndex = 76;
+            this.aktiviteDuzeyiAciklama.UseVisualStyleBackColor = false;
+            this.aktiviteDuzeyiAciklama.Click += new System.EventHandler(this.aktiviteDuzeyiAciklama_Click);
+            // 
+            // btnSifreGizle
+            // 
+            this.btnSifreGizle.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnSifreGizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSifreGizle.Image = ((System.Drawing.Image)(resources.GetObject("btnSifreGizle.Image")));
+            this.btnSifreGizle.Location = new System.Drawing.Point(681, 619);
+            this.btnSifreGizle.Name = "btnSifreGizle";
+            this.btnSifreGizle.Size = new System.Drawing.Size(34, 29);
+            this.btnSifreGizle.TabIndex = 75;
+            this.btnSifreGizle.UseMnemonic = false;
+            this.btnSifreGizle.UseVisualStyleBackColor = true;
+            this.btnSifreGizle.Click += new System.EventHandler(this.btnSifreGizle_Click);
+            // 
+            // txtKullaniciAdi
+            // 
+            this.txtKullaniciAdi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(418, 127);
+            this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(297, 29);
+            this.txtKullaniciAdi.TabIndex = 78;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(248, 130);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(117, 22);
+            this.label18.TabIndex = 77;
+            this.label18.Text = "Kullanıcı Adı: ";
+            // 
             // FH_SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
