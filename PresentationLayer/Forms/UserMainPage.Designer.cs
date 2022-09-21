@@ -112,7 +112,7 @@ namespace PresentationLayer.Forms
             // pictureBox5
             // 
             this.pictureBox5.Image = global::PresentationLayer.Properties.Resources.icons8_Plus;
-            this.pictureBox5.Location = new System.Drawing.Point(860, 678);
+            this.pictureBox5.Location = new System.Drawing.Point(863, 667);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(32, 32);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -166,7 +166,7 @@ namespace PresentationLayer.Forms
             // pictureBox4
             // 
             this.pictureBox4.Image = global::PresentationLayer.Properties.Resources.icons8_Plus;
-            this.pictureBox4.Location = new System.Drawing.Point(862, 248);
+            this.pictureBox4.Location = new System.Drawing.Point(863, 248);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -176,7 +176,7 @@ namespace PresentationLayer.Forms
             // pictureBox3
             // 
             this.pictureBox3.Image = global::PresentationLayer.Properties.Resources.icons8_Plus;
-            this.pictureBox3.Location = new System.Drawing.Point(862, 462);
+            this.pictureBox3.Location = new System.Drawing.Point(863, 463);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -186,7 +186,7 @@ namespace PresentationLayer.Forms
             // pictureBox2
             // 
             this.pictureBox2.Image = global::PresentationLayer.Properties.Resources.icons8_Plus;
-            this.pictureBox2.Location = new System.Drawing.Point(415, 462);
+            this.pictureBox2.Location = new System.Drawing.Point(416, 463);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -196,7 +196,7 @@ namespace PresentationLayer.Forms
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PresentationLayer.Properties.Resources.icons8_Plus;
-            this.pictureBox1.Location = new System.Drawing.Point(416, 247);
+            this.pictureBox1.Location = new System.Drawing.Point(416, 248);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.TabIndex = 36;
@@ -206,7 +206,7 @@ namespace PresentationLayer.Forms
             // 
             this.btnWaterFollowUp.Image = global::PresentationLayer.Properties.Resources.icons8_water;
             this.btnWaterFollowUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWaterFollowUp.Location = new System.Drawing.Point(13, 675);
+            this.btnWaterFollowUp.Location = new System.Drawing.Point(13, 663);
             this.btnWaterFollowUp.Margin = new System.Windows.Forms.Padding(4);
             this.btnWaterFollowUp.Name = "btnWaterFollowUp";
             this.btnWaterFollowUp.Size = new System.Drawing.Size(886, 40);
@@ -292,9 +292,9 @@ namespace PresentationLayer.Forms
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(217)))), ((int)(((byte)(87)))));
             this.panel1.Controls.Add(this.btnHesabım);
             this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1365, 59);
+            this.panel1.Size = new System.Drawing.Size(917, 59);
             this.panel1.TabIndex = 48;
             // 
             // lblKaloriDegeri
@@ -341,8 +341,8 @@ namespace PresentationLayer.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(911, 720);
             this.ClientSize = new System.Drawing.Size(915, 738);
             this.Controls.Add(this.pnlHedefKalori);
             this.Controls.Add(this.btnRozetler);
