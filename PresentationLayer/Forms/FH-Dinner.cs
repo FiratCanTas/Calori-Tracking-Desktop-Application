@@ -20,18 +20,14 @@ namespace PresentationLayer.Forms
             InitializeComponent();
         }
         FatHunterDbContext dbContext;
-        public static List<Besin> besinlerList = new List<Besin>();
+        public static List<Besin> dinnerList = new List<Besin>();
         int tuketilecekBesinID;
         int kaldirilacakBesinID;
-
-        List<List<Besin>> tuketilenTumBesinler;
 
         private void FH_Dinner_Load(object sender, EventArgs e)
         {
             dbContext = new FatHunterDbContext();
             dgvMealList.DataSource = dbContext.Besinler.ToList();
-            tuketilenTumBesinler = new List<List<Besin>>();
-            tuketilenTumBesinler.Add(besinlerList);
         }
 
         private void dgvMealList_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -52,10 +48,10 @@ namespace PresentationLayer.Forms
             {
                 tuketilenBesin.TüketilenTarih = DateTime.Today;
                 tuketilenBesin.BesininTuketildigiOgun = Ogunler.Aksam;
-                besinlerList.Add(tuketilenBesin);
-                dgvDinnerList.DataSource = besinlerList.ToList();
+                dinnerList.Add(tuketilenBesin);
+                dgvDinnerList.DataSource = dinnerList.ToList();
 
-                FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = besinlerList.ToList();
+                FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = dinnerList.ToList();
             }
             else
             {
@@ -66,14 +62,19 @@ namespace PresentationLayer.Forms
         private void btnAksamOgunuKaldir_Click(object sender, EventArgs e)
         {
             var kaldirilanBesin = dbContext.Besinler.Find(kaldirilacakBesinID);
-            besinlerList.Remove(kaldirilanBesin);
+            dinnerList.Remove(kaldirilanBesin);
 
-            dgvDinnerList.DataSource = besinlerList.ToList();
-            FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = besinlerList.ToList();
+            dgvDinnerList.DataSource = dinnerList.ToList();
+            FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = dinnerList.ToList();
         }
 
         private void btnTamamla_Click(object sender, EventArgs e)
         {
+            foreach (Besin item in FH_Dinner.dinnerList)
+            {
+                UserMainPage.tuketilenUrunler.Tuketilenler.Add(item);
+            }
+
             this.Hide();
             FH_SignIn.userMainPage.Show();
         }

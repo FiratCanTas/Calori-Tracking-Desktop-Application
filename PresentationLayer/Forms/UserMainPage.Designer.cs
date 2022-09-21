@@ -47,7 +47,7 @@ namespace PresentationLayer.Forms
             this.btnLunch = new System.Windows.Forms.Button();
             this.btnKahvaltı = new System.Windows.Forms.Button();
             this.btnHesabım = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpUserPage = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblKaloriDegeri = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -278,20 +278,21 @@ namespace PresentationLayer.Forms
             this.btnHesabım.TabIndex = 31;
             this.btnHesabım.Text = "Hesabım";
             this.btnHesabım.UseVisualStyleBackColor = false;
+            this.btnHesabım.Click += new System.EventHandler(this.btnHesabım_Click);
             // 
-            // dateTimePicker1
+            // dtpUserPage
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(331, 14);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(249, 29);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dtpUserPage.Location = new System.Drawing.Point(331, 14);
+            this.dtpUserPage.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpUserPage.Name = "dtpUserPage";
+            this.dtpUserPage.Size = new System.Drawing.Size(249, 29);
+            this.dtpUserPage.TabIndex = 6;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(217)))), ((int)(((byte)(87)))));
             this.panel1.Controls.Add(this.btnHesabım);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.dtpUserPage);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(917, 59);
@@ -342,7 +343,6 @@ namespace PresentationLayer.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(911, 720);
             this.ClientSize = new System.Drawing.Size(915, 738);
             this.Controls.Add(this.pnlHedefKalori);
             this.Controls.Add(this.btnRozetler);
@@ -402,7 +402,8 @@ namespace PresentationLayer.Forms
         private System.Windows.Forms.Button btnDinner;
         private System.Windows.Forms.Button btnLunch;
         private System.Windows.Forms.Button btnKahvaltı;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnHesabım;
+        private System.Windows.Forms.DateTimePicker dtpUserPage;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.DataGridView dgvAksamYemegi;
         public System.Windows.Forms.DataGridView dgvOgleYemegi;

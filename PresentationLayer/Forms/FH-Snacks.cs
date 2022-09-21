@@ -21,7 +21,7 @@ namespace PresentationLayer.Forms
         }
 
         FatHunterDbContext dbContext;
-        public static List<Besin> besinlerList = new List<Besin>();
+        public static List<Besin> snacksList = new List<Besin>();
         int tuketilecekBesinID;
         int kaldirilacakBesinID;
 
@@ -48,10 +48,10 @@ namespace PresentationLayer.Forms
             {
                 tuketilenBesin.TüketilenTarih = DateTime.Today;
                 tuketilenBesin.BesininTuketildigiOgun = Ogunler.Aksam;
-                besinlerList.Add(tuketilenBesin);
-                dgvSnacksList.DataSource = besinlerList.ToList();
+                snacksList.Add(tuketilenBesin);
+                dgvSnacksList.DataSource = snacksList.ToList();
 
-                FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = besinlerList.ToList();
+                FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = snacksList.ToList();
             }
             else
             {
@@ -62,14 +62,19 @@ namespace PresentationLayer.Forms
         private void btnAraOgunuKaldir_Click(object sender, EventArgs e)
         {
             var kaldirilanBesin = dbContext.Besinler.Find(kaldirilacakBesinID);
-            besinlerList.Remove(kaldirilanBesin);
+            snacksList.Remove(kaldirilanBesin);
 
-            dgvSnacksList.DataSource = besinlerList.ToList();
-            FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = besinlerList.ToList();
+            dgvSnacksList.DataSource = snacksList.ToList();
+            FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = snacksList.ToList();
         }
 
         private void btnTamamla_Click(object sender, EventArgs e)
         {
+            foreach (Besin item in FH_Snacks.snacksList)
+            {
+                UserMainPage.tuketilenUrunler.Tuketilenler.Add(item);
+            }
+
             this.Hide();
             FH_SignIn.userMainPage.Show();
         }

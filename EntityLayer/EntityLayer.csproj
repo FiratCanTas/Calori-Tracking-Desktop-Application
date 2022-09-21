@@ -57,6 +57,7 @@
     <Compile Include="Abstract\IIletisimFormlari.cs" />
     <Compile Include="Abstract\IKullanici.cs" />
     <Compile Include="Abstract\IMakroDeger.cs" />
+    <Compile Include="Abstract\ITuketilenUrunler.cs" />
     <Compile Include="Concrete\Besin.cs" />
     <Compile Include="Concrete\IletisimFormlari.cs" />
     <Compile Include="Concrete\Kullanici.cs" />
