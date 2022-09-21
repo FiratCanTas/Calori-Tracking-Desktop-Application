@@ -37,7 +37,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(330, 550);
+            this.btnLogin.Location = new System.Drawing.Point(262, 454);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(162, 37);
@@ -52,7 +52,7 @@
             this.btnKaydol.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnKaydol.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydol.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnKaydol.Location = new System.Drawing.Point(157, 479);
+            this.btnKaydol.Location = new System.Drawing.Point(89, 383);
             this.btnKaydol.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaydol.Name = "btnKaydol";
             this.btnKaydol.Size = new System.Drawing.Size(335, 53);
@@ -65,7 +65,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(165, 552);
+            this.label1.Location = new System.Drawing.Point(97, 456);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 22);
@@ -76,10 +76,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PresentationLayer.Properties.Resources.MicrosoftTeams_image__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(-9, -2);
+            this.pictureBox1.Location = new System.Drawing.Point(-13, -33);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(671, 642);
+            this.pictureBox1.Size = new System.Drawing.Size(541, 550);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
@@ -88,7 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 632);
+            this.ClientSize = new System.Drawing.Size(510, 502);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnKaydol);
             this.Controls.Add(this.label1);

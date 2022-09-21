@@ -63,7 +63,6 @@
     <Compile Include="Mapping\IletisimFormMapping.cs" />
     <Compile Include="Mapping\KullaniciMapping.cs" />
     <Compile Include="Mapping\MakroDegerMapping.cs" />
-    <Compile Include="Mapping\TuketilenBesinMapping.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
