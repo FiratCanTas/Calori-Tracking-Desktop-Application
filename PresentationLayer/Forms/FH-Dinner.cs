@@ -20,16 +20,18 @@ namespace PresentationLayer.Forms
             InitializeComponent();
         }
         FatHunterDbContext dbContext;
-        Besin besin;
         public static List<Besin> besinlerList = new List<Besin>();
         int tuketilecekBesinID;
         int kaldirilacakBesinID;
 
+        List<List<Besin>> tuketilenTumBesinler;
+
         private void FH_Dinner_Load(object sender, EventArgs e)
         {
-            besin = new Besin();
             dbContext = new FatHunterDbContext();
             dgvMealList.DataSource = dbContext.Besinler.ToList();
+            tuketilenTumBesinler = new List<List<Besin>>();
+            tuketilenTumBesinler.Add(besinlerList);
         }
 
         private void dgvMealList_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -45,12 +47,20 @@ namespace PresentationLayer.Forms
         private void btnAksamOgunuEkle_Click(object sender, EventArgs e)
         {
             var tuketilenBesin = dbContext.Besinler.Find(tuketilecekBesinID);
-            tuketilenBesin.TüketilenTarih = DateTime.Today;
-            tuketilenBesin.BesininTuketildigiOgun = Ogunler.Aksam;
-            besinlerList.Add(tuketilenBesin);
-            dgvDinnerList.DataSource = besinlerList.ToList();
 
-            FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = besinlerList.ToList();
+            if (tuketilenBesin != null)
+            {
+                tuketilenBesin.TüketilenTarih = DateTime.Today;
+                tuketilenBesin.BesininTuketildigiOgun = Ogunler.Aksam;
+                besinlerList.Add(tuketilenBesin);
+                dgvDinnerList.DataSource = besinlerList.ToList();
+
+                FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = besinlerList.ToList();
+            }
+            else
+            {
+                MessageBox.Show("Ürün seçimi yapılamadı! Lütfen tekrar deneyiniz.");
+            }
         }
 
         private void btnAksamOgunuKaldir_Click(object sender, EventArgs e)
@@ -70,10 +80,13 @@ namespace PresentationLayer.Forms
 
         private void btnAra_Click(object sender, EventArgs e)
         {
-            dgvMealList.DataSource = dbContext.Besinler
-                   .Where(x => x.BesinAdı == txtAraDinner.Text)
-                   .Select(x => x).ToList();
             if (txtAraDinner.Text == string.Empty)
+            {
+                dgvMealList.DataSource = dbContext.Besinler
+                            .Where(x => x.BesinAdı == txtAraDinner.Text)
+                            .Select(x => x).ToList();
+            }
+            else
             {
                 dgvMealList.DataSource = dbContext.Besinler.ToList();
             }
