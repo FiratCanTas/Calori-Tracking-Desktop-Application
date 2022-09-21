@@ -38,5 +38,7 @@ namespace PresentationLayer.Forms
             Db.Kullanıcılar.Add(kullanici);
             Db.SaveChanges();
         }
+
+        
     }
 }

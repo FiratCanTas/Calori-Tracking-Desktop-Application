@@ -52,7 +52,7 @@ namespace PresentationLayer.Forms
             this.lblKaloriDegeri = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlHedefKalori = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblKaloriHedefDegeri = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGenelDegerler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOgleYemegi)).BeginInit();
@@ -320,7 +320,7 @@ namespace PresentationLayer.Forms
             // pnlHedefKalori
             // 
             this.pnlHedefKalori.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlHedefKalori.Controls.Add(this.label1);
+            this.pnlHedefKalori.Controls.Add(this.lblKaloriHedefDegeri);
             this.pnlHedefKalori.Controls.Add(this.lblKaloriDegeri);
             this.pnlHedefKalori.Controls.Add(this.label2);
             this.pnlHedefKalori.Location = new System.Drawing.Point(774, 75);
@@ -329,13 +329,13 @@ namespace PresentationLayer.Forms
             this.pnlHedefKalori.TabIndex = 52;
             this.pnlHedefKalori.Tag = "";
             // 
-            // label1
+            // lblKaloriHedefDegeri
             // 
-            this.label1.Location = new System.Drawing.Point(2, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 26);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "2500";
+            this.lblKaloriHedefDegeri.Location = new System.Drawing.Point(2, 25);
+            this.lblKaloriHedefDegeri.Name = "lblKaloriHedefDegeri";
+            this.lblKaloriHedefDegeri.Size = new System.Drawing.Size(67, 26);
+            this.lblKaloriHedefDegeri.TabIndex = 50;
+            this.lblKaloriHedefDegeri.Text = "2500";
             // 
             // UserMainPage
             // 
@@ -402,7 +402,6 @@ namespace PresentationLayer.Forms
         private System.Windows.Forms.Button btnDinner;
         private System.Windows.Forms.Button btnLunch;
         private System.Windows.Forms.Button btnKahvaltı;
-        private System.Windows.Forms.Button btnHesabım;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.DataGridView dgvAksamYemegi;
@@ -413,6 +412,7 @@ namespace PresentationLayer.Forms
         public System.Windows.Forms.DataGridView dgvKahvalti;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlHedefKalori;
-        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label lblKaloriHedefDegeri;
+        private System.Windows.Forms.Button btnHesabım;
     }
 }

@@ -105,6 +105,6 @@ namespace PresentationLayer.Forms
             dgvGenelDegerler.DataSource = tuketilenBesinler.ToList();
         }
 
-        
+       
     }
 }

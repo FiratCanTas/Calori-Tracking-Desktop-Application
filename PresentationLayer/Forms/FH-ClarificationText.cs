@@ -40,7 +40,10 @@ namespace PresentationLayer.Forms
                 FH_SignUp.db.SaveChanges();
                 
             }
+
+
             UserMainPage userMainPage = new UserMainPage();
+            userMainPage.lblKaloriHedefDegeri.Text = FH_SignUp.tdee.ToString();
             userMainPage.Show();
             this.Hide();
 

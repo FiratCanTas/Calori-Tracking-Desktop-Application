@@ -63,7 +63,7 @@
             this.label1.Location = new System.Drawing.Point(498, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 28);
+            this.label1.Size = new System.Drawing.Size(185, 29);
             this.label1.TabIndex = 62;
             this.label1.Text = "Hesap Ayarları";
             // 
@@ -122,7 +122,7 @@
             this.label12.Location = new System.Drawing.Point(127, 464);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(146, 22);
+            this.label12.Size = new System.Drawing.Size(154, 23);
             this.label12.TabIndex = 76;
             this.label12.Text = "E-Mail Adresiniz :";
             // 
@@ -141,7 +141,7 @@
             this.label15.Location = new System.Drawing.Point(126, 501);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(85, 22);
+            this.label15.Size = new System.Drawing.Size(90, 23);
             this.label15.TabIndex = 74;
             this.label15.Text = "Şifreniz : ";
             // 
@@ -153,7 +153,7 @@
             this.label13.Location = new System.Drawing.Point(125, 416);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(197, 28);
+            this.label13.Size = new System.Drawing.Size(206, 29);
             this.label13.TabIndex = 73;
             this.label13.Text = "Hesabımı Güncelle";
             // 
@@ -191,7 +191,7 @@
             this.label11.Location = new System.Drawing.Point(127, 363);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(155, 22);
+            this.label11.Size = new System.Drawing.Size(164, 23);
             this.label11.TabIndex = 69;
             this.label11.Text = "Hedef Ağırlığınız : ";
             // 
@@ -201,7 +201,7 @@
             this.label10.Location = new System.Drawing.Point(127, 326);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(146, 22);
+            this.label10.Size = new System.Drawing.Size(154, 23);
             this.label10.TabIndex = 68;
             this.label10.Text = "Diyet Hedefiniz : ";
             // 
@@ -211,7 +211,7 @@
             this.label8.Location = new System.Drawing.Point(127, 289);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(144, 22);
+            this.label8.Size = new System.Drawing.Size(149, 23);
             this.label8.TabIndex = 67;
             this.label8.Text = "Aktivite Düzeyi : ";
             // 
@@ -223,7 +223,7 @@
             this.label6.Location = new System.Drawing.Point(128, 125);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(194, 28);
+            this.label6.Size = new System.Drawing.Size(203, 29);
             this.label6.TabIndex = 66;
             this.label6.Text = "Hedefimi Güncelle";
             // 
@@ -255,7 +255,7 @@
             this.label5.Location = new System.Drawing.Point(127, 217);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 22);
+            this.label5.Size = new System.Drawing.Size(88, 23);
             this.label5.TabIndex = 63;
             this.label5.Text = "Kilonuz : ";
             // 
@@ -265,7 +265,7 @@
             this.label4.Location = new System.Drawing.Point(127, 254);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 22);
+            this.label4.Size = new System.Drawing.Size(100, 23);
             this.label4.TabIndex = 62;
             this.label4.Text = "Boyunuz : ";
             // 
@@ -285,7 +285,7 @@
             this.label2.Location = new System.Drawing.Point(128, 180);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 22);
+            this.label2.Size = new System.Drawing.Size(123, 23);
             this.label2.TabIndex = 80;
             this.label2.Text = "Kullanıcı Adı :";
             // 
@@ -319,6 +319,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FH_MyAccount";
             this.Text = "FH_MyAccount";
+           
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
