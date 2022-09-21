@@ -24,15 +24,6 @@ namespace DataAccessLayer.Mapping
 
             this.Property(b => b.TüketilenTarih).IsOptional();
             this.Property(b => b.BesininTuketildigiOgun).IsOptional();
-
-            //this.HasMany(b => b.TuketilenBesinler)
-            //    .WithMany(p => p.Besinler)
-            //    .Map(tb =>
-            //    {
-            //        tb.MapLeftKey("TüketilenBesinlerId");
-            //        tb.MapRightKey("BesinlerId");
-            //        tb.ToTable("BesinlerTuketilenBesinler");
-            //    });
         }
     }
 }

@@ -71,6 +71,11 @@ namespace PresentationLayer.Forms
 
         private void btnTamamla_Click(object sender, EventArgs e)
         {
+            foreach (Besin item in FH_Breakfast.kahvaltiList)
+            {
+                UserMainPage.tuketilenUrunler.Tuketilenler.Add(item);
+            }
+
             this.Hide();
             FH_SignIn.userMainPage.Show();
         }

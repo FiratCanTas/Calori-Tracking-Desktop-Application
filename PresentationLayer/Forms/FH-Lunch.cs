@@ -20,14 +20,11 @@ namespace PresentationLayer.Forms
             InitializeComponent();
         }
 
-
-
         private void txtAraLunch_TextChanged(object sender, EventArgs e)
         {
 
 
         }
-
 
         private void btnAra_Click(object sender, EventArgs e)
         {
@@ -44,9 +41,8 @@ namespace PresentationLayer.Forms
         }
 
         public static FatHunterDbContext db = new FatHunterDbContext();
-        Besin besin = new Besin();
         UserMainPage userMainPage = new UserMainPage();
-        public static List<Besin> besinlerList = new List<Besin>();
+        public static List<Besin> lunchList = new List<Besin>();
         public int tuketilenBesinClickId;
         public int secilenYemekClickId;
         private void btnOgleOgunuEkle_Click(object sender, EventArgs e)
@@ -56,48 +52,46 @@ namespace PresentationLayer.Forms
             {
                 tuketilenBesin.TüketilenTarih = DateTime.Today;
                 tuketilenBesin.BesininTuketildigiOgun = Ogunler.Ogle;
-                besinlerList.Add(tuketilenBesin);
-                dgvSecilenYemekler.DataSource = besinlerList.ToList();
+                lunchList.Add(tuketilenBesin);
+                dgvSecilenYemekler.DataSource = lunchList.ToList();
 
-                userMainPage.dgvOgleYemegi.DataSource = besinlerList.ToList();
+                userMainPage.dgvOgleYemegi.DataSource = lunchList.ToList();
             }
             else
             {
                 MessageBox.Show("Ürün seçimi yapılamadı! Lütfen tekrar deneyiniz.");
             }
-           
-
         }
 
         private void btnOgleOgunuKaldir_Click(object sender, EventArgs e)
         {
             var kaldirilanBesin = db.Besinler.Find(secilenYemekClickId);
-            besinlerList.Remove(kaldirilanBesin);
+            lunchList.Remove(kaldirilanBesin);
 
-            dgvSecilenYemekler.DataSource = besinlerList.ToList();
-            userMainPage.dgvOgleYemegi.DataSource = besinlerList.ToList();
+            dgvSecilenYemekler.DataSource = lunchList.ToList();
+            userMainPage.dgvOgleYemegi.DataSource = lunchList.ToList();
         }
 
         private void btnTamamla_Click(object sender, EventArgs e)
         {
+            foreach (Besin item in FH_Lunch.lunchList)
+            {
+                UserMainPage.tuketilenUrunler.Tuketilenler.Add(item);
+            }
+
             this.Hide();
             userMainPage.Show();
-
         }
 
         private void FH_Lunch_Load(object sender, EventArgs e)
         {
-            besin = new Besin();
             db = new FatHunterDbContext();
             dgvLuchList.DataSource = db.Besinler.ToList();
         }
-
-
       
         private void dgvLuchList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             tuketilenBesinClickId = Convert.ToInt32(dgvLuchList.Rows[e.RowIndex].Cells[0].Value);
-
         }
 
         private void dgvSecilenYemekler_CellClick(object sender, DataGridViewCellEventArgs e)

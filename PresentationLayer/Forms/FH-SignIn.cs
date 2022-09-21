@@ -23,6 +23,7 @@ namespace PresentationLayer.Forms
         public static FH_ChangePassword fH_ChangePassword;
         public static UserMainPage userMainPage;
         public static FH_ContactUs fH_ContactUs;
+        public static Kullanici user;
         bool gizliMi;
 
         private void FH_SignIn_Load(object sender, EventArgs e)
@@ -46,6 +47,8 @@ namespace PresentationLayer.Forms
 
         private void btnGirisYap_Click(object sender, EventArgs e)
         {
+            //user = dbContext.Kullanıcılar.Where(x => x.KullanıcıMail == txtEmailAdresiniz.Text && x.KullanıcıŞifre == txtSifreniz.Text).FirstOrDefault();
+
             //foreach (Kullanici kullanici in dbContext.Kullanıcılar)
             //{
             //    if (kullanici.KullanıcıMail == txtEmailAdresiniz.Text && kullanici.KullanıcıŞifre == txtSifreniz.Text)

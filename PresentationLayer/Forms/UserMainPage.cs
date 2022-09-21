@@ -1,3 +1,4 @@
+using DataAccessLayer.Context;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,47 @@ namespace PresentationLayer.Forms
         public static FH_MealSuggestion fH_MealSuggestion;
         public static FH_MyAccount myAccount;
         public static List<Besin> tuketilenTumBesinler = new List<Besin>();
+        FatHunterDbContext dbContext = new FatHunterDbContext();
 
+        public static TuketilenUrunler tuketilenUrunler;
+
+        private void UserMainPage_Load(object sender, EventArgs e)
+        {
+            myAccount = new FH_MyAccount();
+
+            tuketilenUrunler = new TuketilenUrunler()
+            {
+                KullanıcıID = FH_SignIn.user.KullanıcıID,
+                TuketildigiTarih = dtpUserPage.Value,
+            };
+
+            dgvAraOgun.DataSource = FH_Snacks.snacksList.ToList();
+            dgvKahvalti.DataSource = FH_Breakfast.kahvaltiList.ToList();
+            dgvOgleYemegi.DataSource = FH_Lunch.lunchList.ToList();
+            dgvAksamYemegi.DataSource = FH_Dinner.dinnerList.ToList();
+
+            //var tuketilenBesinler = FH_Lunch.db.Besinler.Where(x => x.BesininTuketildigiOgun != null && x.TüketilenTarih != null).Select(x => x).ToList();
+
+            //tuketilenTumBesinler = FH_Lunch.db.Besinler.Where(x => x.BesininTuketildigiOgun != null || x.TüketilenTarih != null).Select(x => x).ToList();
+
+            var besins = dbContext.TuketilenUrunlers.Find(FH_SignIn.user.KullanıcıID);
+
+            double yagMiktari = 0;
+            double karbMiktari = 0;
+            double proMiktari = 0;
+            foreach (Besin item in besins.Tuketilenler)
+            {
+                yagMiktari += item.MakroDeger.YagMiktari;
+                karbMiktari += item.MakroDeger.KarbonhidratMiktari;
+                proMiktari += item.MakroDeger.ProteinMiktari;
+            }
+            List<Double> makros = new List<Double>();
+            makros.Add(yagMiktari);
+            makros.Add(proMiktari);
+            makros.Add(karbMiktari);
+
+            dgvGenelDegerler.DataSource = makros.ToList();
+        }
 
         private void btnKahvaltı_Click(object sender, EventArgs e)
         {
@@ -57,6 +98,7 @@ namespace PresentationLayer.Forms
 
         private void btnWaterFollowUp_Click(object sender, EventArgs e)
         {
+            tuketilenUrunler.IcilenSu += 1;
         }
 
         private void UserMainPage_FormClosed(object sender, FormClosedEventArgs e)
@@ -87,24 +129,8 @@ namespace PresentationLayer.Forms
 
         private void btnHesabım_Click(object sender, EventArgs e)
         {
-            myAccount = new FH_MyAccount();
             myAccount.Show();
             this.Hide();
         }
-
-        private void UserMainPage_Load(object sender, EventArgs e)
-        {
-            dgvOgleYemegi.DataSource = FH_Lunch.besinlerList.ToList();
-            dgvAksamYemegi.DataSource = FH_Dinner.besinlerList.ToList();
-
-
-            var tuketilenBesinler = FH_Lunch.db.Besinler.Where(x => x.BesininTuketildigiOgun != null && x.TüketilenTarih != null).Select(x => x).ToList();
-
-            tuketilenTumBesinler =  FH_Lunch.db.Besinler.Where(x => x.BesininTuketildigiOgun != null || x.TüketilenTarih != null).Select(x => x).ToList();
-
-            dgvGenelDegerler.DataSource = tuketilenBesinler.ToList();
-        }
-
-        
     }
 }

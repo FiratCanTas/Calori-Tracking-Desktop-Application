@@ -11,16 +11,23 @@ using System.Windows.Forms;
 
 namespace EntityLayer.Concrete
 {
-    public class Kullanici : IKullanici,IBaseEntity
+    public class Kullanici : IKullanici, IBaseEntity
     {
-       
+        public Kullanici()
+        {
+            IletisimFormlari = new List<IletisimFormlari>();
+            TuketilenUrunlers = new List<TuketilenUrunler>();
+        }
+
         public int KullanıcıID { get; set; }
         public string Adı { get; set; }
         public string Soyadı { get; set; }
         public string NickName { get; set; }
 
         string kullaniciMail;
-        public string KullanıcıMail { get { return kullaniciMail; }
+        public string KullanıcıMail
+        {
+            get { return kullaniciMail; }
             set
             {
                 if (value.Contains("@gmail.com") || value.Contains("@windowslive.com") || value.Contains("@hotmail.com") || value.Contains("@outlook.com") || value.Contains("@yahoo.com"))
@@ -33,32 +40,32 @@ namespace EntityLayer.Concrete
                     value = "0";
                     kullaniciMail = value;
                 }
-            } }
+            }
+        }
 
         string kullaniciSifre;
-        public string KullanıcıŞifre { get { return kullaniciSifre; }
+        public string KullanıcıŞifre
+        {
+            get { return kullaniciSifre; }
             set
             {
                 char[] sifre = value.ToCharArray();
                 int ayniDeger = 0;
 
-                if (value.Length >= 6 )
+                if (value.Length >= 6)
                 {
                     for (int i = 0; i < sifre.Length; i++)
                     {
-                        for (int k = sifre.Length-1; k > 0; k--)
+                        for (int k = sifre.Length - 1; k > 0; k--)
                         {
                             if (sifre[i] == sifre[k])
                             {
                                 ayniDeger++;
                             }
-
-
                         }
-                      
                     }
 
-                    if (ayniDeger <= ((value.Length)/0.7))
+                    if (ayniDeger <= ((value.Length) / 0.7))
                     {
                         kullaniciSifre = value.ToString();
                     }
@@ -75,14 +82,16 @@ namespace EntityLayer.Concrete
                     value = "0";
                     kullaniciSifre = value;
                 }
-                
-            } }
+            }
+        }
         public double Boy { get; set; }
         public Cinsiyet Cinsiyet { get; set; }
         //public List<TuketilenBesin> TüketilenBesinler { get; set; }
 
         int yas;
-        public int Yas { get { return yas; } 
+        public int Yas
+        {
+            get { return yas; }
             set
             {
                 if (value != DateTime.Now.Year)
@@ -95,16 +104,16 @@ namespace EntityLayer.Concrete
                     value = 0;
                     yas = value;
                 }
-                  
-
             }
         }
         public double MevcutAğırlık { get; set; }
-        
+
         public string AktiviteDüzeyi { get; set; }
         public string DiyetHedefi { get; set; }
         public double HedefAgırlıgı { get; set; }
         public List<IletisimFormlari> IletisimFormlari { get; set; }
+        public List<TuketilenUrunler> TuketilenUrunlers { get; set; }
+
         public DateTime CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
@@ -112,6 +121,5 @@ namespace EntityLayer.Concrete
         public string ModifiedBy { get; set; }
         public string DeletedBy { get; set; }
         public Status Status { get; set; }
-       
     }
 }
