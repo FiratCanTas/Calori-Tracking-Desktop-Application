@@ -22,7 +22,10 @@ namespace PresentationLayer.Forms
         }
 
         FH_ClarificationText fH_ClarificationText;
-        FatHunterDbContext db = new FatHunterDbContext();
+        public static FatHunterDbContext db = new FatHunterDbContext();
+        public static Kullanici yeniKullanici = new Kullanici();
+        public double bmr;
+        public double tdee;
         private void btnIptal_Click(object sender, EventArgs e)
         {    
             //Clear(); KATMANLIDA BASE İÇERSİNDE OLUŞACAK
@@ -33,28 +36,77 @@ namespace PresentationLayer.Forms
 
         private void btnKaydol_Click(object sender, EventArgs e)
         {
-            Kullanici yeniKullanici = new Kullanici();
+            
             yeniKullanici.Adı = txtAdiniz.Text;
             yeniKullanici.Soyadı = txtSoyadiniz.Text;
-            yeniKullanici.Yas =  Convert.ToInt32(Convert.ToInt32((DateTime.Now.Year) - dtpDogumTarihi.Value.Year));
-            yeniKullanici.Boy = Convert.ToInt32( txtBoyunuz.Text);
-            yeniKullanici.MevcutAğırlık = Convert.ToInt32( txtKilonuz.Text);
+            yeniKullanici.Yas = Convert.ToInt32(dtpDogumTarihi.Value.Year);
+            yeniKullanici.Boy = Convert.ToDouble( txtBoyunuz.Text);
+            yeniKullanici.MevcutAğırlık = Convert.ToDouble( txtKilonuz.Text);
             yeniKullanici.AktiviteDüzeyi = cmbAktiviteDuzeyi.SelectedItem.ToString();
             yeniKullanici.Cinsiyet = (rdbErkek.Checked ? Cinsiyet.Erkek : Cinsiyet.Kadın);
             yeniKullanici.DiyetHedefi = cmbDiyetHedefiniz.SelectedItem.ToString();
-            yeniKullanici.HedefAgırlıgı = Convert.ToInt32( txtHedefAgirlik.Text);
+            yeniKullanici.HedefAgırlıgı = Convert.ToDouble( txtHedefAgirlik.Text);
             yeniKullanici.KullanıcıMail = txtEmailAdresiniz.Text;
             yeniKullanici.KullanıcıŞifre = txtSifreniz.Text;
+            yeniKullanici.NickName = txtKullaniciAdi.Text;
 
-            if (yeniKullanici.KullanıcıŞifre != "0")
+            if (yeniKullanici.Cinsiyet == Cinsiyet.Erkek)
             {
-                db.Kullanıcılar.Add(yeniKullanici);
-                db.SaveChanges();
+                bmr = 66.5 + ((13.75) * yeniKullanici.MevcutAğırlık) + (5.03 * yeniKullanici.Boy) - (6.75 * yeniKullanici.Yas); 
+            }
+            else if (yeniKullanici.Cinsiyet == Cinsiyet.Kadın)
+            {
+                bmr = 655.1 + (9.56 * yeniKullanici.MevcutAğırlık) + (1.85 * yeniKullanici.Boy) - (4.68 * yeniKullanici.Yas);
+            }
+
+
+            if (yeniKullanici.AktiviteDüzeyi == "Hareketsiz Yaşam Tarzına Sahibim")
+            {
+                tdee = bmr * 1.2;
+            }
+            else if (yeniKullanici.AktiviteDüzeyi == "Haftada 1-2 Gün Spor Yapıyorum")
+            {
+
+            }
+            else if (yeniKullanici.AktiviteDüzeyi == " Haftada 2 - 3 Gün Spor Yapıyorum")
+            {
+
+            }
+            else if (yeniKullanici.AktiviteDüzeyi == "Haftada 4 - 5 Gün Spor Yapıyorum")
+            {
+
+            }
+            else if (yeniKullanici.AktiviteDüzeyi == "Haftada 6 - 7 Gün Spor Yapıyorum")
+            {
+
+            }
+            else if (yeniKullanici.AktiviteDüzeyi == " Günde 2 Defa Spor Yapıyorum")
+            {
+
+            }
+
+
+
+                  var kullaniciVarMi = db.Kullanıcılar.Select(x => x.NickName).ToList();
+
+            foreach (var item in kullaniciVarMi)
+            {
+                if (txtKullaniciAdi.Text == item)
+                {
+                    MessageBox.Show("Bu kullanici adı ile kayıt yapılmış! Lütfen başka bir ad seçiniz.");
+                }
+            }
+
+
+            if (yeniKullanici.KullanıcıŞifre != "0" && yeniKullanici.Yas != 0 && yeniKullanici.KullanıcıMail != "0")
+            {
+               
                 fH_ClarificationText = new FH_ClarificationText();
                 fH_ClarificationText.Show();
                 this.Hide();
             }
-           
+
+
         }
 
         private void FH_SignUp_FormClosed(object sender, FormClosedEventArgs e)
@@ -82,7 +134,10 @@ namespace PresentationLayer.Forms
         {
             gizliMi = false;
             cmbAktiviteDuzeyi.SelectedText = "Hareketsiz Yaşam Tarzına Sahibim";
+            cmbAktiviteDuzeyi.SelectedItem = "Hareketsiz Yaşam Tarzına Sahibim";
             cmbDiyetHedefiniz.SelectedText = "Kilomu Koru";
+            cmbDiyetHedefiniz.SelectedItem = "Kilomu Koru";
+            
             rdbErkek.Checked = true;
         }
 

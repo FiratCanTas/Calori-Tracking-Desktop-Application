@@ -49,6 +49,10 @@ namespace PresentationLayer.Forms
             this.btnHesabım = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblKaloriDegeri = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pnlHedefKalori = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGenelDegerler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOgleYemegi)).BeginInit();
@@ -60,6 +64,7 @@ namespace PresentationLayer.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.pnlHedefKalori.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnRozetler
@@ -292,6 +297,46 @@ namespace PresentationLayer.Forms
             this.panel1.Size = new System.Drawing.Size(1365, 59);
             this.panel1.TabIndex = 48;
             // 
+            // lblKaloriDegeri
+            // 
+            this.lblKaloriDegeri.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKaloriDegeri.Location = new System.Drawing.Point(5, 0);
+            this.lblKaloriDegeri.Name = "lblKaloriDegeri";
+            this.lblKaloriDegeri.Size = new System.Drawing.Size(115, 25);
+            this.lblKaloriDegeri.TabIndex = 50;
+            this.lblKaloriDegeri.Text = "Hedef:";
+            this.lblKaloriDegeri.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(65, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 26);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "Kalori";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pnlHedefKalori
+            // 
+            this.pnlHedefKalori.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlHedefKalori.Controls.Add(this.label1);
+            this.pnlHedefKalori.Controls.Add(this.lblKaloriDegeri);
+            this.pnlHedefKalori.Controls.Add(this.label2);
+            this.pnlHedefKalori.Location = new System.Drawing.Point(774, 75);
+            this.pnlHedefKalori.Name = "pnlHedefKalori";
+            this.pnlHedefKalori.Size = new System.Drawing.Size(125, 51);
+            this.pnlHedefKalori.TabIndex = 52;
+            this.pnlHedefKalori.Tag = "";
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(2, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 26);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "2500";
+            // 
             // UserMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -299,6 +344,7 @@ namespace PresentationLayer.Forms
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(915, 738);
+            this.Controls.Add(this.pnlHedefKalori);
             this.Controls.Add(this.btnRozetler);
             this.Controls.Add(this.btnRaporlar);
             this.Controls.Add(this.btnÖneriler);
@@ -335,6 +381,7 @@ namespace PresentationLayer.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.pnlHedefKalori.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,11 +392,7 @@ namespace PresentationLayer.Forms
         private System.Windows.Forms.Button btnRozetler;
         private System.Windows.Forms.Button btnRaporlar;
         private System.Windows.Forms.Button btnÖneriler;
-        private System.Windows.Forms.DataGridView dgvGenelDegerler;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.DataGridView dgvOgleYemegi;
-        private System.Windows.Forms.DataGridView dgvAraOgun;
-        private System.Windows.Forms.DataGridView dgvKahvalti;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -363,5 +406,13 @@ namespace PresentationLayer.Forms
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.DataGridView dgvAksamYemegi;
+        public System.Windows.Forms.DataGridView dgvOgleYemegi;
+        private System.Windows.Forms.Label lblKaloriDegeri;
+        public System.Windows.Forms.DataGridView dgvGenelDegerler;
+        public System.Windows.Forms.DataGridView dgvAraOgun;
+        public System.Windows.Forms.DataGridView dgvKahvalti;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnlHedefKalori;
+        private System.Windows.Forms.Label label1;
     }
 }

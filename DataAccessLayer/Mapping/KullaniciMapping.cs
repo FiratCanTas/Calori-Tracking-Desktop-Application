@@ -21,10 +21,11 @@ namespace DataAccessLayer.Mapping
 
             this.Property(x => x.Soyadı).HasMaxLength(20).HasColumnType("nvarchar").IsUnicode(true);
 
-            this.Property(x => x.KullanıcıMail).HasMaxLength(20).HasColumnType("nvarchar").IsUnicode(true);
+            this.Property(x => x.KullanıcıMail).HasMaxLength(40).HasColumnType("nvarchar").IsUnicode(true);
 
-            this.Property(x => x.KullanıcıŞifre).HasMaxLength(10).HasColumnType("nvarchar").IsUnicode(true);
+            this.Property(x => x.KullanıcıŞifre).HasMaxLength(15).HasColumnType("nvarchar").IsUnicode(true);
 
+            
 
             this.HasMany(k => k.IletisimFormlari)
                 .WithRequired(ıf => ıf.Kullanici)

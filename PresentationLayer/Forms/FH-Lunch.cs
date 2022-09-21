@@ -31,37 +31,69 @@ namespace PresentationLayer.Forms
 
         private void btnAra_Click(object sender, EventArgs e)
         {
-            dgvLuchList.DataSource = db.Besinler
-                               .Where(x => x.BesinAdı == txtAraLunch.Text)
-                               .Select(x => x).ToList();
+            if (txtAraLunch.Text != string.Empty)
+            {
+                dgvLuchList.DataSource = db.Besinler
+                    .Where(x => x.BesinAdı == txtAraLunch.Text)
+                    .Select(x => x).ToList();
+            }
+            else
+            {
+                dgvLuchList.DataSource = db.Besinler.ToList();
+            }
         }
 
-        FatHunterDbContext db = new FatHunterDbContext();
-        TuketilenBesin tuketilenBesin = new TuketilenBesin();
+        public static FatHunterDbContext db = new FatHunterDbContext();
         Besin besin = new Besin();
         UserMainPage userMainPage = new UserMainPage();
+        public static List<Besin> besinlerList = new List<Besin>();
+        public int tuketilenBesinClickId;
+        public int secilenYemekClickId;
         private void btnOgleOgunuEkle_Click(object sender, EventArgs e)
         {
+            var tuketilenBesin = db.Besinler.Find(tuketilenBesinClickId);
+            if (tuketilenBesin != null)
+            {
+                tuketilenBesin.TüketilenTarih = DateTime.Today;
+                tuketilenBesin.BesininTuketildigiOgun = Ogunler.Ogle;
+                besinlerList.Add(tuketilenBesin);
+                dgvSecilenYemekler.DataSource = besinlerList.ToList();
 
+                userMainPage.dgvOgleYemegi.DataSource = besinlerList.ToList();
+            }
+            else
+            {
+                MessageBox.Show("Ürün seçimi yapılamadı! Lütfen tekrar deneyiniz.");
+            }
+           
 
         }
 
         private void btnOgleOgunuKaldir_Click(object sender, EventArgs e)
         {
+            var kaldirilanBesin = db.Besinler.Find(secilenYemekClickId);
+            besinlerList.Remove(kaldirilanBesin);
 
+            dgvSecilenYemekler.DataSource = besinlerList.ToList();
+            userMainPage.dgvOgleYemegi.DataSource = besinlerList.ToList();
         }
 
         private void btnTamamla_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            userMainPage.Show();
 
         }
 
         private void FH_Lunch_Load(object sender, EventArgs e)
         {
-
+            besin = new Besin();
+            db = new FatHunterDbContext();
+            dgvLuchList.DataSource = db.Besinler.ToList();
         }
-        public int tuketilenBesinClickId;
-        public int secilenYemekClickId;
+
+
+      
         private void dgvLuchList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             tuketilenBesinClickId = Convert.ToInt32(dgvLuchList.Rows[e.RowIndex].Cells[0].Value);
