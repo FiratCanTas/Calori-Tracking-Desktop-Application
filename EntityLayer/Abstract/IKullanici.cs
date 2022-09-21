@@ -16,6 +16,8 @@ namespace EntityLayer.Abstract
         string KullanıcıMail { get; set; }
         string KullanıcıŞifre { get; set; }
         double Boy { get; set; }
+
+     
         Cinsiyet Cinsiyet { get; set; }
         //Bir kullanıcı birden fazla besin tüketecek
         //List<TuketilenBesin> TüketilenBesinler { get; set; }
@@ -23,10 +25,12 @@ namespace EntityLayer.Abstract
         double MevcutAğırlık { get; set; }
         string AktiviteDüzeyi { get; set; }
         string DiyetHedefi { get; set; }
-        int HedefAgırlıgı { get; set; }
+        double HedefAgırlıgı { get; set; }
 
         //İletisim form tablo listesi
         List<IletisimFormlari> IletisimFormlari { get; set; }
+
+        
     }
 }
 
