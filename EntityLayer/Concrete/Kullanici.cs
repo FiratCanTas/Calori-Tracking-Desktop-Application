@@ -11,14 +11,29 @@ using System.Windows.Forms;
 
 namespace EntityLayer.Concrete
 {
-    public class Kullanici : IKullanici, IBaseEntity
+    public class Kullanici : IKullanici,IBaseEntity
     {
        
         public int KullanıcıID { get; set; }
         public string Adı { get; set; }
         public string Soyadı { get; set; }
         public string NickName { get; set; }
-        public string KullanıcıMail { get; set; }
+
+        string kullaniciMail;
+        public string KullanıcıMail { get { return kullaniciMail; }
+            set
+            {
+                if (value.Contains("@gmail.com") || value.Contains("@windowslive.com") || value.Contains("@hotmail.com") || value.Contains("@outlook.com") || value.Contains("@yahoo.com"))
+                {
+                    kullaniciMail = value;
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen geçerli bir mail adresi giriniz!");
+                    value = "0";
+                    kullaniciMail = value;
+                }
+            } }
 
         string kullaniciSifre;
         public string KullanıcıŞifre { get { return kullaniciSifre; }
@@ -66,13 +81,30 @@ namespace EntityLayer.Concrete
         public Cinsiyet Cinsiyet { get; set; }
         //public List<TuketilenBesin> TüketilenBesinler { get; set; }
 
-        public int Yas { get; set; }
+        int yas;
+        public int Yas { get { return yas; } 
+            set
+            {
+                if (value != DateTime.Now.Year)
+                {
+                    yas = DateTime.Now.Year - value;
+                }
+                else
+                {
+                    MessageBox.Show("Dogum tarihi bilgisini kontrol ediniz!");
+                    value = 0;
+                    yas = value;
+                }
+                  
+
+            }
+        }
         public double MevcutAğırlık { get; set; }
+        
         public string AktiviteDüzeyi { get; set; }
         public string DiyetHedefi { get; set; }
-        public int HedefAgırlıgı { get; set; }
+        public double HedefAgırlıgı { get; set; }
         public List<IletisimFormlari> IletisimFormlari { get; set; }
-
         public DateTime CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
@@ -80,6 +112,6 @@ namespace EntityLayer.Concrete
         public string ModifiedBy { get; set; }
         public string DeletedBy { get; set; }
         public Status Status { get; set; }
-
+       
     }
 }

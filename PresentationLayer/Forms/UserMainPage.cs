@@ -1,3 +1,4 @@
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace PresentationLayer.Forms
         public UserMainPage()
         {
             InitializeComponent();
+
         }
 
         public static FH_Breakfast fH_Breakfast;
@@ -25,6 +27,8 @@ namespace PresentationLayer.Forms
         public static FH_Badge fH_Badge;
         public static FH_MealSuggestion fH_MealSuggestion;
         public static FH_MyAccount myAccount;
+        public static List<Besin> tuketilenTumBesinler = new List<Besin>();
+
 
         private void btnKahvaltı_Click(object sender, EventArgs e)
         {
@@ -90,7 +94,17 @@ namespace PresentationLayer.Forms
 
         private void UserMainPage_Load(object sender, EventArgs e)
         {
+            dgvOgleYemegi.DataSource = FH_Lunch.besinlerList.ToList();
+            dgvAksamYemegi.DataSource = FH_Dinner.besinlerList.ToList();
 
+
+            var tuketilenBesinler = FH_Lunch.db.Besinler.Where(x => x.BesininTuketildigiOgun != null && x.TüketilenTarih != null).Select(x => x).ToList();
+
+            tuketilenTumBesinler =  FH_Lunch.db.Besinler.Where(x => x.BesininTuketildigiOgun != null || x.TüketilenTarih != null).Select(x => x).ToList();
+
+            dgvGenelDegerler.DataSource = tuketilenBesinler.ToList();
         }
+
+        
     }
 }
