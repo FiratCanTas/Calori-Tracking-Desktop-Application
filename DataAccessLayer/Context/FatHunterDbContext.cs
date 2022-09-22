@@ -22,7 +22,6 @@ namespace DataAccessLayer.Context
         public DbSet<MakroDeger> MakroDegerler { get; set; }
         public DbSet<IletisimFormlari> IletisimFormlari { get; set; }
 
-        //Mapping işlemlerini bununla yapabilirim
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

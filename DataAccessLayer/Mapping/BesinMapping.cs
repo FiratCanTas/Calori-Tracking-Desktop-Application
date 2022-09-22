@@ -22,8 +22,8 @@ namespace DataAccessLayer.Mapping
             this.HasOptional(b => b.MakroDeger)
                 .WithRequired(b => b.Besin).WillCascadeOnDelete(false);
 
-            this.Property(b => b.TüketilenTarih).IsOptional();
-            this.Property(b => b.BesininTuketildigiOgun).IsOptional();
+            //this.Property(b => b.TüketilenTarih).IsOptional();
+            //this.Property(b => b.BesininTuketildigiOgun).IsOptional();
         }
     }
 }

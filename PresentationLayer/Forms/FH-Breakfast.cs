@@ -44,20 +44,18 @@ namespace PresentationLayer.Forms
         private void btnKahvaltiEkle_Click(object sender, EventArgs e)
         {
             var tuketilenBesin = dbContext.Besinler.Find(tuketilecekBesinID);
+           
             if (tuketilenBesin != null)
             {
                 tuketilenBesin.TüketilenTarih = DateTime.Today;
-                tuketilenBesin.BesininTuketildigiOgun = Ogunler.Aksam;
+                tuketilenBesin.BesininTuketildigiOgun = Ogunler.Sabah;
                 kahvaltiList.Add(tuketilenBesin);
                 dgvBreakfastList.DataSource = kahvaltiList.ToList();
-
-                FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = kahvaltiList.ToList();
             }
             else
             {
                 MessageBox.Show("Ürün seçimi yapılamadı! Lütfen tekrar deneyiniz.");
             }
-
         }
 
         private void btnKahvaltiOgunuKaldir_Click(object sender, EventArgs e)
@@ -66,16 +64,16 @@ namespace PresentationLayer.Forms
             kahvaltiList.Remove(kaldirilanBesin);
 
             dgvBreakfastList.DataSource = kahvaltiList.ToList();
-            FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = kahvaltiList.ToList();
         }
 
         private void btnTamamla_Click(object sender, EventArgs e)
         {
-            foreach (Besin item in FH_Breakfast.kahvaltiList)
+            foreach (Besin item in kahvaltiList)
             {
-                UserMainPage.tuketilenUrunler.Tuketilenler.Add(item);
+                UserMainPage.tuketilenUrun.Tuketilenler.Add(item);
             }
 
+            FH_SignIn.userMainPage.dgvKahvalti.DataSource = kahvaltiList.ToList();
             this.Hide();
             FH_SignIn.userMainPage.Show();
         }
