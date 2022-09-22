@@ -67,7 +67,6 @@ namespace PresentationLayer.Forms
             dgvGenelDegerler.Columns[3].Name = "Kalori Miktarı";
 
             dgvGenelDegerler.Rows.Add(yagMiktari, karbMiktari, proMiktari, tuketilenUrun.TuketilenKalori);
-
         }
 
         private void btnKahvaltı_Click(object sender, EventArgs e)
