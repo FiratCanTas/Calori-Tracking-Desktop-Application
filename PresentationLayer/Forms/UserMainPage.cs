@@ -30,7 +30,6 @@ namespace PresentationLayer.Forms
         public static FH_MyAccount myAccount;
         public static List<Besin> tuketilenTumBesinler = new List<Besin>();
         FatHunterDbContext dbContext = new FatHunterDbContext();
-        List<Double> makros = new List<Double>();
 
         public static TuketilenUrunler tuketilenUrun = new TuketilenUrunler();
 
@@ -45,8 +44,6 @@ namespace PresentationLayer.Forms
             dgvKahvalti.DataSource = FH_Breakfast.kahvaltiList.ToList();
             dgvOgleYemegi.DataSource = FH_Lunch.lunchList.ToList();
             dgvAksamYemegi.DataSource = FH_Dinner.dinnerList.ToList();
-
-
 
             double yagMiktari = 0;
             double karbMiktari = 0;
