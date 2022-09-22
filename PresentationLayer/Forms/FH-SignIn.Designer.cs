@@ -190,9 +190,9 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtEmailAdresiniz;
         private System.Windows.Forms.Button btnGirisYap;
         private System.Windows.Forms.Button btnSifreGizle;
-        private System.Windows.Forms.TextBox txtSifreniz;
+        public System.Windows.Forms.TextBox txtEmailAdresiniz;
+        public System.Windows.Forms.TextBox txtSifreniz;
     }
 }
