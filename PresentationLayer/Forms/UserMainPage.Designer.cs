@@ -47,11 +47,12 @@ namespace PresentationLayer.Forms
             this.btnLunch = new System.Windows.Forms.Button();
             this.btnKahvaltı = new System.Windows.Forms.Button();
             this.btnHesabım = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpUserPage = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblKaloriDegeri = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlHedefKalori = new System.Windows.Forms.Panel();
+            this.lblKaloriHedefDegeri = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGenelDegerler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -112,7 +113,7 @@ namespace PresentationLayer.Forms
             // pictureBox5
             // 
             this.pictureBox5.Image = global::PresentationLayer.Properties.Resources.icons8_Plus;
-            this.pictureBox5.Location = new System.Drawing.Point(860, 678);
+            this.pictureBox5.Location = new System.Drawing.Point(863, 667);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(32, 32);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -166,53 +167,58 @@ namespace PresentationLayer.Forms
             // pictureBox4
             // 
             this.pictureBox4.Image = global::PresentationLayer.Properties.Resources.icons8_Plus;
-            this.pictureBox4.Location = new System.Drawing.Point(862, 248);
+            this.pictureBox4.Location = new System.Drawing.Point(863, 248);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox4.TabIndex = 39;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.btnLunch_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::PresentationLayer.Properties.Resources.icons8_Plus;
-            this.pictureBox3.Location = new System.Drawing.Point(862, 462);
+            this.pictureBox3.Location = new System.Drawing.Point(863, 463);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox3.TabIndex = 38;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.btnSnacks_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::PresentationLayer.Properties.Resources.icons8_Plus;
-            this.pictureBox2.Location = new System.Drawing.Point(415, 462);
+            this.pictureBox2.Location = new System.Drawing.Point(416, 463);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 37;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.btnDinner_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PresentationLayer.Properties.Resources.icons8_Plus;
-            this.pictureBox1.Location = new System.Drawing.Point(416, 247);
+            this.pictureBox1.Location = new System.Drawing.Point(416, 248);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.btnKahvaltı_Click);
             // 
             // btnWaterFollowUp
             // 
             this.btnWaterFollowUp.Image = global::PresentationLayer.Properties.Resources.icons8_water;
             this.btnWaterFollowUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWaterFollowUp.Location = new System.Drawing.Point(13, 675);
+            this.btnWaterFollowUp.Location = new System.Drawing.Point(13, 663);
             this.btnWaterFollowUp.Margin = new System.Windows.Forms.Padding(4);
             this.btnWaterFollowUp.Name = "btnWaterFollowUp";
             this.btnWaterFollowUp.Size = new System.Drawing.Size(886, 40);
             this.btnWaterFollowUp.TabIndex = 35;
             this.btnWaterFollowUp.Text = "İçilen Su Miktarı(200mL)";
             this.btnWaterFollowUp.UseVisualStyleBackColor = true;
+            this.btnWaterFollowUp.Click += new System.EventHandler(this.btnWaterFollowUp_Click_1);
             // 
             // btnSnacks
             // 
@@ -278,23 +284,24 @@ namespace PresentationLayer.Forms
             this.btnHesabım.TabIndex = 31;
             this.btnHesabım.Text = "Hesabım";
             this.btnHesabım.UseVisualStyleBackColor = false;
+            this.btnHesabım.Click += new System.EventHandler(this.btnHesabım_Click);
             // 
-            // dateTimePicker1
+            // dtpUserPage
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(331, 14);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(249, 29);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dtpUserPage.Location = new System.Drawing.Point(331, 14);
+            this.dtpUserPage.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpUserPage.Name = "dtpUserPage";
+            this.dtpUserPage.Size = new System.Drawing.Size(249, 29);
+            this.dtpUserPage.TabIndex = 6;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(217)))), ((int)(((byte)(87)))));
             this.panel1.Controls.Add(this.btnHesabım);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Controls.Add(this.dtpUserPage);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1365, 59);
+            this.panel1.Size = new System.Drawing.Size(917, 59);
             this.panel1.TabIndex = 48;
             // 
             // lblKaloriDegeri
@@ -320,6 +327,8 @@ namespace PresentationLayer.Forms
             // pnlHedefKalori
             // 
             this.pnlHedefKalori.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlHedefKalori.Controls.Add(this.lblKaloriHedefDegeri);
+
             this.pnlHedefKalori.Controls.Add(this.label1);
             this.pnlHedefKalori.Controls.Add(this.lblKaloriDegeri);
             this.pnlHedefKalori.Controls.Add(this.label2);
@@ -329,6 +338,13 @@ namespace PresentationLayer.Forms
             this.pnlHedefKalori.TabIndex = 52;
             this.pnlHedefKalori.Tag = "";
             // 
+            // lblKaloriHedefDegeri
+            // 
+            this.lblKaloriHedefDegeri.Location = new System.Drawing.Point(2, 25);
+            this.lblKaloriHedefDegeri.Name = "lblKaloriHedefDegeri";
+            this.lblKaloriHedefDegeri.Size = new System.Drawing.Size(67, 26);
+            this.lblKaloriHedefDegeri.TabIndex = 50;
+            this.lblKaloriHedefDegeri.Text = "2500";
             // label1
             // 
             this.label1.Location = new System.Drawing.Point(2, 25);
@@ -341,7 +357,6 @@ namespace PresentationLayer.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(915, 738);
             this.Controls.Add(this.pnlHedefKalori);
@@ -403,7 +418,7 @@ namespace PresentationLayer.Forms
         private System.Windows.Forms.Button btnLunch;
         private System.Windows.Forms.Button btnKahvaltı;
         private System.Windows.Forms.Button btnHesabım;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpUserPage;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.DataGridView dgvAksamYemegi;
         public System.Windows.Forms.DataGridView dgvOgleYemegi;
@@ -413,6 +428,9 @@ namespace PresentationLayer.Forms
         public System.Windows.Forms.DataGridView dgvKahvalti;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlHedefKalori;
+        public System.Windows.Forms.Label lblKaloriHedefDegeri;
+
         private System.Windows.Forms.Label label1;
+ 
     }
 }

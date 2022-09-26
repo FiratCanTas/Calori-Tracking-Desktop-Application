@@ -18,6 +18,7 @@ namespace PresentationLayer.Forms
         }
 
         FH_MainPage mainPage;
+        FH_SignIn signIn;
 
         private void btnRedEdiyorum_Click(object sender, EventArgs e)
         {
@@ -33,6 +34,13 @@ namespace PresentationLayer.Forms
 
         private void btnKabul_Click(object sender, EventArgs e)
         {
+            FH_SignUp.yeniKullanici.CreatedDate = DateTime.Today;
+            FH_SignUp.db.Kullanıcılar.Add(FH_SignUp.yeniKullanici);
+            FH_SignUp.db.SaveChanges();
+
+            signIn = new FH_SignIn();
+            signIn.Show();
+
             if (FH_SignUp.yeniKullanici.KullanıcıŞifre != "0" && FH_SignUp.yeniKullanici.Yas != 0 && FH_SignUp.yeniKullanici.KullanıcıMail != "0")
             {
                 FH_SignUp.yeniKullanici.CreatedDate = DateTime.Today;
@@ -42,6 +50,7 @@ namespace PresentationLayer.Forms
             }
             UserMainPage userMainPage = new UserMainPage();
             userMainPage.Show();
+
             this.Hide();
 
             

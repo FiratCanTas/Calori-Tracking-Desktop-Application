@@ -1,3 +1,5 @@
+using DataAccessLayer.Context;
+using EntityLayer.Abstract;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -16,7 +18,6 @@ namespace PresentationLayer.Forms
         public UserMainPage()
         {
             InitializeComponent();
-
         }
 
         public static FH_Breakfast fH_Breakfast;
@@ -28,19 +29,54 @@ namespace PresentationLayer.Forms
         public static FH_MealSuggestion fH_MealSuggestion;
         public static FH_MyAccount myAccount;
         public static List<Besin> tuketilenTumBesinler = new List<Besin>();
+        FatHunterDbContext dbContext = new FatHunterDbContext();
 
+        public static TuketilenUrunler tuketilenUrun = new TuketilenUrunler();
+
+        private void UserMainPage_Load(object sender, EventArgs e)
+        {
+            tuketilenUrun.KullanıcıID = FH_SignIn.user.KullanıcıID;
+            tuketilenUrun.TuketildigiTarih = dtpUserPage.Value;
+            dbContext.TuketilenUrunlers.Add(tuketilenUrun);
+            dbContext.SaveChanges();
+
+            dgvAraOgun.DataSource = FH_Snacks.snacksList.ToList();
+            dgvKahvalti.DataSource = FH_Breakfast.kahvaltiList.ToList();
+            dgvOgleYemegi.DataSource = FH_Lunch.lunchList.ToList();
+            dgvAksamYemegi.DataSource = FH_Dinner.dinnerList.ToList();
+
+            double yagMiktari = 0;
+            double karbMiktari = 0;
+            double proMiktari = 0;
+
+            foreach (Besin item in tuketilenUrun.Tuketilenler)
+            {
+                yagMiktari += dbContext.MakroDegerler.Find(item.BesinID).YagMiktari;
+                karbMiktari += dbContext.MakroDegerler.Find(item.BesinID).KarbonhidratMiktari;
+                proMiktari += dbContext.MakroDegerler.Find(item.BesinID).ProteinMiktari;
+                tuketilenUrun.TuketilenKalori += item.BesinKalorisi;
+            }
+
+            dgvGenelDegerler.ColumnCount = 4;
+            dgvGenelDegerler.Columns[0].Name = "Yağ Oranı";
+            dgvGenelDegerler.Columns[1].Name = "Karb Oranı";
+            dgvGenelDegerler.Columns[2].Name = "Pro Oranı";
+            dgvGenelDegerler.Columns[3].Name = "Kalori Miktarı";
+
+            dgvGenelDegerler.Rows.Add(yagMiktari, karbMiktari, proMiktari, tuketilenUrun.TuketilenKalori);
+        }
 
         private void btnKahvaltı_Click(object sender, EventArgs e)
         {
             fH_Breakfast = new FH_Breakfast();
             fH_Breakfast.Show();
-            this.Hide();
         }
 
         private void btnLunch_Click(object sender, EventArgs e)
         {
             fH_Lunch = new FH_Lunch();
             fH_Lunch.Show();
+            this.Hide();
         }
 
         private void btnDinner_Click(object sender, EventArgs e)
@@ -53,10 +89,6 @@ namespace PresentationLayer.Forms
         {
             fH_Snack = new FH_Snacks();
             fH_Snack.Show();
-        }
-
-        private void btnWaterFollowUp_Click(object sender, EventArgs e)
-        {
         }
 
         private void UserMainPage_FormClosed(object sender, FormClosedEventArgs e)
@@ -92,8 +124,10 @@ namespace PresentationLayer.Forms
             this.Hide();
         }
 
-        private void UserMainPage_Load(object sender, EventArgs e)
+        private void btnWaterFollowUp_Click_1(object sender, EventArgs e)
         {
+            tuketilenUrun.IcilenSu += 1;
+
             dgvOgleYemegi.DataSource = FH_Lunch.besinlerList.ToList();
             dgvAksamYemegi.DataSource = FH_Dinner.besinlerList.ToList();
 
@@ -102,7 +136,7 @@ namespace PresentationLayer.Forms
 
             tuketilenTumBesinler =  FH_Lunch.db.Besinler.Where(x => x.BesininTuketildigiOgun != null || x.TüketilenTarih != null).Select(x => x).ToList();
 
-            dgvGenelDegerler.DataSource = tuketilenBesinler.ToList();
+            dgvGenelDegerler.DataSource = tuketilenBesinler.ToList(); 
         }
 
         

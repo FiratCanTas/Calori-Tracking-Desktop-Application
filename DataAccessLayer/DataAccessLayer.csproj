@@ -57,13 +57,12 @@
     <Compile Include="ConcreteRepository\KullaniciRepository.cs" />
     <Compile Include="ConcreteRepository\MakroDegerRepository.cs" />
     <Compile Include="ConcreteRepository\BaseRepository.cs" />
-    <Compile Include="ConcreteRepository\TuketilenBesinRepository.cs" />
+    <Compile Include="ConcreteRepository\TuketilenUrunlerRepository.cs" />
     <Compile Include="Context\FatHunterDbContext.cs" />
     <Compile Include="Mapping\BesinMapping.cs" />
     <Compile Include="Mapping\IletisimFormMapping.cs" />
     <Compile Include="Mapping\KullaniciMapping.cs" />
     <Compile Include="Mapping\MakroDegerMapping.cs" />
-    <Compile Include="Mapping\TuketilenBesinMapping.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

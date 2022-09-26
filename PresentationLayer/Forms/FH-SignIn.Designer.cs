@@ -94,7 +94,7 @@
             this.label2.Location = new System.Drawing.Point(282, 292);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 23);
+            this.label2.Size = new System.Drawing.Size(63, 22);
             this.label2.TabIndex = 33;
             this.label2.Text = "Şifre : ";
             // 
@@ -104,7 +104,7 @@
             this.label1.Location = new System.Drawing.Point(236, 252);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 23);
+            this.label1.Size = new System.Drawing.Size(107, 22);
             this.label1.TabIndex = 32;
             this.label1.Text = "Mail Adresi :";
             // 
@@ -152,7 +152,6 @@
             this.txtSifreniz.Name = "txtSifreniz";
             this.txtSifreniz.Size = new System.Drawing.Size(240, 29);
             this.txtSifreniz.TabIndex = 76;
-            this.txtSifreniz.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // FH_SignIn
             // 
@@ -191,9 +190,9 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtEmailAdresiniz;
         private System.Windows.Forms.Button btnGirisYap;
         private System.Windows.Forms.Button btnSifreGizle;
-        private System.Windows.Forms.TextBox txtSifreniz;
+        public System.Windows.Forms.TextBox txtEmailAdresiniz;
+        public System.Windows.Forms.TextBox txtSifreniz;
     }
 }
