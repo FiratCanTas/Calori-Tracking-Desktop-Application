@@ -40,7 +40,21 @@ namespace PresentationLayer.Forms
 
             signIn = new FH_SignIn();
             signIn.Show();
+
+            if (FH_SignUp.yeniKullanici.KullanıcıŞifre != "0" && FH_SignUp.yeniKullanici.Yas != 0 && FH_SignUp.yeniKullanici.KullanıcıMail != "0")
+            {
+                FH_SignUp.yeniKullanici.CreatedDate = DateTime.Today;
+                FH_SignUp.db.Kullanıcılar.Add(FH_SignUp.yeniKullanici);
+                FH_SignUp.db.SaveChanges();
+                
+            }
+            UserMainPage userMainPage = new UserMainPage();
+            userMainPage.Show();
+
             this.Hide();
+
+            
+
         }
     }
 }

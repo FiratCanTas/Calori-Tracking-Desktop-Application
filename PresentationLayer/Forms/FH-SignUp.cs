@@ -25,6 +25,9 @@ namespace PresentationLayer.Forms
         public static Kullanici yeniKullanici = new Kullanici();
         public static double bmr;
         public static double tdee;
+
+        public double bmr;
+        public double tdee;
         private void btnIptal_Click(object sender, EventArgs e)
         {
 
@@ -45,6 +48,16 @@ namespace PresentationLayer.Forms
             yeniKullanici.Cinsiyet = (rdbErkek.Checked ? Cinsiyet.Erkek : Cinsiyet.Kadın);
             yeniKullanici.DiyetHedefi = cmbDiyetHedefiniz.SelectedItem.ToString();
             yeniKullanici.HedefAgırlıgı = Convert.ToDouble(txtHedefAgirlik.Text);
+            
+            yeniKullanici.Adı = txtAdiniz.Text;
+            yeniKullanici.Soyadı = txtSoyadiniz.Text;
+            yeniKullanici.Yas = Convert.ToInt32(dtpDogumTarihi.Value.Year);
+            yeniKullanici.Boy = Convert.ToDouble( txtBoyunuz.Text);
+            yeniKullanici.MevcutAğırlık = Convert.ToDouble( txtKilonuz.Text);
+            yeniKullanici.AktiviteDüzeyi = cmbAktiviteDuzeyi.SelectedItem.ToString();
+            yeniKullanici.Cinsiyet = (rdbErkek.Checked ? Cinsiyet.Erkek : Cinsiyet.Kadın);
+            yeniKullanici.DiyetHedefi = cmbDiyetHedefiniz.SelectedItem.ToString();
+            yeniKullanici.HedefAgırlıgı = Convert.ToDouble( txtHedefAgirlik.Text);
             yeniKullanici.KullanıcıMail = txtEmailAdresiniz.Text;
             yeniKullanici.KullanıcıŞifre = txtSifreniz.Text;
             yeniKullanici.NickName = txtKullaniciAdi.Text;
@@ -52,6 +65,8 @@ namespace PresentationLayer.Forms
             if (yeniKullanici.Cinsiyet == Cinsiyet.Erkek)
             {
                 bmr = 66.5 + ((13.75) * yeniKullanici.MevcutAğırlık) + (5.03 * yeniKullanici.Boy) - (6.75 * yeniKullanici.Yas);
+
+                bmr = 66.5 + ((13.75) * yeniKullanici.MevcutAğırlık) + (5.03 * yeniKullanici.Boy) - (6.75 * yeniKullanici.Yas); 
             }
             else if (yeniKullanici.Cinsiyet == Cinsiyet.Kadın)
             {
@@ -206,6 +221,35 @@ namespace PresentationLayer.Forms
 
             var kullaniciVarMi = db.Kullanıcılar.Select(x => x.NickName).ToList();
 
+            if (yeniKullanici.AktiviteDüzeyi == "Hareketsiz Yaşam Tarzına Sahibim")
+            {
+                tdee = bmr * 1.2;
+            }
+            else if (yeniKullanici.AktiviteDüzeyi == "Haftada 1-2 Gün Spor Yapıyorum")
+            {
+
+            }
+            else if (yeniKullanici.AktiviteDüzeyi == " Haftada 2 - 3 Gün Spor Yapıyorum")
+            {
+
+            }
+            else if (yeniKullanici.AktiviteDüzeyi == "Haftada 4 - 5 Gün Spor Yapıyorum")
+            {
+
+            }
+            else if (yeniKullanici.AktiviteDüzeyi == "Haftada 6 - 7 Gün Spor Yapıyorum")
+            {
+
+            }
+            else if (yeniKullanici.AktiviteDüzeyi == " Günde 2 Defa Spor Yapıyorum")
+            {
+
+            }
+
+
+
+                  var kullaniciVarMi = db.Kullanıcılar.Select(x => x.NickName).ToList();
+
             foreach (var item in kullaniciVarMi)
             {
                 if (txtKullaniciAdi.Text == item)
@@ -216,11 +260,15 @@ namespace PresentationLayer.Forms
 
             if (yeniKullanici.KullanıcıŞifre != "0" && yeniKullanici.Yas != 0 && yeniKullanici.KullanıcıMail != "0")
             {
+
+
+            if (yeniKullanici.KullanıcıŞifre != "0" && yeniKullanici.Yas != 0 && yeniKullanici.KullanıcıMail != "0")
+            {
+               
                 fH_ClarificationText = new FH_ClarificationText();
                 fH_ClarificationText.Show();
                 this.Hide();
             }
-
         }
 
         private void FH_SignUp_FormClosed(object sender, FormClosedEventArgs e)
@@ -253,6 +301,9 @@ namespace PresentationLayer.Forms
             cmbDiyetHedefiniz.SelectedText = "Kilomu Koru";
             cmbAktiviteDuzeyi.SelectedItem = "Kilomu Koru";
 
+
+            cmbDiyetHedefiniz.SelectedItem = "Kilomu Koru";
+            
             rdbErkek.Checked = true;
         }
 

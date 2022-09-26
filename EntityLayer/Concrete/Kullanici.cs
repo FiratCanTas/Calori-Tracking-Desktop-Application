@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace EntityLayer.Concrete
 {
-    public class Kullanici : IKullanici, IBaseEntity
+    public class Kullanici : IKullanici,IBaseEntity
     {
         public Kullanici()
         {
@@ -28,6 +28,8 @@ namespace EntityLayer.Concrete
         public string KullanıcıMail
         {
             get { return kullaniciMail; }
+
+        public string KullanıcıMail { get { return kullaniciMail; }
             set
             {
                 if (value.Contains("@gmail.com") || value.Contains("@windowslive.com") || value.Contains("@hotmail.com") || value.Contains("@outlook.com") || value.Contains("@yahoo.com"))
@@ -42,6 +44,9 @@ namespace EntityLayer.Concrete
                 }
             }
         }
+
+            } }
+
 
         string kullaniciSifre;
         public string KullanıcıŞifre
@@ -92,6 +97,8 @@ namespace EntityLayer.Concrete
         public int Yas
         {
             get { return yas; }
+
+        public int Yas { get { return yas; } 
             set
             {
                 if (value != DateTime.Now.Year)
@@ -107,13 +114,19 @@ namespace EntityLayer.Concrete
             }
         }
         public double MevcutAğırlık { get; set; }
+                 
+
+            }
+        }
+        public double MevcutAğırlık { get; set; }
+        
 
         public string AktiviteDüzeyi { get; set; }
         public string DiyetHedefi { get; set; }
         public double HedefAgırlıgı { get; set; }
         public List<IletisimFormlari> IletisimFormlari { get; set; }
-        public List<TuketilenUrunler> TuketilenUrunlers { get; set; }
 
+        public List<TuketilenUrunler> TuketilenUrunlers { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }

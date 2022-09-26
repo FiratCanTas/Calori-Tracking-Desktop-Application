@@ -127,6 +127,18 @@ namespace PresentationLayer.Forms
         private void btnWaterFollowUp_Click_1(object sender, EventArgs e)
         {
             tuketilenUrun.IcilenSu += 1;
+
+            dgvOgleYemegi.DataSource = FH_Lunch.besinlerList.ToList();
+            dgvAksamYemegi.DataSource = FH_Dinner.besinlerList.ToList();
+
+
+            var tuketilenBesinler = FH_Lunch.db.Besinler.Where(x => x.BesininTuketildigiOgun != null && x.TüketilenTarih != null).Select(x => x).ToList();
+
+            tuketilenTumBesinler =  FH_Lunch.db.Besinler.Where(x => x.BesininTuketildigiOgun != null || x.TüketilenTarih != null).Select(x => x).ToList();
+
+            dgvGenelDegerler.DataSource = tuketilenBesinler.ToList(); 
         }
+
+        
     }
 }

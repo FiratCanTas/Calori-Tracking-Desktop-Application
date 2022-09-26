@@ -53,6 +53,7 @@ namespace PresentationLayer.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.pnlHedefKalori = new System.Windows.Forms.Panel();
             this.lblKaloriHedefDegeri = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGenelDegerler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOgleYemegi)).BeginInit();
@@ -327,6 +328,8 @@ namespace PresentationLayer.Forms
             // 
             this.pnlHedefKalori.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlHedefKalori.Controls.Add(this.lblKaloriHedefDegeri);
+
+            this.pnlHedefKalori.Controls.Add(this.label1);
             this.pnlHedefKalori.Controls.Add(this.lblKaloriDegeri);
             this.pnlHedefKalori.Controls.Add(this.label2);
             this.pnlHedefKalori.Location = new System.Drawing.Point(774, 75);
@@ -342,6 +345,13 @@ namespace PresentationLayer.Forms
             this.lblKaloriHedefDegeri.Size = new System.Drawing.Size(67, 26);
             this.lblKaloriHedefDegeri.TabIndex = 50;
             this.lblKaloriHedefDegeri.Text = "2500";
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(2, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 26);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "2500";
             // 
             // UserMainPage
             // 
@@ -419,5 +429,8 @@ namespace PresentationLayer.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlHedefKalori;
         public System.Windows.Forms.Label lblKaloriHedefDegeri;
+
+        private System.Windows.Forms.Label label1;
+ 
     }
 }
