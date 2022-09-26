@@ -19,6 +19,7 @@ namespace PresentationLayer.Forms
         {
             InitializeComponent();
         }
+
         FatHunterDbContext dbContext;
         public static List<Besin> dinnerList = new List<Besin>();
         int tuketilecekBesinID;
@@ -50,8 +51,6 @@ namespace PresentationLayer.Forms
                 tuketilenBesin.BesininTuketildigiOgun = Ogunler.Aksam;
                 dinnerList.Add(tuketilenBesin);
                 dgvDinnerList.DataSource = dinnerList.ToList();
-
-                FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = dinnerList.ToList();
             }
             else
             {
@@ -65,16 +64,16 @@ namespace PresentationLayer.Forms
             dinnerList.Remove(kaldirilanBesin);
 
             dgvDinnerList.DataSource = dinnerList.ToList();
-            FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = dinnerList.ToList();
         }
 
         private void btnTamamla_Click(object sender, EventArgs e)
         {
-            foreach (Besin item in FH_Dinner.dinnerList)
+            foreach (var item in dinnerList)
             {
-                UserMainPage.tuketilenUrunler.Tuketilenler.Add(item);
+                UserMainPage.tuketilenUrun.Tuketilenler.Add(item);
             }
 
+            FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = dinnerList.ToList();
             this.Hide();
             FH_SignIn.userMainPage.Show();
         }

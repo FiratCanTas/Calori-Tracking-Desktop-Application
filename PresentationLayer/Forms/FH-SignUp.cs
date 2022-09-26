@@ -18,7 +18,6 @@ namespace PresentationLayer.Forms
         public FH_SignUp()
         {
             InitializeComponent();
-           
         }
 
         FH_ClarificationText fH_ClarificationText;
@@ -27,45 +26,44 @@ namespace PresentationLayer.Forms
         public static double bmr;
         public static double tdee;
         private void btnIptal_Click(object sender, EventArgs e)
-        {    
-            
+        {
+
             this.Hide();
             FH_MainPage.page.Show();
-            
+
         }
 
         private void btnKaydol_Click(object sender, EventArgs e)
         {
-            
+
             yeniKullanici.Adı = txtAdiniz.Text;
             yeniKullanici.Soyadı = txtSoyadiniz.Text;
             yeniKullanici.Yas = Convert.ToInt32(dtpDogumTarihi.Value.Year);
-            yeniKullanici.Boy = Convert.ToDouble( txtBoyunuz.Text);
-            yeniKullanici.MevcutAğırlık = Convert.ToDouble( txtKilonuz.Text);
+            yeniKullanici.Boy = Convert.ToDouble(txtBoyunuz.Text);
+            yeniKullanici.MevcutAğırlık = Convert.ToDouble(txtKilonuz.Text);
             yeniKullanici.AktiviteDüzeyi = cmbAktiviteDuzeyi.SelectedItem.ToString();
             yeniKullanici.Cinsiyet = (rdbErkek.Checked ? Cinsiyet.Erkek : Cinsiyet.Kadın);
             yeniKullanici.DiyetHedefi = cmbDiyetHedefiniz.SelectedItem.ToString();
-            yeniKullanici.HedefAgırlıgı = Convert.ToDouble( txtHedefAgirlik.Text);
+            yeniKullanici.HedefAgırlıgı = Convert.ToDouble(txtHedefAgirlik.Text);
             yeniKullanici.KullanıcıMail = txtEmailAdresiniz.Text;
             yeniKullanici.KullanıcıŞifre = txtSifreniz.Text;
             yeniKullanici.NickName = txtKullaniciAdi.Text;
 
             if (yeniKullanici.Cinsiyet == Cinsiyet.Erkek)
             {
-                bmr = 66.5 + ((13.75) * yeniKullanici.MevcutAğırlık) + (5.03 * yeniKullanici.Boy) - (6.75 * yeniKullanici.Yas); 
+                bmr = 66.5 + ((13.75) * yeniKullanici.MevcutAğırlık) + (5.03 * yeniKullanici.Boy) - (6.75 * yeniKullanici.Yas);
             }
             else if (yeniKullanici.Cinsiyet == Cinsiyet.Kadın)
             {
                 bmr = 655.1 + (9.56 * yeniKullanici.MevcutAğırlık) + (1.85 * yeniKullanici.Boy) - (4.68 * yeniKullanici.Yas);
             }
 
-            
             if (cmbAktiviteDuzeyi.SelectedIndex == 0)
             {
-                if (cmbDiyetHedefiniz.SelectedIndex  == 0)
+                if (cmbDiyetHedefiniz.SelectedIndex == 0)
                 {
                     tdee = (bmr * 1.2) + 700;
-                    
+
                 }
                 else if (cmbDiyetHedefiniz.SelectedIndex == 1)
                 {
@@ -83,7 +81,7 @@ namespace PresentationLayer.Forms
                 {
                     tdee = (bmr * 1.2) - 700;
                 }
-                
+
             }
             else if (cmbAktiviteDuzeyi.SelectedIndex == 1)
             {
@@ -206,9 +204,7 @@ namespace PresentationLayer.Forms
                 }
             }
 
-
-
-                  var kullaniciVarMi = db.Kullanıcılar.Select(x => x.NickName).ToList();
+            var kullaniciVarMi = db.Kullanıcılar.Select(x => x.NickName).ToList();
 
             foreach (var item in kullaniciVarMi)
             {
@@ -218,15 +214,12 @@ namespace PresentationLayer.Forms
                 }
             }
 
-
             if (yeniKullanici.KullanıcıŞifre != "0" && yeniKullanici.Yas != 0 && yeniKullanici.KullanıcıMail != "0")
             {
-               
                 fH_ClarificationText = new FH_ClarificationText();
                 fH_ClarificationText.Show();
                 this.Hide();
             }
-
 
         }
 
@@ -242,7 +235,7 @@ namespace PresentationLayer.Forms
                 txtSifreniz.UseSystemPasswordChar = true;
                 gizliMi = true;
             }
-            
+
             else if (gizliMi == true)
             {
                 txtSifreniz.UseSystemPasswordChar = false;
@@ -253,15 +246,12 @@ namespace PresentationLayer.Forms
         bool gizliMi;
         private void FH_SignUp_Load(object sender, EventArgs e)
         {
-            
+
             gizliMi = false;
             cmbAktiviteDuzeyi.SelectedText = "Hareketsiz Yaşam Tarzına Sahibim";
             cmbAktiviteDuzeyi.SelectedItem = "Hareketsiz Yaşam Tarzına Sahibim";
             cmbDiyetHedefiniz.SelectedText = "Kilomu Koru";
             cmbAktiviteDuzeyi.SelectedItem = "Kilomu Koru";
-            
-
-
 
             rdbErkek.Checked = true;
         }
@@ -270,7 +260,7 @@ namespace PresentationLayer.Forms
         {
             FH_ExerciseAnnotation aciklama = new FH_ExerciseAnnotation();
             aciklama.Show();
-            
+
         }
     }
 }

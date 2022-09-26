@@ -51,7 +51,6 @@ namespace PresentationLayer.Forms
                 snacksList.Add(tuketilenBesin);
                 dgvSnacksList.DataSource = snacksList.ToList();
 
-                FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = snacksList.ToList();
             }
             else
             {
@@ -65,16 +64,16 @@ namespace PresentationLayer.Forms
             snacksList.Remove(kaldirilanBesin);
 
             dgvSnacksList.DataSource = snacksList.ToList();
-            FH_SignIn.userMainPage.dgvAksamYemegi.DataSource = snacksList.ToList();
         }
 
         private void btnTamamla_Click(object sender, EventArgs e)
         {
-            foreach (Besin item in FH_Snacks.snacksList)
+            foreach (Besin item in snacksList)
             {
-                UserMainPage.tuketilenUrunler.Tuketilenler.Add(item);
+                UserMainPage.tuketilenUrun.Tuketilenler.Add(item);
             }
 
+            FH_SignIn.userMainPage.dgvAraOgun.DataSource = snacksList.ToList();
             this.Hide();
             FH_SignIn.userMainPage.Show();
         }

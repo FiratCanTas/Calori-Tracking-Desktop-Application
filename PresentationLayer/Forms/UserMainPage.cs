@@ -1,4 +1,5 @@
 using DataAccessLayer.Context;
+using EntityLayer.Abstract;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,6 @@ namespace PresentationLayer.Forms
         public UserMainPage()
         {
             InitializeComponent();
-
         }
 
         public static FH_Breakfast fH_Breakfast;
@@ -31,57 +31,52 @@ namespace PresentationLayer.Forms
         public static List<Besin> tuketilenTumBesinler = new List<Besin>();
         FatHunterDbContext dbContext = new FatHunterDbContext();
 
-        public static TuketilenUrunler tuketilenUrunler;
+        public static TuketilenUrunler tuketilenUrun = new TuketilenUrunler();
 
         private void UserMainPage_Load(object sender, EventArgs e)
         {
-            myAccount = new FH_MyAccount();
-
-            tuketilenUrunler = new TuketilenUrunler()
-            {
-                KullanıcıID = FH_SignIn.user.KullanıcıID,
-                TuketildigiTarih = dtpUserPage.Value,
-            };
+            tuketilenUrun.KullanıcıID = FH_SignIn.user.KullanıcıID;
+            tuketilenUrun.TuketildigiTarih = dtpUserPage.Value;
+            dbContext.TuketilenUrunlers.Add(tuketilenUrun);
+            dbContext.SaveChanges();
 
             dgvAraOgun.DataSource = FH_Snacks.snacksList.ToList();
             dgvKahvalti.DataSource = FH_Breakfast.kahvaltiList.ToList();
             dgvOgleYemegi.DataSource = FH_Lunch.lunchList.ToList();
             dgvAksamYemegi.DataSource = FH_Dinner.dinnerList.ToList();
 
-            //var tuketilenBesinler = FH_Lunch.db.Besinler.Where(x => x.BesininTuketildigiOgun != null && x.TüketilenTarih != null).Select(x => x).ToList();
-
-            //tuketilenTumBesinler = FH_Lunch.db.Besinler.Where(x => x.BesininTuketildigiOgun != null || x.TüketilenTarih != null).Select(x => x).ToList();
-
-            var besins = dbContext.TuketilenUrunlers.Find(FH_SignIn.user.KullanıcıID);
-
             double yagMiktari = 0;
             double karbMiktari = 0;
             double proMiktari = 0;
-            foreach (Besin item in besins.Tuketilenler)
-            {
-                yagMiktari += item.MakroDeger.YagMiktari;
-                karbMiktari += item.MakroDeger.KarbonhidratMiktari;
-                proMiktari += item.MakroDeger.ProteinMiktari;
-            }
-            List<Double> makros = new List<Double>();
-            makros.Add(yagMiktari);
-            makros.Add(proMiktari);
-            makros.Add(karbMiktari);
 
-            dgvGenelDegerler.DataSource = makros.ToList();
+            foreach (Besin item in tuketilenUrun.Tuketilenler)
+            {
+                yagMiktari += dbContext.MakroDegerler.Find(item.BesinID).YagMiktari;
+                karbMiktari += dbContext.MakroDegerler.Find(item.BesinID).KarbonhidratMiktari;
+                proMiktari += dbContext.MakroDegerler.Find(item.BesinID).ProteinMiktari;
+                tuketilenUrun.TuketilenKalori += item.BesinKalorisi;
+            }
+
+            dgvGenelDegerler.ColumnCount = 4;
+            dgvGenelDegerler.Columns[0].Name = "Yağ Oranı";
+            dgvGenelDegerler.Columns[1].Name = "Karb Oranı";
+            dgvGenelDegerler.Columns[2].Name = "Pro Oranı";
+            dgvGenelDegerler.Columns[3].Name = "Kalori Miktarı";
+
+            dgvGenelDegerler.Rows.Add(yagMiktari, karbMiktari, proMiktari, tuketilenUrun.TuketilenKalori);
         }
 
         private void btnKahvaltı_Click(object sender, EventArgs e)
         {
             fH_Breakfast = new FH_Breakfast();
             fH_Breakfast.Show();
-            this.Hide();
         }
 
         private void btnLunch_Click(object sender, EventArgs e)
         {
             fH_Lunch = new FH_Lunch();
             fH_Lunch.Show();
+            this.Hide();
         }
 
         private void btnDinner_Click(object sender, EventArgs e)
@@ -94,11 +89,6 @@ namespace PresentationLayer.Forms
         {
             fH_Snack = new FH_Snacks();
             fH_Snack.Show();
-        }
-
-        private void btnWaterFollowUp_Click(object sender, EventArgs e)
-        {
-            tuketilenUrunler.IcilenSu += 1;
         }
 
         private void UserMainPage_FormClosed(object sender, FormClosedEventArgs e)
@@ -129,8 +119,14 @@ namespace PresentationLayer.Forms
 
         private void btnHesabım_Click(object sender, EventArgs e)
         {
+            myAccount = new FH_MyAccount();
             myAccount.Show();
             this.Hide();
+        }
+
+        private void btnWaterFollowUp_Click_1(object sender, EventArgs e)
+        {
+            tuketilenUrun.IcilenSu += 1;
         }
     }
 }

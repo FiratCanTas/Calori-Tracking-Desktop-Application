@@ -36,15 +36,15 @@
             this.btnAra = new System.Windows.Forms.Button();
             this.txtAraLunch = new System.Windows.Forms.TextBox();
             this.btnOgleOgunuEkle = new System.Windows.Forms.Button();
-            this.dgvLuchList = new System.Windows.Forms.DataGridView();
-            this.dgvSecilenYemekler = new System.Windows.Forms.DataGridView();
+            this.dgvMealList = new System.Windows.Forms.DataGridView();
+            this.dgvLunchList = new System.Windows.Forms.DataGridView();
             this.btnOgleOgunuKaldir = new System.Windows.Forms.Button();
             this.btnTamamla = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLuchList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSecilenYemekler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMealList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLunchList)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,7 +63,7 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(913, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 29);
+            this.label1.Size = new System.Drawing.Size(242, 28);
             this.label1.TabIndex = 11;
             this.label1.Text = "Öğle Yemeği Seçimi";
             // 
@@ -105,7 +105,6 @@
             this.txtAraLunch.Name = "txtAraLunch";
             this.txtAraLunch.Size = new System.Drawing.Size(204, 29);
             this.txtAraLunch.TabIndex = 30;
-            this.txtAraLunch.TextChanged += new System.EventHandler(this.txtAraLunch_TextChanged);
             // 
             // btnOgleOgunuEkle
             // 
@@ -119,29 +118,29 @@
             this.btnOgleOgunuEkle.UseVisualStyleBackColor = false;
             this.btnOgleOgunuEkle.Click += new System.EventHandler(this.btnOgleOgunuEkle_Click);
             // 
-            // dgvLuchList
+            // dgvMealList
             // 
-            this.dgvLuchList.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvLuchList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLuchList.Location = new System.Drawing.Point(12, 166);
-            this.dgvLuchList.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.dgvLuchList.Name = "dgvLuchList";
-            this.dgvLuchList.RowHeadersWidth = 51;
-            this.dgvLuchList.Size = new System.Drawing.Size(717, 404);
-            this.dgvLuchList.TabIndex = 28;
-            this.dgvLuchList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLuchList_CellClick);
+            this.dgvMealList.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvMealList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMealList.Location = new System.Drawing.Point(12, 166);
+            this.dgvMealList.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.dgvMealList.Name = "dgvMealList";
+            this.dgvMealList.RowHeadersWidth = 51;
+            this.dgvMealList.Size = new System.Drawing.Size(717, 404);
+            this.dgvMealList.TabIndex = 28;
+            this.dgvMealList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLuchList_CellClick);
             // 
-            // dgvSecilenYemekler
+            // dgvLunchList
             // 
-            this.dgvSecilenYemekler.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvSecilenYemekler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSecilenYemekler.Location = new System.Drawing.Point(935, 166);
-            this.dgvSecilenYemekler.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.dgvSecilenYemekler.Name = "dgvSecilenYemekler";
-            this.dgvSecilenYemekler.RowHeadersWidth = 51;
-            this.dgvSecilenYemekler.Size = new System.Drawing.Size(426, 404);
-            this.dgvSecilenYemekler.TabIndex = 27;
-            this.dgvSecilenYemekler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSecilenYemekler_CellClick);
+            this.dgvLunchList.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvLunchList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLunchList.Location = new System.Drawing.Point(935, 166);
+            this.dgvLunchList.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.dgvLunchList.Name = "dgvLunchList";
+            this.dgvLunchList.RowHeadersWidth = 51;
+            this.dgvLunchList.Size = new System.Drawing.Size(426, 404);
+            this.dgvLunchList.TabIndex = 27;
+            this.dgvLunchList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSecilenYemekler_CellClick);
             // 
             // btnOgleOgunuKaldir
             // 
@@ -180,8 +179,8 @@
             this.Controls.Add(this.btnAra);
             this.Controls.Add(this.txtAraLunch);
             this.Controls.Add(this.btnOgleOgunuEkle);
-            this.Controls.Add(this.dgvLuchList);
-            this.Controls.Add(this.dgvSecilenYemekler);
+            this.Controls.Add(this.dgvMealList);
+            this.Controls.Add(this.dgvLunchList);
             this.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FH_Lunch";
@@ -191,8 +190,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLuchList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSecilenYemekler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMealList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLunchList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,8 +206,8 @@
         private System.Windows.Forms.Button btnAra;
         private System.Windows.Forms.TextBox txtAraLunch;
         private System.Windows.Forms.Button btnOgleOgunuEkle;
-        private System.Windows.Forms.DataGridView dgvLuchList;
-        private System.Windows.Forms.DataGridView dgvSecilenYemekler;
+        private System.Windows.Forms.DataGridView dgvMealList;
+        private System.Windows.Forms.DataGridView dgvLunchList;
         private System.Windows.Forms.Button btnOgleOgunuKaldir;
         private System.Windows.Forms.Button btnTamamla;
     }

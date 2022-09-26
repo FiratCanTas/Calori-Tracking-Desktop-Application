@@ -29,6 +29,7 @@ namespace PresentationLayer.Forms
             var sifreGuncellenecekKisi = dbContext.Kullanıcılar.Where(x => x.KullanıcıMail == txtEmail.Text).Where(x => x.Adı == txtAdiniz.Text).Where(x => x.Soyadı == txtSoyadiniz.Text).FirstOrDefault();
 
             sifreGuncellenecekKisi.KullanıcıŞifre = txtYeniSifre.Text;
+            dbContext.SaveChanges();
 
             FH_MainPage.fH_SignIn.Show();
             this.Hide();
@@ -36,7 +37,7 @@ namespace PresentationLayer.Forms
 
         private void FH_ChangePassword_FormClosed(object sender, FormClosedEventArgs e)
         {
-            FH_SignIn.userMainPage.Show();
+            FH_MainPage.fH_SignIn.Show();
         }
     }
 }

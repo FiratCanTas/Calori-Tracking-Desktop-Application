@@ -172,6 +172,7 @@ namespace PresentationLayer.Forms
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox4.TabIndex = 39;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.btnLunch_Click);
             // 
             // pictureBox3
             // 
@@ -182,6 +183,7 @@ namespace PresentationLayer.Forms
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox3.TabIndex = 38;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.btnSnacks_Click);
             // 
             // pictureBox2
             // 
@@ -192,6 +194,7 @@ namespace PresentationLayer.Forms
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox2.TabIndex = 37;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.btnDinner_Click);
             // 
             // pictureBox1
             // 
@@ -201,6 +204,7 @@ namespace PresentationLayer.Forms
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.btnKahvaltı_Click);
             // 
             // btnWaterFollowUp
             // 
@@ -213,6 +217,7 @@ namespace PresentationLayer.Forms
             this.btnWaterFollowUp.TabIndex = 35;
             this.btnWaterFollowUp.Text = "İçilen Su Miktarı(200mL)";
             this.btnWaterFollowUp.UseVisualStyleBackColor = true;
+            this.btnWaterFollowUp.Click += new System.EventHandler(this.btnWaterFollowUp_Click_1);
             // 
             // btnSnacks
             // 
@@ -414,6 +419,5 @@ namespace PresentationLayer.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlHedefKalori;
         public System.Windows.Forms.Label lblKaloriHedefDegeri;
-        private System.Windows.Forms.Button btnHesabım;
     }
 }
